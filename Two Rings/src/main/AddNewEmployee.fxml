@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #29333d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="137.0" layoutY="153.0" promptText="First Name *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
+      <TextField layoutX="137.0" layoutY="240.0" promptText="Last Name *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
+      <TextField layoutX="407.0" layoutY="153.0" promptText="Create New Password *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
+      <TextField layoutX="407.0" layoutY="197.0" promptText="Confirm New Password *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
+      <ComboBox layoutX="407.0" layoutY="240.0" prefHeight="31.0" prefWidth="187.0" promptText="Gender" style="-fx-background-radius: 21; -fx-border-radius: 21; -fx-background-color: gray;" />
+      <TextField layoutX="137.0" layoutY="330.0" promptText="Phone Number *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
+      <TextField layoutX="137.0" layoutY="374.0" promptText="Present Address *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
+      <TextField layoutX="137.0" layoutY="420.0" promptText="Permanent Address *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
+      <ComboBox layoutX="407.0" layoutY="284.0" prefHeight="31.0" prefWidth="187.0" promptText="Post" style="-fx-background-radius: 21; -fx-border-radius: 21; -fx-background-color: gray;" />
+      <ComboBox layoutX="407.0" layoutY="330.0" prefHeight="31.0" prefWidth="187.0" promptText="Blood Group" style="-fx-background-radius: 21; -fx-border-radius: 21; -fx-background-color: gray;" />
+      <TextField layoutX="137.0" layoutY="197.0" promptText="Middle Name *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
+      <TextField layoutX="137.0" layoutY="284.0" promptText="Age *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
+      <Button layoutX="262.0" layoutY="481.0" mnemonicParsing="false" prefWidth="145.0" style="-fx-background-radius: 21; -fx-background-color: #0c84ff;" text="Add this employee" />
+      <TextField layoutX="407.0" layoutY="374.0" promptText="Year Of Experience *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
+      <DatePicker layoutX="407.0" layoutY="420.0" prefHeight="31.0" prefWidth="212.0" promptText="Date Of Joining" style="-fx-background-color: gray; -fx-background-radius: 15; -fx-border-radius: 15;" />
+      <Label layoutX="137.0" layoutY="56.0" prefHeight="97.0" prefWidth="463.0" text="Make Employee Profile" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
