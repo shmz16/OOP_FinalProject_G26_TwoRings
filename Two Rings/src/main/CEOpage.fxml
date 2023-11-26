@@ -2,24 +2,31 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CEOpageController">
    <children>
       <AnchorPane layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="185.0" style="-fx-background-color: #29333d;">
          <children>
             <Button layoutX="14.0" layoutY="380.0" mnemonicParsing="false" text="Book A Meeting" wrapText="true" />
             <Button layoutX="14.0" layoutY="338.0" mnemonicParsing="false" text="Advertisement" wrapText="true" />
-            <Button layoutX="14.0" layoutY="299.0" mnemonicParsing="false" text="Finance Report" wrapText="true" />
-            <Button layoutX="14.0" layoutY="257.0" mnemonicParsing="false" text="Employee Report" wrapText="true" />
-            <Button layoutX="14.0" layoutY="212.0" mnemonicParsing="false" text="Employee List" wrapText="true" />
-            <Button layoutX="14.0" layoutY="166.0" mnemonicParsing="false" text="Add New Employee" />
-            <Button layoutX="14.0" layoutY="422.0" mnemonicParsing="false" text="Update policy" wrapText="true" />
+            <Button layoutX="14.0" layoutY="299.0" mnemonicParsing="false" onAction="#financeReportOnClick" text="Finance Report" wrapText="true" />
+            <Button layoutX="14.0" layoutY="257.0" mnemonicParsing="false" onAction="#employeeReportOnClick" text="Employee Report" wrapText="true" />
+            <Button layoutX="14.0" layoutY="212.0" mnemonicParsing="false" onAction="#employeeListOnClick" text="Employee List" wrapText="true" />
+            <Button layoutX="14.0" layoutY="166.0" mnemonicParsing="false" onAction="#addNewEmployeeOnClick" text="Add New Employee" />
+            <Button layoutX="14.0" layoutY="422.0" mnemonicParsing="false" onAction="#updatePolicyOnClick" text="Update policy" wrapText="true" />
             <Button layoutX="14.0" layoutY="464.0" mnemonicParsing="false" text="Calculator" wrapText="true" />
          </children>
       </AnchorPane>
-      <Label layoutX="214.0" layoutY="32.0" prefHeight="59.0" prefWidth="406.0" text="🌸 Welcome Back 🌸">
+      <ImageView fitHeight="720.0" fitWidth="897.0" layoutX="183.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../ww/image%20(10).jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="214.0" layoutY="32.0" prefHeight="59.0" prefWidth="406.0" text="🌸 Welcome Back 🌸" textFill="WHITE">
          <font>
             <Font name="System Bold" size="35.0" />
          </font>

@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1080.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="124.0" prefWidth="1080.0" />
+      <TableView fx:id="empolyeTable" layoutX="349.0" layoutY="131.0" prefHeight="479.0" prefWidth="739.0">
+         <columns>
+            <TableColumn fx:id="nameColomn" prefWidth="154.0" text="Name" />
+            <TableColumn fx:id="idColomn" prefWidth="71.0" text="ID" />
+            <TableColumn fx:id="genderColomn" prefWidth="72.0" text="Gender" />
+            <TableColumn fx:id="salryColomn" prefWidth="113.0" text="Salary" />
+            <TableColumn fx:id="postColomn" prefWidth="98.0" text="Post" />
+            <TableColumn fx:id="DOJColomn" prefWidth="129.0" text="Date Of Joining" />
+            <TableColumn fx:id="ratingColomn" prefWidth="101.0" text="Rating" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>
