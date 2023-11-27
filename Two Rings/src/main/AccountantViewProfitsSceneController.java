@@ -6,7 +6,10 @@ package main;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import java.io.IOException;
 
 /**
  * FXML Controller class
@@ -22,5 +25,11 @@ public class AccountantViewProfitsSceneController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void accountantBackButtonOnClick(ActionEvent event) throws IOException {
+        BackButton accountantBackButton = new BackButton(event);
+        accountantBackButton.AccountantBackButton();
+    }
     
 }

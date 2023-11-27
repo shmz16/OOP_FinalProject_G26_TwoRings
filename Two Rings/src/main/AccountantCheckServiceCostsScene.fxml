@@ -7,10 +7,9 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="main.AccountantCheckServiceCostsSceneController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.AccountantCheckServiceCostsSceneController">
    <children>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Back" textAlignment="CENTER" textFill="WHITE" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#accountantBackButtonOnClick" style="-fx-background-color: #008080;" text="Back" textAlignment="CENTER" textFill="WHITE" />
       <Label layoutX="50.0" layoutY="80.0" text="Filter: " />
       <ComboBox layoutX="91.0" layoutY="75.0" prefHeight="33.0" prefWidth="163.0" style="-fx-border-color: #008080;" />
       <Button layoutX="266.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Apply" textAlignment="CENTER" textFill="WHITE" />
