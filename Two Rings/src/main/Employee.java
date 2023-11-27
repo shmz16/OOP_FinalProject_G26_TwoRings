@@ -3,202 +3,65 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package main;
-
 import java.time.LocalDate;
-import java.util.Date;
-
 /**
  *
- * @author acer
+ * @author User
  */
-public class Employee {
-    private String employeeId;
-    private String firstName;
-    private String middleName;
-    private String lastName;
-    private String gender;
-    private String bloodGroup;
-    private int age;
-    private double nidNo;
+public class Employee extends User{
     
-    private String nationality;
-    private String presentAddress;
-    private String permanentAddress;
-    private String position;
-    private LocalDate dateOfBirth;
-    private LocalDate hireDate;
-    private double salary;
-    private String contactNumber;
-    private String email;
+    private int employeeID;
+    private LocalDate joinDate;
+    private int salary;
+    private String designation;
 
-    public Employee() {
+    public Employee(){
+    
+    };
+    
+    public Employee(int employeeID, LocalDate joinDate, int salary, String designation, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
+        super(name, gender, email, phoneNo, password, dateOfBirth);
+        this.employeeID = employeeID;
+        this.joinDate = joinDate;
+        this.salary = salary;
+        this.designation = designation;
     }
 
-    public Employee(String employeeId, String firstName, String middleName, String lastName, String gender, String bloodGroup, int age, String presentAddress, String permanentAddress, String position, LocalDate hireDate, String contactNumber, String email) {
-        this.employeeId = employeeId;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.bloodGroup = bloodGroup;
-        this.age = age;
-        this.presentAddress = presentAddress;
-        this.permanentAddress = permanentAddress;
-        this.position = position;
-        this.hireDate = hireDate;
-        this.contactNumber = contactNumber;
-        this.email = email;
+    public int getEmployeeID() {
+        return employeeID;
     }
 
-    public String getEmployeeId() {
-        return employeeId;
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
     }
 
-    public void setEmployeeId(String employeeId) {
-        this.employeeId = employeeId;
+    public LocalDate getJoinDate() {
+        return joinDate;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public void setJoinDate(LocalDate joinDate) {
+        this.joinDate = joinDate;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getBloodGroup() {
-        return bloodGroup;
-    }
-
-    public void setBloodGroup(String bloodGroup) {
-        this.bloodGroup = bloodGroup;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public double getNidNo() {
-        return nidNo;
-    }
-
-    public void setNidNo(double nidNo) {
-        this.nidNo = nidNo;
-    }
-
-    public String getNationality() {
-        return nationality;
-    }
-
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
-    }
-
-    public String getPresentAddress() {
-        return presentAddress;
-    }
-
-    public void setPresentAddress(String presentAddress) {
-        this.presentAddress = presentAddress;
-    }
-
-    public String getPermanentAddress() {
-        return permanentAddress;
-    }
-
-    public void setPermanentAddress(String permanentAddress) {
-        this.permanentAddress = permanentAddress;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public LocalDate getHireDate() {
-        return hireDate;
-    }
-
-    public void setHireDate(LocalDate hireDate) {
-        this.hireDate = hireDate;
-    }
-
-    public double getSalary() {
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
-    public String getContactNumber() {
-        return contactNumber;
+    public String getDesignation() {
+        return designation;
     }
 
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDesignation(String designation) {
+        this.designation = designation;
     }
 
     @Override
     public String toString() {
-        return "Employee{" + "employeeId=" + employeeId + ", firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName + ", gender=" + gender + ", bloodGroup=" + bloodGroup + ", age=" + age + ", nidNo=" + nidNo + ", nationality=" + nationality + ", presentAddress=" + presentAddress + ", permanentAddress=" + permanentAddress + ", position=" + position + ", dateOfBirth=" + dateOfBirth + ", hireDate=" + hireDate + ", salary=" + salary + ", contactNumber=" + contactNumber + ", email=" + email + '}';
+        return "Employee{" + "employeeID=" + employeeID + ", joinDate=" + joinDate + ", salary=" + salary + ", designation=" + designation + '}';
     }
-
-    
-    
-
-    
-
-    
-    
-    
-    
     
 }
