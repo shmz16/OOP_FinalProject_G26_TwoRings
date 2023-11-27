@@ -38,7 +38,7 @@ public class AccountantDashboardSceneController implements Initializable {
     }
 
     @FXML
-    private void viewSalaryListButtonOnClick(ActionEvent event) throws IOException{
+    private void viewSalaryListButtonOnClick(ActionEvent event) throws IOException {
         SceneSwitcher switchToViewSalaryScene = new SceneSwitcher("AccountantCheckSalariesScene.fxml", event);
         switchToViewSalaryScene.ConfirmSceneSwitch();
     }
@@ -50,15 +50,21 @@ public class AccountantDashboardSceneController implements Initializable {
     }
 
     @FXML
-    private void eventVenuesButtonOnClick(ActionEvent event) {
+    private void eventVenuesButtonOnClick(ActionEvent event) throws IOException {
+        SceneSwitcher switchToEventVenuesScene = new SceneSwitcher("AccountantEventVenuesCostScene.fxml", event);
+        switchToEventVenuesScene.ConfirmSceneSwitch();
     }
 
     @FXML
-    private void viewServiceChargesButtonOnClick(ActionEvent event) {
+    private void viewServiceChargesButtonOnClick(ActionEvent event) throws IOException {
+        SceneSwitcher switchToCheckServiceCostsScene = new SceneSwitcher("AccountantCheckServiceCostsScene.fxml", event);
+        switchToCheckServiceCostsScene.ConfirmSceneSwitch();
     }
 
     @FXML
-    private void packageServiceButtonOnClick(ActionEvent event) {
+    private void packageServiceButtonOnClick(ActionEvent event) throws IOException {
+        SceneSwitcher switchToPackageServiceScene = new SceneSwitcher("AccountantPackageServiceScene.fxml", event);
+        switchToPackageServiceScene.ConfirmSceneSwitch();
     }
     
 }
