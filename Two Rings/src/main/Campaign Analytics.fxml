@@ -15,7 +15,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CampaignAnalyticsController">
    <children>
-      <LineChart layoutX="14.0" layoutY="91.0" prefHeight="316.0" prefWidth="482.0" style="-fx-background-color: #00cca3;" title="Platform Reach OVer the Year">
+      <LineChart fx:id="reacgOverTheYearLineChart" layoutX="14.0" layoutY="91.0" prefHeight="316.0" prefWidth="482.0" style="-fx-background-color: #00cca3;" title="Platform Reach OVer the Year">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
@@ -35,7 +35,7 @@
             <TextArea editable="false" layoutX="12.0" layoutY="36.0" prefHeight="113.0" prefWidth="142.0" style="-fx-background-color: #ffffff;" />
          </children>
       </Pane>
-      <PieChart layoutX="584.0" layoutY="92.0" prefHeight="316.0" prefWidth="482.0" style="-fx-background-color: #00cca3;" title="AD Reach By Platform" />
+      <PieChart fx:id="adByPlatform" layoutX="584.0" layoutY="92.0" prefHeight="316.0" prefWidth="482.0" style="-fx-background-color: #00cca3;" title="AD Reach By Platform" />
       <Button layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#prevPage" text="&lt;--">
          <font>
             <Font name="System Bold" size="17.0" />
@@ -43,17 +43,17 @@
       </Button>
       <Line endX="956.0" layoutX="115.0" layoutY="419.0" startX="-100.0" />
       <Line endX="956.0" layoutX="112.0" layoutY="64.0" startX="-100.0" />
-      <Button layoutX="704.0" layoutY="437.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" text="Load Chart">
+      <Button layoutX="704.0" layoutY="437.0" mnemonicParsing="false" onAction="#loadPieChartOnClick" prefHeight="38.0" prefWidth="242.0" text="Load Pie Chart">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
       <TextField layoutX="704.0" layoutY="488.0" prefHeight="31.0" prefWidth="242.0" promptText="Hover On Pie to See More Details" />
-      <Button layoutX="103.0" layoutY="434.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" text="Load Chart">
+      <Button layoutX="103.0" layoutY="434.0" mnemonicParsing="false" onAction="#loadLineChartOnClick" prefHeight="38.0" prefWidth="242.0" text="Load Line Chart">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <TextField layoutX="103.0" layoutY="485.0" prefHeight="31.0" prefWidth="242.0" promptText="Hover On LineChart to See More Details" />
+      <TextField fx:id="lineChartLabel" layoutX="103.0" layoutY="485.0" prefHeight="31.0" prefWidth="242.0" promptText="Hover On LineChart to See More Details" />
    </children>
 </AnchorPane>

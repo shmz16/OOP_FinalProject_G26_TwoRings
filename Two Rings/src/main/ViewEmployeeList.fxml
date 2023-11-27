@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
@@ -13,12 +14,11 @@
    <children>
       <TableView fx:id="empolyeTable" layoutX="51.0" layoutY="14.0" prefHeight="322.0" prefWidth="782.0" style="-fx-background-color: #00cca3;">
         <columns>
-          <TableColumn fx:id="serialColomn" prefWidth="71.0" text="Serial No" />
           <TableColumn fx:id="nameColomn" prefWidth="184.0" text="Name" />
             <TableColumn fx:id="idColomn" minWidth="0.0" prefWidth="106.0" text="ID" />
             <TableColumn fx:id="genderColomn" prefWidth="114.0" text="Gender" />
             <TableColumn fx:id="postColomn" prefWidth="166.0" text="Post" />
-            <TableColumn fx:id="postColomn" prefWidth="166.0" text="Phone No" />
+            <TableColumn fx:id="phoneNoColomn" prefWidth="166.0" text="Phone No" />
         </columns>
       </TableView>
     <Button layoutX="14.0" layoutY="14.0" minWidth="33.0" mnemonicParsing="false" onAction="#prevPage" prefHeight="20.0" prefWidth="37.0" text="&lt;" wrapText="true">
@@ -36,5 +36,6 @@
       <Button layoutX="442.0" layoutY="475.0" mnemonicParsing="false" onAction="#loadPieChartOnClick" prefHeight="39.0" prefWidth="412.0" text="Click to see chart info" />
       <Line endX="965.0" layoutX="115.0" layoutY="351.0" startX="-115.0" />
       <Line endX="-100.0" endY="343.0" layoutX="527.0" layoutY="376.0" startX="-100.0" startY="-24.5" />
+      <TextArea fx:id="TextArea" layoutX="561.0" layoutY="540.0" prefHeight="333.0" prefWidth="791.0" />
    </children>
 </AnchorPane>

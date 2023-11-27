@@ -63,13 +63,8 @@ public class CEOpageController implements Initializable {
     @FXML
     private void addNewEmployeeOnClick(ActionEvent event) throws IOException {
 
-        Parent sceneA = FXMLLoader.load(getClass().getResource("AddNewEmployee.fxml"));
-        Scene sceneB = new Scene(sceneA);
-
-        Stage stg = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stg.setTitle("I am Back!!");
-        stg.setScene(sceneB);
-        stg.show();
+        SceneSwitcher switchToViewProfitsScene = new SceneSwitcher("AccountantViewProfitsScene.fxml", event);
+        switchToViewProfitsScene.ConfirmSceneSwitch();
 
     }
 

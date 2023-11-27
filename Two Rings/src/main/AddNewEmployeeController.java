@@ -41,27 +41,17 @@ public class AddNewEmployeeController implements Initializable {
     private ComboBox<String> genderCombo;
     @FXML
     private ComboBox<String> postCombo;
-    @FXML
     private ComboBox<String> bloodGroupCombo;
     @FXML
     private TextField fNameField;
-    @FXML
-    private TextField lNameField;
     @FXML
     private TextField setNewPass;
     @FXML
     private TextField confirmEmpPass;
     @FXML
     private TextField empPhoneNo;
-    @FXML
     private TextField empPresentAddress;
-    @FXML
     private TextField empPermanentAddress;
-    @FXML
-    private TextField mNameField;
-    @FXML
-    private TextField empAge;
-    @FXML
     private TextField yearOfExperience;
     @FXML
     private DatePicker DOJ;
@@ -70,7 +60,11 @@ public class AddNewEmployeeController implements Initializable {
     @FXML
     private TextField empEmail;
 
-    private ObservableList<Employee> employeeList = FXCollections.observableArrayList();
+    private ArrayList<Employee> employeeList = new ArrayList<>();
+    @FXML
+    private DatePicker dateOfBirth;
+    @FXML
+    private TextField salary;
 
     /**
      * Initializes the controller class.
@@ -93,33 +87,29 @@ public class AddNewEmployeeController implements Initializable {
 
     @FXML
     private void addEmployeeButton(ActionEvent event) {
-        String firstName = fNameField.getText();
-        String middleNmae = mNameField.getText();
-        String lastName = lNameField.getText();
-        String empId = assignId.getText();
+        String name = fNameField.getText();
+        LocalDate DOB = dateOfBirth.getValue();
 
-        int age = Integer.parseInt(empAge.getText());
+        int employeeId = Integer.parseInt(assignId.getText());
         String phoneNo = empPhoneNo.getText();
-        String presentAddress = empPresentAddress.getText();
-        String permanentAddress = empPermanentAddress.getText();
+        
         //String empId = empPermanentAddress.getText();
         String newpass = setNewPass.getText();
         String confirm = confirmEmpPass.getText();
         String gender = genderCombo.getValue();
         String post = postCombo.getValue();
-        String bloodGroup = bloodGroupCombo.getValue();
+        int salaryy = Integer.parseInt(salary.getText());
         String email = empEmail.getText();
-        int experience = Integer.parseInt(yearOfExperience.getText());
+        
 
-        int experence = Integer.parseInt(yearOfExperience.getText());
+        
         LocalDate dateOfJoin = DOJ.getValue();
 
-        Employee temp = new Employee(empId, firstName, middleNmae, lastName, gender,
-                bloodGroup, age, presentAddress, permanentAddress, post, dateOfJoin,
-                phoneNo, email);
+        Employee temp = new Employee(employeeId, dateOfJoin, salaryy, post, name, gender, email, phoneNo, newpass, DOB);
         employeeList.add(temp);
 
         // creating a object stream file;
+        /*
         File f = null;
         FileOutputStream fos = null;      
         ObjectOutputStream oos = null;
@@ -145,7 +135,8 @@ public class AddNewEmployeeController implements Initializable {
             } catch (IOException ex) {
                 Logger.getLogger(MainFXMLController.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } 
+        }
+        */
 
     }
 
