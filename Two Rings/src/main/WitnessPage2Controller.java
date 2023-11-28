@@ -27,7 +27,9 @@ public class WitnessPage2Controller implements Initializable {
     }    
 
     @FXML
-    private void photoBT(ActionEvent event) {
+    private void photoBT(ActionEvent event) throws IOException {
+        SceneSwitcher album = new SceneSwitcher("Picture.fxml", event);
+        album.ConfirmSceneSwitch();
     }
 
     @FXML

@@ -55,5 +55,10 @@
          </font>
       </Button>
       <TextField fx:id="lineChartLabel" layoutX="103.0" layoutY="485.0" prefHeight="31.0" prefWidth="242.0" promptText="Hover On LineChart to See More Details" />
+      <Button layoutX="946.0" layoutY="668.0" mnemonicParsing="false" onAction="#ddddddddddD" prefHeight="38.0" prefWidth="0.0" text=".">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -29,6 +29,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -70,7 +72,7 @@ public class AddNewEmployeeController implements Initializable {
     @FXML
     private ImageView bigImg;
     @FXML
-    private ImageView littleImg;
+    private Label confirmAddThisEmployee;
 
     /**
      * Initializes the controller class.
@@ -84,39 +86,39 @@ public class AddNewEmployeeController implements Initializable {
         String[] typesOfEmployee = {"Laywer", "Register", "Marketing Maneger", "Event Maneger", "Accountant"};
         postCombo.getItems().addAll(typesOfEmployee);
 
-        String[] gender = {"Male", "Female", "Others"};
+        String[] gender = {"Male", "Female"};
         genderCombo.getItems().addAll(gender);
 
         //Creatiing an empty bin file!!
-        File f = null;
-        FileInputStream fis = null;
-        ObjectInputStream ois = null;
-
-        try {
-            f = new File("EmployeeList.bin");
-            fis = new FileInputStream(f);
-            ois = new ObjectInputStream(fis);
-            Employee emp;
-            try {
-                while( true) {
-                
-                    emp = (Employee) ois.readObject();
-
-                }
-            } catch (Exception e) {
-                
-            }
-        } catch (Exception ex){
-            
-        } finally {
-            try{
-                if (ois != null) {
-                    ois.close();
-                }
-            } catch (IOException ex){
-                
-            }
-        }
+//        File f = null;
+//        FileInputStream fis = null;
+//        ObjectInputStream ois = null;
+//
+//        try {
+//            f = new File("EmployeeList.bin");
+//            fis = new FileInputStream(f);
+//            ois = new ObjectInputStream(fis);
+//            Employee emp;
+//            try {
+//                while( true) {
+//                
+//                    emp = (Employee) ois.readObject();
+//
+//                }
+//            } catch (Exception e) {
+//                
+//            }
+//        } catch (Exception ex){
+//            
+//        } finally {
+//            try{
+//                if (ois != null) {
+//                    ois.close();
+//                }
+//            } catch (IOException ex){
+//                
+//            }
+//        }
 
     }
 
@@ -138,11 +140,11 @@ public class AddNewEmployeeController implements Initializable {
 
         LocalDate dateOfJoin = DOJ.getValue();
 
-        Employee temp = new Employee(employeeId, dateOfJoin, salaryy, post, name, gender, email, phoneNo, newpass, DOB);
         
+        File f = null;
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
-        File f = null;
+       
         try {
             f = new File("EmployeeList.bin");
             if (f.exists()) {
@@ -154,7 +156,10 @@ public class AddNewEmployeeController implements Initializable {
                 oos = new ObjectOutputStream(fos);
                 
             }
+            Employee temp = new Employee(employeeId, dateOfJoin, salaryy, post, name, gender, email, phoneNo, newpass, DOB);
+            
             oos.writeObject(temp);
+            System.out.println(temp);
             
         } catch (IOException ex) {
             Logger.getLogger(AddNewEmployeeController.class.getName()).log(Level.SEVERE,null,ex);
@@ -199,6 +204,8 @@ public class AddNewEmployeeController implements Initializable {
             }
         }
          */
+        
+        confirmAddThisEmployee.setText("Succesfuly added New Employee");
     }
 
     @FXML

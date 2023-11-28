@@ -26,7 +26,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="857.0" layoutY="87.0" mnemonicParsing="false" onAction="#showEmployeeOnClick" prefHeight="177.0" prefWidth="156.0" text="Show Employee LIST" />
+      <Button fx:id="confirmAddEmployee" layoutX="857.0" layoutY="87.0" mnemonicParsing="false" onAction="#showEmployeeOnClick" prefHeight="177.0" prefWidth="156.0" text="Show Employee LIST" />
       <PieChart fx:id="employeePie" layoutX="44.0" layoutY="336.0" prefHeight="384.0" prefWidth="472.0" style="-fx-background-image: black;" title="PIE-CHART" />
       <Label fx:id="pieChartInfoLabel" layoutX="651.0" layoutY="388.0" prefHeight="39.0" prefWidth="412.0" style="-fx-background-color: #00cca3;" text="Label">
          <font>

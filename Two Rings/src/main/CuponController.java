@@ -39,7 +39,7 @@ public class CuponController implements Initializable {
         Random random = new Random();
         String code = String.valueOf(random.nextInt(999999) + 1000000);
         Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setTitle("Exiting Voucher!!");
+        a.setTitle("Exiting Voucher!🎁🎈!");
         a.setHeaderText("Congrats, You Have Won a coupon Card!!");
         a.setContentText("To Claim Your Coucher save the Coupon Code,\n or take a picture!!\nCode: " + code);
         a.showAndWait();

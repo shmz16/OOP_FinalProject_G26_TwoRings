@@ -9,7 +9,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #29333d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.WitnessPage2Controller">
    <top>
-      <MenuBar blendMode="GREEN" BorderPane.alignment="CENTER">
+      <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="HOME">
             <items>
@@ -53,12 +53,12 @@
       </MenuBar>
    </top>
    <center>
-      <AnchorPane blendMode="BLUE" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="714.0" layoutY="515.0" mnemonicParsing="false" onAction="#photoBT" text="Album" />
-            <Button layoutX="40.0" layoutY="176.0" mnemonicParsing="false" onAction="#cupponButton" prefHeight="199.0" prefWidth="141.0" text="Claim Cupon Card" />
-            <Button layoutX="417.0" layoutY="546.0" mnemonicParsing="false" onAction="#aboutUsBT" text="About Us" />
-            <Button layoutX="40.0" layoutY="388.0" mnemonicParsing="false" onAction="#officeLocagtorBT" text="Locate Our Office" />
+            <Button layoutX="559.0" layoutY="448.0" mnemonicParsing="false" onAction="#photoBT" prefHeight="202.0" prefWidth="157.0" text="Album" />
+            <Button layoutX="79.0" layoutY="447.0" mnemonicParsing="false" onAction="#cupponButton" prefHeight="199.0" prefWidth="141.0" style="-fx-background-color: #ccffff;" text="Claim Cupon Card" textAlignment="CENTER" />
+            <Button layoutX="241.0" layoutY="447.0" mnemonicParsing="false" onAction="#aboutUsBT" prefHeight="204.0" prefWidth="146.0" text="About Us" />
+            <Button layoutX="403.0" layoutY="448.0" mnemonicParsing="false" onAction="#officeLocagtorBT" prefHeight="203.0" prefWidth="145.0" text="Locate Our Office" />
          </children>
       </AnchorPane>
    </center>

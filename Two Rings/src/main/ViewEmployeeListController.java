@@ -37,12 +37,12 @@ import javafx.stage.Stage;
  */
 public class ViewEmployeeListController implements Initializable {
 
-    private Employee model = new Employee();
+//    private Employee model = new Employee();
 
     @FXML
     private TableView<Employee> empolyeTable;
-    @FXML
-    private TableColumn<Employee, String> nameColomn;
+//    @FXML
+//    private TableColumn<Employee, String> nameColomn;
     @FXML
     private TableColumn<Employee, Integer> idColomn;
     @FXML
@@ -59,26 +59,23 @@ public class ViewEmployeeListController implements Initializable {
     @FXML
     private PieChart employeePie;
     
+    @FXML
+    private Button confirmAddEmployee;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
 
-//        nameColomn.setCellFactory(new PropertyValueFactory<Employee, >("Name"));
-//        idColomn.setCellFactory(new PropertyValueFactory<Employee, Integer>("employeeId"));
-//        genderColomn.setCellFactory(new PropertyValueFactory<Employee, String>("gender"));
-//        postColomn.setCellFactory(new PropertyValueFactory<Employee, String>("position"));
-//        phoneNoColomn.setCellFactory(new PropertyValueFactory<Employee, String>("contactNumber"));
-//        empolyeTable.setItems(model.getEmployeeList());
     }
 
     @FXML
     private void showEmployeeOnClick(ActionEvent event) throws IOException, ClassNotFoundException {
-
         ObservableList<Employee> empList = FXCollections.observableArrayList();
         
-        nameColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("name"));
+//        nameColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("name"));
         idColomn.setCellValueFactory(new PropertyValueFactory<Employee, Integer>("employeeID"));
         genderColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("gender"));
         postColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("designation"));
@@ -87,7 +84,7 @@ public class ViewEmployeeListController implements Initializable {
         File f = null;
         FileInputStream fis = null;
         ObjectInputStream ois = null;
-
+        
         try {
             f = new File("EmployeeList.bin");
             fis = new FileInputStream(f);
@@ -97,6 +94,7 @@ public class ViewEmployeeListController implements Initializable {
                 while (true) {
                     emp = (Employee) ois.readObject();
                     empList.add(emp);
+                    System.out.println(emp.toString());
                     
                 }
             } catch (Exception e) {
@@ -112,6 +110,7 @@ public class ViewEmployeeListController implements Initializable {
 
         }
         empolyeTable.setItems(empList);
+        
         
 //        ObjectInputStream ois = null;
 //        try {
@@ -131,6 +130,9 @@ public class ViewEmployeeListController implements Initializable {
 //            }
 //            ex.printStackTrace();
 //        }
+
+
+       
 
     }
 

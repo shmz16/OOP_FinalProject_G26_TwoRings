@@ -6,6 +6,7 @@ package main;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -65,7 +66,9 @@ public class PictureController implements Initializable {
     }
 
     @FXML
-    private void prevPage(ActionEvent event) {
+    private void prevPage(ActionEvent event) throws IOException {
+       SceneSwitcher witnessDash = new SceneSwitcher("WitnessPage2.fxml", event);
+        witnessDash.ConfirmSceneSwitch();
     }
 
 }
