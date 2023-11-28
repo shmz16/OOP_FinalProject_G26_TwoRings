@@ -4,12 +4,13 @@
  */
 package main;
 import java.time.LocalDate;
+import javafx.collections.ObservableList;
 /**
  *
  * @author User
  */
 public class Employee extends User{
-    
+//    private ObservableList <Employee> employeeList;
     private int employeeID;
     private LocalDate joinDate;
     private int salary;
@@ -26,7 +27,15 @@ public class Employee extends User{
         this.salary = salary;
         this.designation = designation;
     }
+    
 
+    
+//    public ObservableList<Employee> getEmployeeList() {
+//        return employeeList;
+//    }
+
+    
+    
     public int getEmployeeID() {
         return employeeID;
     }

@@ -45,7 +45,10 @@ public class CEOpageController implements Initializable {
     }
 
     @FXML
-    private void employeeReportOnClick(ActionEvent event) {
+    private void employeeReportOnClick(ActionEvent event) throws IOException {
+        SceneSwitcher empReport = new SceneSwitcher("Employee Report.fxml", event);
+        empReport.ConfirmSceneSwitch();
+
     }
 
     @FXML
@@ -63,13 +66,28 @@ public class CEOpageController implements Initializable {
     @FXML
     private void addNewEmployeeOnClick(ActionEvent event) throws IOException {
 
-        SceneSwitcher switchToViewProfitsScene = new SceneSwitcher("AccountantViewProfitsScene.fxml", event);
-        switchToViewProfitsScene.ConfirmSceneSwitch();
+        SceneSwitcher addNewEmployeeSc = new SceneSwitcher("AddNewEmployee.fxml", event);
+        addNewEmployeeSc.ConfirmSceneSwitch();
+
 
     }
 
     @FXML
-    private void updatePolicyOnClick(ActionEvent event) {
+    private void updatePolicyOnClick(ActionEvent event) throws IOException {
+        SceneSwitcher policySc = new SceneSwitcher("Update Policy.fxml", event);
+        policySc.ConfirmSceneSwitch();
+
+    }
+
+    @FXML
+    private void bookMetting(ActionEvent event) {
+    }
+
+    @FXML
+    private void testWitnes(ActionEvent event) throws IOException {
+        
+        SceneSwitcher witnesSC = new SceneSwitcher("WitnessPage2.fxml", event);
+        witnesSC.ConfirmSceneSwitch();
     }
 
 }

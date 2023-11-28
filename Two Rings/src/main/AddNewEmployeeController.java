@@ -29,6 +29,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
@@ -60,19 +62,24 @@ public class AddNewEmployeeController implements Initializable {
     @FXML
     private TextField empEmail;
 
-    private ArrayList<Employee> employeeList = new ArrayList<>();
+    public ObservableList<Employee> employeeList;
     @FXML
     private DatePicker dateOfBirth;
     @FXML
     private TextField salary;
+    @FXML
+    private ImageView bigImg;
+    @FXML
+    private ImageView littleImg;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        String[] bloodGroups = {"A(+ve)", "B(+ve)", "O(+ve)", "AB(+ve)", "A(-ve)", "B(-ve)", "B(-ve)", "O(-ve)", "AB(-ve)"};
-        bloodGroupCombo.getItems().addAll(bloodGroups);
+//        Image myImage = new Image(getClass().getResourceAsStream("addemp.png"));
+//        bigImg.setImage(myImage);
+//        littleImg.setImage(myImage);
 
         String[] typesOfEmployee = {"Laywer", "Register", "Marketing Maneger", "Event Maneger", "Accountant"};
         postCombo.getItems().addAll(typesOfEmployee);
@@ -81,7 +88,35 @@ public class AddNewEmployeeController implements Initializable {
         genderCombo.getItems().addAll(gender);
 
         //Creatiing an empty bin file!!
-        
+        File f = null;
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+
+        try {
+            f = new File("EmployeeList.bin");
+            fis = new FileInputStream(f);
+            ois = new ObjectInputStream(fis);
+            Employee emp;
+            try {
+                while( true) {
+                
+                    emp = (Employee) ois.readObject();
+
+                }
+            } catch (Exception e) {
+                
+            }
+        } catch (Exception ex){
+            
+        } finally {
+            try{
+                if (ois != null) {
+                    ois.close();
+                }
+            } catch (IOException ex){
+                
+            }
+        }
 
     }
 
@@ -92,7 +127,7 @@ public class AddNewEmployeeController implements Initializable {
 
         int employeeId = Integer.parseInt(assignId.getText());
         String phoneNo = empPhoneNo.getText();
-        
+
         //String empId = empPermanentAddress.getText();
         String newpass = setNewPass.getText();
         String confirm = confirmEmpPass.getText();
@@ -100,13 +135,40 @@ public class AddNewEmployeeController implements Initializable {
         String post = postCombo.getValue();
         int salaryy = Integer.parseInt(salary.getText());
         String email = empEmail.getText();
-        
 
-        
         LocalDate dateOfJoin = DOJ.getValue();
 
         Employee temp = new Employee(employeeId, dateOfJoin, salaryy, post, name, gender, email, phoneNo, newpass, DOB);
-        employeeList.add(temp);
+        
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+        File f = null;
+        try {
+            f = new File("EmployeeList.bin");
+            if (f.exists()) {
+                fos = new FileOutputStream(f,true);
+                oos = new AppendableObjectOutputStream(fos);
+                
+            } else {
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);
+                
+            }
+            oos.writeObject(temp);
+            
+        } catch (IOException ex) {
+            Logger.getLogger(AddNewEmployeeController.class.getName()).log(Level.SEVERE,null,ex);
+        } finally {
+            try {
+                if (oos != null) {
+                    oos.close();
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(AddNewEmployeeController.class.getName())
+                        .log(Level.SEVERE,null, ex);
+            }
+        }
+//        employeeList.add(temp);
 
         // creating a object stream file;
         /*
@@ -136,8 +198,7 @@ public class AddNewEmployeeController implements Initializable {
                 Logger.getLogger(MainFXMLController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        */
-
+         */
     }
 
     @FXML

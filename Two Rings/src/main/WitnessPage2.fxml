@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #29333d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #29333d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.WitnessPage2Controller">
    <top>
       <MenuBar blendMode="GREEN" BorderPane.alignment="CENTER">
         <menus>
@@ -55,7 +55,7 @@
    <center>
       <AnchorPane blendMode="BLUE" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="photoBT" layoutX="714.0" layoutY="515.0" mnemonicParsing="false" text="Album" />
+            <Button layoutX="714.0" layoutY="515.0" mnemonicParsing="false" onAction="#photoBT" text="Album" />
             <Button layoutX="40.0" layoutY="176.0" mnemonicParsing="false" onAction="#cupponButton" prefHeight="199.0" prefWidth="141.0" text="Claim Cupon Card" />
             <Button layoutX="417.0" layoutY="546.0" mnemonicParsing="false" onAction="#aboutUsBT" text="About Us" />
             <Button layoutX="40.0" layoutY="388.0" mnemonicParsing="false" onAction="#officeLocagtorBT" text="Locate Our Office" />

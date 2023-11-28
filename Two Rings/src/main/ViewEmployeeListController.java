@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -36,81 +37,125 @@ import javafx.stage.Stage;
  */
 public class ViewEmployeeListController implements Initializable {
 
+    private Employee model = new Employee();
+
     @FXML
     private TableView<Employee> empolyeTable;
     @FXML
     private TableColumn<Employee, String> nameColomn;
     @FXML
-    private TableColumn<Employee, String> idColomn;
+    private TableColumn<Employee, Integer> idColomn;
     @FXML
     private TableColumn<Employee, String> genderColomn;
     @FXML
     private TableColumn<Employee, String> postColomn;
     @FXML
-    private PieChart pieChart;
-    @FXML
     private Label pieChartInfoLabel;
     @FXML
     private TableColumn<Employee, String> phoneNoColomn;
-    private ArrayList<Employee> employeeList = new ArrayList<>();
+
     @FXML
     private TextArea TextArea;
+    @FXML
+    private PieChart employeePie;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-//        nameColomn.setCellFactory(new PropertyValueFactory<Employee, String>("Name"));
-//        idColomn.setCellFactory(new PropertyValueFactory<Employee, String>("employeeId"));
+
+//        nameColomn.setCellFactory(new PropertyValueFactory<Employee, >("Name"));
+//        idColomn.setCellFactory(new PropertyValueFactory<Employee, Integer>("employeeId"));
 //        genderColomn.setCellFactory(new PropertyValueFactory<Employee, String>("gender"));
 //        postColomn.setCellFactory(new PropertyValueFactory<Employee, String>("position"));
 //        phoneNoColomn.setCellFactory(new PropertyValueFactory<Employee, String>("contactNumber"));
-//        
+//        empolyeTable.setItems(model.getEmployeeList());
     }
 
     @FXML
     private void showEmployeeOnClick(ActionEvent event) throws IOException, ClassNotFoundException {
-        
-        
-        
 
-        ObjectInputStream ois=null;
-         try {
-            Employee e;
-            ois = new ObjectInputStream(new FileInputStream("EmpListObsject.bin"));
-            e = (Employee) ois.readObject();
-            empolyeTable.getItems().add(e);
-            //s = (Student) ois.readObject(); tableView.getItems().add(s);            
-            
-        } catch (Exception ex) {
+        ObservableList<Employee> empList = FXCollections.observableArrayList();
+        
+        nameColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("name"));
+        idColomn.setCellValueFactory(new PropertyValueFactory<Employee, Integer>("employeeID"));
+        genderColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("gender"));
+        postColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("designation"));
+        phoneNoColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("phoneNo"));
+        
+        File f = null;
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+
+        try {
+            f = new File("EmployeeList.bin");
+            fis = new FileInputStream(f);
+            ois = new ObjectInputStream(fis);
+            Employee emp;
             try {
-                if(ois!=null)
-                    ois.close();
-            } 
-            catch (IOException e) {
-                e.printStackTrace();
+                while (true) {
+                    emp = (Employee) ois.readObject();
+                    empList.add(emp);
+                    
+                }
+            } catch (Exception e) {
             }
-            ex.printStackTrace();
-        }
+        } catch (IOException ex) {
+        } finally {
+            try {
+                if (ois != null) {
+                    ois.close();
+                }
+            } catch (IOException ex) {
+            }
 
+        }
+        empolyeTable.setItems(empList);
         
+//        ObjectInputStream ois = null;
+//        try {
+//            Employee e;
+//            ois = new ObjectInputStream(new FileInputStream("EmpListObsject.bin"));
+//            e = (Employee) ois.readObject();
+//            empolyeTable.getItems().add(e);
+//            //s = (Student) ois.readObject(); tableView.getItems().add(s);            
+//
+//        } catch (Exception ex) {
+//            try {
+//                if (ois != null) {
+//                    ois.close();
+//                }
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//            ex.printStackTrace();
+//        }
+
     }
 
     @FXML
-        private void prevPage
-        (ActionEvent event) throws IOException {
-            Parent sceneA = FXMLLoader.load(getClass().getResource("CEOpage.fxml"));
-            Scene sceneB = new Scene(sceneA);
+    private void prevPage(ActionEvent event) throws IOException {
+        Parent sceneA = FXMLLoader.load(getClass().getResource("CEOpage.fxml"));
+        Scene sceneB = new Scene(sceneA);
 
-            Stage stg = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stg.setTitle("I am Back!!");
-            stg.setScene(sceneB);
-            stg.show();
-        }
+        Stage stg = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stg.setTitle("I am Back!!");
+        stg.setScene(sceneB);
+        stg.show();
+    }
 
     @FXML
     private void loadPieChartOnClick(ActionEvent event) {
+        Random random = new Random();
+        String[] typesOfEmployee = {"Laywer", "Register", "Marketing Maneger", "Event Maneger", "Accountant"};
+        ObservableList<PieChart.Data> list = FXCollections.observableArrayList();
+        for (int i = 0; i<(typesOfEmployee.length);i++){
+            
+            list.add(new PieChart.Data(typesOfEmployee[i], random.nextInt(1500)));
+            
+            employeePie.setData(list);
+    }
     }
 
-    }
+}

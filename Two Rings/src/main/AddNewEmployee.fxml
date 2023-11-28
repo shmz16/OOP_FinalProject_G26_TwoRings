@@ -25,14 +25,14 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Label>
-      <ImageView fitHeight="231.0" fitWidth="269.0" layoutX="729.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bigImg" fitHeight="231.0" fitWidth="269.0" layoutX="729.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Downloads/476844.png" />
+            <Image url="@../image/addemp.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="124.0" fitWidth="83.0" layoutX="308.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="littleImg" fitHeight="124.0" fitWidth="83.0" layoutX="308.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Downloads/476844.png" />
+            <Image url="@../image/addemp.png" />
          </image>
       </ImageView>
       <TextField fx:id="assignId" layoutX="137.0" layoutY="197.0" promptText="Assign Employee ID *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />

@@ -39,5 +39,6 @@
       <TextField fx:id="parcipentid" layoutX="447.0" layoutY="418.0" promptText="Participant User ID *" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" />
       <DatePicker fx:id="dateOfBirth" layoutX="708.0" layoutY="260.0" promptText="Date of birth" />
       <ComboBox fx:id="genderCombo" layoutX="708.0" layoutY="306.0" prefHeight="31.0" prefWidth="187.0" promptText="Gender" style="-fx-background-radius: 21; -fx-border-radius: 21;" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#witnessDasboard" text="&lt;" />
    </children>
 </AnchorPane>

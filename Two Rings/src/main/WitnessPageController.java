@@ -157,4 +157,12 @@ public class WitnessPageController implements Initializable {
         
     }
 
+    @FXML
+    private void witnessDasboard(ActionEvent event) throws IOException {
+       SceneSwitcher witnessDasboard = new SceneSwitcher("WitnessPage2.fxml", event);
+        witnessDasboard.ConfirmSceneSwitch();
+
+        
+    }
+
 }
