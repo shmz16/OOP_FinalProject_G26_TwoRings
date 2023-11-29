@@ -3,17 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package main;
+import java.io.Serializable;
 import java.time.LocalDate;
 /**
  *
  * @author User
  */
-public class Employee extends User{
+public class Employee extends User implements Serializable {
     
-    private int employeeID;
-    private LocalDate joinDate;
-    private int salary;
-    private String designation;
+    protected int employeeID;
+    protected LocalDate joinDate;
+    protected int salary;
+    protected String designation;
 
     public Employee(){
     
