@@ -11,14 +11,15 @@
    <children>
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#accountantBackButtonOnClick" style="-fx-background-color: #008080;" text="Back" textAlignment="CENTER" textFill="WHITE" />
       <Label layoutX="50.0" layoutY="80.0" text="Filter: " />
-      <ComboBox layoutX="91.0" layoutY="75.0" prefHeight="33.0" prefWidth="163.0" style="-fx-border-color: #008080;" />
-      <Button layoutX="266.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Apply" textAlignment="CENTER" textFill="WHITE" />
-      <Button layoutX="335.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Reset" textAlignment="CENTER" textFill="WHITE" />
-      <TableView layoutX="30.0" layoutY="124.0" prefHeight="402.0" prefWidth="740.0" style="-fx-border-color: #008080;">
+      <ComboBox fx:id="filterComboBoxSC" layoutX="91.0" layoutY="75.0" prefHeight="33.0" prefWidth="163.0" style="-fx-border-color: #008080;" />
+      <Button layoutX="266.0" layoutY="76.0" mnemonicParsing="false" onAction="#applyFilterButtonSC" style="-fx-background-color: #008080;" text="Apply" textAlignment="CENTER" textFill="WHITE" />
+      <Button layoutX="335.0" layoutY="76.0" mnemonicParsing="false" onAction="#resetFilterButtonSC" style="-fx-background-color: #008080;" text="Reset" textAlignment="CENTER" textFill="WHITE" />
+      <TableView fx:id="serviceChargesTable" layoutX="30.0" layoutY="124.0" prefHeight="402.0" prefWidth="740.0" style="-fx-border-color: #008080;">
          <columns>
-            <TableColumn prefWidth="263.0" text="Name" />
-            <TableColumn prefWidth="247.0" text="Designation" />
-            <TableColumn prefWidth="228.0" text="Service Cost" />
+            <TableColumn fx:id="serviceChargesTableEmpID" prefWidth="162.0" text="ID" />
+            <TableColumn fx:id="serviceChargesTableEmpName" prefWidth="220.0" text="Name" />
+            <TableColumn fx:id="serviceChargesTableEmpDes" prefWidth="163.0" text="Designation" />
+            <TableColumn fx:id="serviceChargesTableEmpSC" prefWidth="193.0" text="Service Cost" />
          </columns>
       </TableView>
    </children>

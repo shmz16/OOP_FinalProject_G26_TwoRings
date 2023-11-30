@@ -4,7 +4,10 @@
  */
 package main;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -28,10 +31,6 @@ public class AccountantCheckSalariesSceneController implements Initializable {
     @FXML
     private ComboBox<String> filterComboBox;
     @FXML
-    private Button applyFilterButton;
-    @FXML
-    private Button resetFilterButton;
-    @FXML
     private TableView<AccountantSalariesTableClass> salariesTable;
     @FXML
     private TableColumn<AccountantSalariesTableClass, String> salariesTableEmployeeName;
@@ -43,7 +42,8 @@ public class AccountantCheckSalariesSceneController implements Initializable {
     private TableColumn<AccountantSalariesTableClass, LocalDate> salariesTableEmployeeJoinDate;
     @FXML
     private TableColumn<AccountantSalariesTableClass, Integer> salariesTableEmployeeID;
-
+    
+    public ArrayList<Employee> empList = new ArrayList<Employee>();
     /**
      * Initializes the controller class.
      */
@@ -62,20 +62,86 @@ public class AccountantCheckSalariesSceneController implements Initializable {
         salariesTableEmployeeSalary.setCellValueFactory(new PropertyValueFactory<AccountantSalariesTableClass, Integer>("salary"));
         salariesTableEmployeeJoinDate.setCellValueFactory(new PropertyValueFactory<AccountantSalariesTableClass, LocalDate>("joinDate"));
         
-        ArrayList<Employee> empList = new ArrayList();
-        salariesTable.getItems().add(new AccountantSalariesTableClass(
-                empList(i).employeeID,
-                empList(i).name,
-                empList(i).deisgnation,
-                empList(i).salary,
-                empList(i).joinDate,
-        );
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        File employeesFile = null;
+        
+        try {
+            employeesFile = new File("Employees.bin");
+            fis = new FileInputStream(employeesFile);
+            ois = new ObjectInputStream(fis);
+            Employee tempEmp;
+            try {
+                while (true) {
+                    tempEmp = (Employee) ois.readObject();
+                    empList.add(tempEmp);
+                }
+            } 
+            catch (Exception e) {
+            }
+        } 
+        catch (IOException ex) {
+        }
+        finally {
+            try {
+                if (ois != null) {
+                    ois.close();
+                }
+            } 
+            catch (IOException ex) {
+            }
+        }
+        int i = 0;
+        while (i <= empList.size()) {
+            salariesTable.getItems().add(new AccountantSalariesTableClass(
+                    empList.get(i).employeeID,
+                    empList.get(i).name,
+                    empList.get(i).designation,
+                    empList.get(i).salary,
+                    empList.get(i).joinDate)
+            );
+            i++;
+        }
     }
 
     @FXML
     private void accountantBackButtonOnClick(ActionEvent event) throws IOException {
         BackButton accountantBackButton = new BackButton(event);
         accountantBackButton.AccountantBackButton();
+    }
+
+    @FXML
+    private void applyFilterButton(ActionEvent event) {
+        salariesTable.getItems().clear();
+        int i = 0;
+        while (i <= empList.size()) {
+            if (empList.get(i).designation == filterComboBox.getValue()) {
+                salariesTable.getItems().add(new AccountantSalariesTableClass(
+                        empList.get(i).employeeID,
+                        empList.get(i).name,
+                        empList.get(i).designation,
+                        empList.get(i).salary,
+                        empList.get(i).joinDate)
+                );
+            }
+            i++;
+        }
+    }
+
+    @FXML
+    private void resetFilterButton(ActionEvent event) {
+        salariesTable.getItems().clear();
+        int i = 0;
+        while (i <= empList.size()) {
+            salariesTable.getItems().add(new AccountantSalariesTableClass(
+                    empList.get(i).employeeID,
+                    empList.get(i).name,
+                    empList.get(i).designation,
+                    empList.get(i).salary,
+                    empList.get(i).joinDate)
+            );
+            i++;
+        }
     }
     
 }

@@ -15,10 +15,10 @@ public class AccountantSalariesTableClass {
     private int employeeID;
     private String employeeName;
     private String designation;
-    private String salary;
+    private int salary;
     private LocalDate joinDate;
 
-    public AccountantSalariesTableClass(int employeeID, String employeeName, String designation, String salary, LocalDate joinDate) {
+    public AccountantSalariesTableClass(int employeeID, String employeeName, String designation, int salary, LocalDate joinDate) {
         this.employeeName = employeeName;
         this.designation = designation;
         this.salary = salary;
@@ -49,11 +49,11 @@ public class AccountantSalariesTableClass {
         this.designation = designation;
     }
 
-    public String getSalary() {
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
