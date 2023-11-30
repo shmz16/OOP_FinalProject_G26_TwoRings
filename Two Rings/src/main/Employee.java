@@ -10,31 +10,42 @@ import javafx.collections.ObservableList;
  *
  * @author User
  */
-public class Employee extends User implements Serializable{
+public class Employee implements Serializable{
 
-     int employeeID;
-     LocalDate joinDate;
-     int salary;
-     String designation;
+     
+    String name;
+    int id,salary;
+    LocalDate dateOfBirth,dateOfjoining;
+    String phoneNo;
+    String email,password,gender,designation,ratings;
 
-    public Employee(int employeeID, LocalDate joinDate, int salary, String designation) {
-        this.employeeID = employeeID;
-        this.joinDate = joinDate;
+    public Employee(String name, int id, int salary, LocalDate dateOfBirth, LocalDate dateOfjoining, String phoneNo, String email, String password, String gender, String designation) {
+        this.name = name;
+        this.id = id;
         this.salary = salary;
+        this.dateOfBirth = dateOfBirth;
+        this.dateOfjoining = dateOfjoining;
+        this.phoneNo = phoneNo;
+        this.email = email;
+        this.password = password;
+        this.gender = gender;
         this.designation = designation;
+        
     }
 
-    public Employee(int employeeID, LocalDate joinDate, int salary, String designation, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
-        super(name, gender, email, phoneNo, password, dateOfBirth);
-        this.employeeID = employeeID;
-        this.joinDate = joinDate;
-        this.salary = salary;
-        this.designation = designation;
+    public Employee(String ratings) {
+        this.ratings = ratings;
+    }
+    
+    public String getRatings() {
+        return ratings;
     }
 
-    public Employee() {
+    public void setRatings(String ratings) {
+        this.ratings = ratings;
     }
 
+    
     public String getName() {
         return name;
     }
@@ -43,36 +54,20 @@ public class Employee extends User implements Serializable{
         this.name = name;
     }
 
-    public String getGender() {
-        return gender;
+    public int getId() {
+        return id;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getEmail() {
-        return email;
+    public int getSalary() {
+        return salary;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoneNo() {
-        return phoneNo;
-    }
-
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 
     public LocalDate getDateOfBirth() {
@@ -83,32 +78,44 @@ public class Employee extends User implements Serializable{
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Employee(String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
-        super(name, gender, email, phoneNo, password, dateOfBirth);
-    }
-    
-    public int getEmployeeID() {
-        return employeeID;
+    public LocalDate getDateOfjoining() {
+        return dateOfjoining;
     }
 
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
+    public void setDateOfjoining(LocalDate dateOfjoining) {
+        this.dateOfjoining = dateOfjoining;
     }
 
-    public LocalDate getJoinDate() {
-        return joinDate;
+    public String getPhoneNo() {
+        return phoneNo;
     }
 
-    public void setJoinDate(LocalDate joinDate) {
-        this.joinDate = joinDate;
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
     }
 
-    public int getSalary() {
-        return salary;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getDesignation() {
@@ -121,9 +128,10 @@ public class Employee extends User implements Serializable{
 
     @Override
     public String toString() {
-        return "Employee{" + "employeeID=" + employeeID + ", joinDate=" + joinDate + ", salary=" + salary + ", designation=" + designation + '}';
+        return "Employee{" + "name=" + name + ", id=" + id + ", salary=" + salary + ", dateOfBirth=" + dateOfBirth + ", dateOfjoining=" + dateOfjoining + ", phoneNo=" + phoneNo + ", email=" + email + ", password=" + password + ", gender=" + gender + ", designation=" + designation + ", ratings=" + ratings + '}';
     }
 
+    
     
     
   

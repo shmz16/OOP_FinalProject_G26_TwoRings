@@ -13,23 +13,23 @@ import java.util.Date;
  */
 public class Witness {
     
-    private String firstName;
-    private String lastName;
-    private LocalDate dateOfBirth;
-    private String gender;
-    private String nidNo;
-    private String maritalStatus;
-    private String witnessFor;
-    private String cName;
-    private String cId;
-    private String password;
-    private String country;
+    String firstName;
+    String lastName;
+    LocalDate dateOfBirth;
+    String gender;
+    String nidNo;
+    String maritalStatus;
+    String witnessFor;
+    String cName;
+    String cId;
+    String password;
+    String country;
     
     
-    private String address;
+    String address;
     
-    private String contactNumber;
-    private String email;
+    String contactNumber;
+    String email;
 
     public Witness(String firstName, String lastName, LocalDate dateOfBirth, String gender, String nidNo, String witnessFor, String cName, String cId, String password, String country, String address, String contactNumber, String email) {
         this.firstName = firstName;
@@ -46,7 +46,7 @@ public class Witness {
         this.contactNumber = contactNumber;
         this.email = email;
     }
-
+    
     public String getFirstName() {
         return firstName;
     }

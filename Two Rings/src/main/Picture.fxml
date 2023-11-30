@@ -27,11 +27,11 @@
          </image></ImageView>
       <ImageView fx:id="pic4" fitHeight="288.0" fitWidth="273.0" layoutX="58.0" layoutY="398.0" pickOnBounds="true">
          <image>
-            <Image url="@../image/marriagePic%20(2).jpg" />
+            <Image url="@../image/marriagePic%20(2).jpeg" />
          </image></ImageView>
       <ImageView fx:id="pic5" fitHeight="150.0" fitWidth="200.0" layoutX="653.0" layoutY="559.0" pickOnBounds="true">
          <image>
-            <Image url="@../image/marriagePic%20(3).jpg" />
+            <Image url="@../image/istockphoto-1190043570-612x612.jpg" />
          </image></ImageView>
       <ImageView fx:id="pic6" fitHeight="150.0" fitWidth="200.0" layoutX="744.0" layoutY="181.0" pickOnBounds="true" />
       <ImageView fx:id="pic8" fitHeight="288.0" fitWidth="247.0" layoutX="355.0" layoutY="398.0" pickOnBounds="true">

@@ -28,7 +28,6 @@ public class FinanceReportController implements Initializable {
 
     @FXML
     private TextArea totalMarraige;
-    @FXML
     private TextArea mrrRetation;
     @FXML
     private TextArea avgSalesPerAccount;
@@ -66,13 +65,8 @@ public class FinanceReportController implements Initializable {
     private void campaignAnalitycs(ActionEvent event) throws IOException {
         
         
-        Parent sceneA = FXMLLoader.load(getClass().getResource("Campaign Analytics.fxml"));
-        Scene sceneB = new Scene(sceneA);
-
-        Stage stg = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stg.setTitle("I am Back!!");
-        stg.setScene(sceneB);
-        stg.show();
+        SceneSwitcher winessSC = new SceneSwitcher("Campaign Analytics.fxml", event);
+        winessSC.ConfirmSceneSwitch();
     }
 
     @FXML
@@ -83,7 +77,7 @@ public class FinanceReportController implements Initializable {
         totalMarraige.setText(String.valueOf( random.nextInt(100)));
         avgSalesPerAccount.setText(String.valueOf( random.nextInt(100)));
         totalAccounts.setText(String.valueOf( random.nextInt(100)));
-        mrrRetation.setText(String.valueOf( random.nextInt(100)));
+        
         
         
         
@@ -91,6 +85,10 @@ public class FinanceReportController implements Initializable {
 
     @FXML
     private void salesPerMonthChartOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void suscriberGrowth(ActionEvent event) {
     }
     
 }

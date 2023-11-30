@@ -6,10 +6,13 @@ package main;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import static java.lang.Math.random;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -38,11 +41,10 @@ import javafx.stage.Stage;
 public class ViewEmployeeListController implements Initializable {
 
 //    private Employee model = new Employee();
-
     @FXML
     private TableView<Employee> empolyeTable;
-//    @FXML
-//    private TableColumn<Employee, String> nameColomn;
+    @FXML
+    private TableColumn<Employee, String> nameColomn;
     @FXML
     private TableColumn<Employee, Integer> idColomn;
     @FXML
@@ -58,33 +60,32 @@ public class ViewEmployeeListController implements Initializable {
     private TextArea TextArea;
     @FXML
     private PieChart employeePie;
-    
+
     @FXML
     private Button confirmAddEmployee;
-    
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
 
     }
 
     @FXML
     private void showEmployeeOnClick(ActionEvent event) throws IOException, ClassNotFoundException {
         ObservableList<Employee> empList = FXCollections.observableArrayList();
-        
-//        nameColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("name"));
-        idColomn.setCellValueFactory(new PropertyValueFactory<Employee, Integer>("employeeID"));
+
+        nameColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("name"));
+        idColomn.setCellValueFactory(new PropertyValueFactory<Employee, Integer>("id"));
         genderColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("gender"));
         postColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("designation"));
         phoneNoColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("phoneNo"));
-        
+
         File f = null;
         FileInputStream fis = null;
         ObjectInputStream ois = null;
-        
+
         try {
             f = new File("EmployeeList.bin");
             fis = new FileInputStream(f);
@@ -95,7 +96,7 @@ public class ViewEmployeeListController implements Initializable {
                     emp = (Employee) ois.readObject();
                     empList.add(emp);
                     System.out.println(emp.toString());
-                    
+
                 }
             } catch (Exception e) {
             }
@@ -110,8 +111,7 @@ public class ViewEmployeeListController implements Initializable {
 
         }
         empolyeTable.setItems(empList);
-        
-        
+
 //        ObjectInputStream ois = null;
 //        try {
 //            Employee e;
@@ -130,10 +130,6 @@ public class ViewEmployeeListController implements Initializable {
 //            }
 //            ex.printStackTrace();
 //        }
-
-
-       
-
     }
 
     @FXML
@@ -148,16 +144,57 @@ public class ViewEmployeeListController implements Initializable {
     }
 
     @FXML
-    private void loadPieChartOnClick(ActionEvent event) {
+    private void loadPieChartOnClick(ActionEvent event) throws FileNotFoundException, IOException, ClassNotFoundException {
+//        List <Employee> desigList = new ArrayList<>();
+//        
+//        ObservableList<PieChart.Data> list = FXCollections.observableArrayList();
+//        File f = null;
+//        FileInputStream fis = null;
+//        ObjectInputStream ois = null;
+//        Random random = new Random();
+//        try {
+//            f = new File("EmployeeList.bin");
+//            fis = new FileInputStream(f);
+//            ois = new ObjectInputStream(fis);
+//            Employee emp;
+//            try {
+//                while (true) {
+//                    emp = (Employee) ois.readObject();
+//                    
+//
+//                    desigList.add(emp);
+//                    
+//                    System.out.println(emp.toString());
+//
+//                }
+//                
+//
+//            } catch (Exception e) {
+//            }
+//        } catch (IOException ex) {
+//        } finally {
+//            try {
+//                if (ois != null) {
+//                    ois.close();
+//                }
+//            } catch (IOException ex) {
+//            }
+//            
+//
+//        }
+//        ArrayList<String> allDesig = (desigList,"designation");
+        
+        
+
         Random random = new Random();
         String[] typesOfEmployee = {"Laywer", "Register", "Marketing Maneger", "Event Maneger", "Accountant"};
         ObservableList<PieChart.Data> list = FXCollections.observableArrayList();
-        for (int i = 0; i<(typesOfEmployee.length);i++){
-            
+        for (int i = 0; i < (typesOfEmployee.length); i++) {
+
             list.add(new PieChart.Data(typesOfEmployee[i], random.nextInt(1500)));
-            
+
             employeePie.setData(list);
-    }
+        }
     }
 
 }

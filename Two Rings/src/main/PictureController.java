@@ -40,15 +40,11 @@ public class PictureController implements Initializable {
     @FXML
     private ImageView pic6;
     @FXML
-    private ImageView pic7;
-    @FXML
     private ImageView pic8;
     @FXML
     private ImageView pic9;
     @FXML
-    private ImageView pic10;
-    @FXML
-    private ImageView pic11;
+    private ImageView pic51;
 
     /**
      * Initializes the controller class.

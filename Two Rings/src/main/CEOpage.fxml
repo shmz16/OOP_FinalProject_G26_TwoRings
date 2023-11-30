@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -31,5 +33,14 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Label>
+      <Label layoutX="713.0" layoutY="412.0" prefHeight="59.0" prefWidth="271.0" text="Send Massage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Button layoutX="840.0" layoutY="675.0" mnemonicParsing="false" onAction="#sendMassageBT" text="send" />
+      <ComboBox fx:id="sendToCombo" layoutX="942.0" layoutY="471.0" prefHeight="31.0" prefWidth="84.0" promptText="To" />
+      <Button layoutX="754.0" layoutY="675.0" mnemonicParsing="false" onAction="#receiveMassageBT" text="Receive" />
+      <TextArea fx:id="massageTextArea" layoutX="706.0" layoutY="465.0" prefHeight="200.0" prefWidth="200.0" promptText="Write Here:  " />
    </children>
 </AnchorPane>

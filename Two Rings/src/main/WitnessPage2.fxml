@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #29333d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.WitnessPage2Controller">
    <top>
@@ -59,6 +61,11 @@
             <Button layoutX="79.0" layoutY="447.0" mnemonicParsing="false" onAction="#cupponButton" prefHeight="199.0" prefWidth="141.0" style="-fx-background-color: #ccffff;" text="Claim Cupon Card" textAlignment="CENTER" />
             <Button layoutX="241.0" layoutY="447.0" mnemonicParsing="false" onAction="#aboutUsBT" prefHeight="204.0" prefWidth="146.0" text="About Us" />
             <Button layoutX="403.0" layoutY="448.0" mnemonicParsing="false" onAction="#officeLocagtorBT" prefHeight="203.0" prefWidth="145.0" text="Locate Our Office" />
+            <Label layoutX="55.0" layoutY="39.0" text="Welcome to Two Rings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="35.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </center>

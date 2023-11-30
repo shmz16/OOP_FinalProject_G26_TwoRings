@@ -131,8 +131,8 @@ public class AddNewEmployeeController implements Initializable {
         String phoneNo = empPhoneNo.getText();
 
         //String empId = empPermanentAddress.getText();
-        String newpass = setNewPass.getText();
-        String confirm = confirmEmpPass.getText();
+        String newPass = setNewPass.getText();
+        String confirmPass = confirmEmpPass.getText();
         String gender = genderCombo.getValue();
         String post = postCombo.getValue();
         int salaryy = Integer.parseInt(salary.getText());
@@ -156,7 +156,7 @@ public class AddNewEmployeeController implements Initializable {
                 oos = new ObjectOutputStream(fos);
                 
             }
-            Employee temp = new Employee(employeeId, dateOfJoin, salaryy, post, name, gender, email, phoneNo, newpass, DOB);
+            Employee temp = new Employee(name, employeeId, salaryy, DOB, dateOfJoin, phoneNo, email, newPass, gender, post);
             
             oos.writeObject(temp);
             System.out.println(temp);

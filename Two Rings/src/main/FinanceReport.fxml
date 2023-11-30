@@ -12,22 +12,22 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="175.0" style="-fx-background-color: #29333d;">
          <children>
-            <Button layoutX="12.0" layoutY="261.0" mnemonicParsing="false" text="MRR Grouth" />
+            <Button layoutX="12.0" layoutY="261.0" mnemonicParsing="false" onAction="#suscriberGrowth" text="Subscriber growth" />
             <Button layoutX="12.0" layoutY="343.0" mnemonicParsing="false" onAction="#campaignAnalitycs" text="Campaign Analytics" />
             <Button layoutX="12.0" layoutY="302.0" mnemonicParsing="false" onAction="#salesPerMonthChartOnClick" text="Sales Per Month" />
             <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#prevPage" text="&lt;" />
          </children>
       </AnchorPane>
-      <Label layoutX="198.0" layoutY="24.0" text="Excutive Dashboard" wrapText="true">
+      <Label layoutX="257.0" layoutY="24.0" text="Excutive Dashboard" wrapText="true">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <ComboBox fx:id="postCombo" layoutX="221.0" layoutY="102.0" prefHeight="51.0" prefWidth="223.0" promptText="Posts" />
-      <Label layoutX="221.0" layoutY="75.0" text="Posts" wrapText="true" />
-      <Label layoutX="516.0" layoutY="75.0" text="Service" wrapText="true" />
-      <ComboBox fx:id="serviceCombo" layoutX="516.0" layoutY="102.0" prefHeight="51.0" prefWidth="223.0" promptText="Service" />
-      <Pane layoutX="221.0" layoutY="185.0" prefHeight="200.0" prefWidth="223.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15;">
+      <ComboBox fx:id="postCombo" layoutX="280.0" layoutY="102.0" prefHeight="51.0" prefWidth="223.0" promptText="Posts" />
+      <Label layoutX="280.0" layoutY="75.0" text="Posts" wrapText="true" />
+      <Label layoutX="660.0" layoutY="75.0" text="Service" wrapText="true" />
+      <ComboBox fx:id="serviceCombo" layoutX="660.0" layoutY="102.0" prefHeight="51.0" prefWidth="223.0" promptText="Service" />
+      <Pane layoutX="280.0" layoutY="185.0" prefHeight="200.0" prefWidth="223.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15;">
          <children>
             <Label layoutX="14.0" layoutY="14.0" text="Total Marriage" wrapText="true" />
             <TextArea fx:id="totalMarraige" layoutX="14.0" layoutY="41.0" prefHeight="162.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15; rad: 20;" text="0" wrapText="true">
@@ -36,16 +36,7 @@
                </font></TextArea>
          </children>
       </Pane>
-      <Pane layoutX="516.0" layoutY="428.0" prefHeight="200.0" prefWidth="223.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15;">
-         <children>
-            <Label layoutX="14.0" layoutY="14.0" text="MRR Retation" wrapText="true" />
-            <TextArea fx:id="mrrRetation" layoutX="12.0" layoutY="36.0" prefHeight="162.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" text="0" wrapText="true">
-               <font>
-                  <Font size="65.0" />
-               </font></TextArea>
-         </children>
-      </Pane>
-      <Pane layoutX="516.0" layoutY="185.0" prefHeight="200.0" prefWidth="223.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15;">
+      <Pane layoutX="660.0" layoutY="185.0" prefHeight="200.0" prefWidth="223.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15;">
          <children>
             <Label layoutX="14.0" layoutY="14.0" text="Average Sales Per Account" wrapText="true" />
             <TextArea fx:id="avgSalesPerAccount" layoutX="12.0" layoutY="36.0" prefHeight="162.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" text="0" wrapText="true">
@@ -54,7 +45,7 @@
                </font></TextArea>
          </children>
       </Pane>
-      <Pane layoutX="221.0" layoutY="428.0" prefHeight="200.0" prefWidth="223.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15;">
+      <Pane layoutX="280.0" layoutY="428.0" prefHeight="200.0" prefWidth="223.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15;">
          <children>
             <Label layoutX="14.0" layoutY="14.0" text="Total Accounts" wrapText="true" />
             <TextArea fx:id="totalAccounts" layoutX="12.0" layoutY="36.0" prefHeight="155.0" prefWidth="169.0" style="-fx-background-color: #ffffff;" text="0" wrapText="true">
@@ -63,6 +54,6 @@
                </font></TextArea>
          </children>
       </Pane>
-      <Button layoutX="856.0" layoutY="290.0" mnemonicParsing="false" onAction="#show4TextFieldOnClick" prefHeight="155.0" prefWidth="135.0" text="Click To Show details" wrapText="true" />
+      <Button layoutX="704.0" layoutY="487.0" mnemonicParsing="false" onAction="#show4TextFieldOnClick" prefHeight="155.0" prefWidth="135.0" text="Click To Show details" wrapText="true" />
    </children>
 </AnchorPane>

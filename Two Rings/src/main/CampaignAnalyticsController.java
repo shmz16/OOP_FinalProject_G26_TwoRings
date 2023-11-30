@@ -154,4 +154,8 @@ public class CampaignAnalyticsController implements Initializable {
 
     }
 
+    @FXML
+    private void ddddddddddD(ActionEvent event) {
+    }
+
 }

@@ -10,18 +10,17 @@
       <AnchorPane prefHeight="124.0" prefWidth="1080.0">
          <children>
             <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#prevPage" text="&lt;" />
+            <TableView fx:id="empolyeTable" layoutX="233.0" layoutY="74.0" prefHeight="479.0" prefWidth="614.0">
+               <columns>
+                  <TableColumn fx:id="nameColomn" prefWidth="154.0" text="Name" />
+                  <TableColumn fx:id="idColomn" prefWidth="71.0" text="ID" />
+                  <TableColumn fx:id="genderColomn" prefWidth="72.0" text="Gender" />
+                  <TableColumn fx:id="salryColomn" prefWidth="113.0" text="Salary" />
+                  <TableColumn fx:id="postColomn" prefWidth="98.0" text="Post" />
+                  <TableColumn fx:id="ratingColomn" prefWidth="101.0" text="Rating" />
+               </columns>
+            </TableView>
          </children></AnchorPane>
-      <TableView fx:id="empolyeTable" layoutX="132.0" layoutY="62.0" prefHeight="479.0" prefWidth="739.0">
-         <columns>
-            <TableColumn fx:id="nameColomn" prefWidth="154.0" text="Name" />
-            <TableColumn fx:id="idColomn" prefWidth="71.0" text="ID" />
-            <TableColumn fx:id="genderColomn" prefWidth="72.0" text="Gender" />
-            <TableColumn fx:id="salryColomn" prefWidth="113.0" text="Salary" />
-            <TableColumn fx:id="postColomn" prefWidth="98.0" text="Post" />
-            <TableColumn fx:id="DOJColomn" prefWidth="129.0" text="Date Of Joining" />
-            <TableColumn fx:id="ratingColomn" prefWidth="101.0" text="Rating" />
-         </columns>
-      </TableView>
-      <Button layoutX="493.0" layoutY="592.0" mnemonicParsing="false" onAction="#empReportBT" text="Load report" />
+      <Button layoutX="491.0" layoutY="591.0" mnemonicParsing="false" onAction="#empReportBT" text="Load report" />
    </children>
 </AnchorPane>
