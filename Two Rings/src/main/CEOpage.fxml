@@ -14,7 +14,7 @@
       <AnchorPane layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="185.0" style="-fx-background-color: #29333d;">
          <children>
             <Button layoutX="14.0" layoutY="380.0" mnemonicParsing="false" onAction="#bookMetting" text="Book A Meeting" wrapText="true" />
-            <Button layoutX="14.0" layoutY="338.0" mnemonicParsing="false" onAction="#calculateTaxOnClick" text="Tax Calculator" wrapText="true" />
+            <Button layoutX="14.0" layoutY="338.0" mnemonicParsing="false" text="Advertisement" wrapText="true" />
             <Button layoutX="14.0" layoutY="299.0" mnemonicParsing="false" onAction="#financeReportOnClick" text="Finance Report" wrapText="true" />
             <Button layoutX="14.0" layoutY="257.0" mnemonicParsing="false" onAction="#employeeReportOnClick" text="Employee Report" wrapText="true" />
             <Button layoutX="14.0" layoutY="212.0" mnemonicParsing="false" onAction="#employeeListOnClick" text="Employee List" wrapText="true" />

@@ -35,7 +35,7 @@ public class CEOpageController implements Initializable {
 
     @FXML
     private ComboBox<String> sendToCombo;
-
+   
     @FXML
     private TextArea massageTextArea;
 
@@ -162,15 +162,15 @@ public class CEOpageController implements Initializable {
             f = new File("Massage.bin");
             fis = new FileInputStream(f);
             ois = new ObjectInputStream(fis);
-            CEO readMassage;
+            CEO readMassage ;
             try {
                 while (true) {
                     readMassage = (CEO) ois.readObject();
-
+                    
                     recevedMassage = readMassage.massage;
                     System.out.println("Reading Object");
                     System.out.println(readMassage.massage);
-                    massageTextArea.setText("Received:\n" + recevedMassage);
+                    massageTextArea.setText("Received:\n"+recevedMassage);
 
                 }
             } catch (Exception e) {
@@ -186,12 +186,6 @@ public class CEOpageController implements Initializable {
 
         }
 //        massageTextField.setText(recevedMassage);
-    }
-
-    @FXML
-    private void calculateTaxOnClick(ActionEvent event) throws IOException {
-        SceneSwitcher switchToViewProfitsScene = new SceneSwitcher("TaxCalculator.fxml", event);
-        switchToViewProfitsScene.ConfirmSceneSwitch();
     }
 
 }

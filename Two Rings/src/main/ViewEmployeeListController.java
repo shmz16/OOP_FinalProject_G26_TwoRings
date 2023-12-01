@@ -127,17 +127,13 @@ public class ViewEmployeeListController implements Initializable {
 
     @FXML
     private void loadPieChartOnClick(ActionEvent event) throws FileNotFoundException, IOException, ClassNotFoundException {
-        Class myClass ;
-
-//      
-//        ObservableList<Employee> employee = FXCollections.observableArrayList();
-//        Random random = new Random();
-//
+//        List <Employee> desigList = new ArrayList<>();
+//        
 //        ObservableList<PieChart.Data> list = FXCollections.observableArrayList();
 //        File f = null;
 //        FileInputStream fis = null;
 //        ObjectInputStream ois = null;
-//        
+//        Random random = new Random();
 //        try {
 //            f = new File("EmployeeList.bin");
 //            fis = new FileInputStream(f);
@@ -146,11 +142,15 @@ public class ViewEmployeeListController implements Initializable {
 //            try {
 //                while (true) {
 //                    emp = (Employee) ois.readObject();
-//                    employee.add(emp);
-//                    System.out.println(emp.toString());
 //                    
-//                    list.add(new PieChart.Data(emp.designation, random.nextInt(15)));
+//
+//                    desigList.add(emp);
+//                    
+//                    System.out.println(emp.toString());
+//
 //                }
+//                
+//
 //            } catch (Exception e) {
 //            }
 //        } catch (IOException ex) {
@@ -161,9 +161,10 @@ public class ViewEmployeeListController implements Initializable {
 //                }
 //            } catch (IOException ex) {
 //            }
+//            
 //
 //        }
-//        employeePie.setData(list);
+//        ArrayList<String> allDesig = (desigList,"designation");
         
         
 
@@ -172,7 +173,7 @@ public class ViewEmployeeListController implements Initializable {
         ObservableList<PieChart.Data> list = FXCollections.observableArrayList();
         for (int i = 0; i < (typesOfEmployee.length); i++) {
 
-            list.add(new PieChart.Data(typesOfEmployee[i], random.nextInt(17)));
+            list.add(new PieChart.Data(typesOfEmployee[i], random.nextInt(1500)));
 
             employeePie.setData(list);
         }
