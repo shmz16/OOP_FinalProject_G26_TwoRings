@@ -17,7 +17,7 @@ public class Venue {
     public Venue(){
     
     
-}
+};
 
     public Venue(String venueName, String venueType, String venueLocation, int rentingcost) {
         this.venueName = venueName;

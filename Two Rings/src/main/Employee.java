@@ -10,10 +10,10 @@ import java.time.LocalDate;
  */
 public class Employee extends User{
     
-    private int employeeID;
-    private LocalDate joinDate;
-    private int salary;
-    private String designation;
+    protected int employeeID;
+    protected LocalDate joinDate;
+    protected int salary;
+    protected String designation;
 
     public Employee(){
     

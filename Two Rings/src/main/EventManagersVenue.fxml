@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.EventManagerVenueController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -45,7 +45,7 @@
                   </Menu>
                </menus>
             </MenuBar>
-            <Label layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
+            <Label fx:id="tworingslogolabel" layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
                <font>
                   <Font name="Yu Gothic Regular" size="27.0" />
                </font>
@@ -55,22 +55,22 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+      <Button fx:id="helpcenterlabel" layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
+      <Button fx:id="settingslabel" layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+      <Button fx:id="Aboutlabel" layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Dash Board" textFill="WHITE">
+      <Button fx:id="dashboardlabel" layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Dash Board" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="NONE" />
          </cursor>
@@ -80,23 +80,24 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <ListView layoutX="5.0" layoutY="217.0" prefHeight="224.0" prefWidth="212.0" />
-      <ListView layoutX="217.0" layoutY="217.0" prefHeight="224.0" prefWidth="212.0" />
-      <ListView layoutX="429.0" layoutY="217.0" prefHeight="224.0" prefWidth="169.0" />
-      <Label layoutX="286.0" layoutY="188.0" text="Menu" textFill="TEAL">
+      <ListView fx:id="venuelist" layoutX="5.0" layoutY="217.0" prefHeight="224.0" prefWidth="212.0" />
+      <ListView fx:id="menulist" layoutX="217.0" layoutY="217.0" prefHeight="224.0" prefWidth="212.0" />
+      <ListView fx:id="otherslist" layoutX="429.0" layoutY="217.0" prefHeight="224.0" prefWidth="169.0" />
+      <Label fx:id="menulabel" layoutX="286.0" layoutY="188.0" text="Menu" textFill="TEAL">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="486.0" layoutY="188.0" text="Others" textFill="TEAL">
+      <Label fx:id="otherslabel" layoutX="486.0" layoutY="188.0" text="Others" textFill="TEAL">
          <font>
             <Font name="System Italic" size="21.0" />
          </font>
       </Label>
-      <Label layoutX="89.0" layoutY="188.0" text="Venue" textFill="TEAL">
+      <Label fx:id="venuelabel" layoutX="89.0" layoutY="188.0" text="Venue" textFill="TEAL">
          <font>
             <Font name="System Italic" size="21.0" />
          </font>
       </Label>
+      <Button layoutX="21.0" layoutY="135.0" mnemonicParsing="false" onAction="#backbuttononclick" text="&lt;" />
    </children>
 </AnchorPane>

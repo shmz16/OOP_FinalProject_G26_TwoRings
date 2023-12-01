@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.EventManagerCustomerController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -49,7 +49,7 @@
                   </Menu>
                </menus>
             </MenuBar>
-            <Label layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
+            <Label fx:id="TworingsLogolabel" layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
                <font>
                   <Font name="Yu Gothic Regular" size="27.0" />
                </font>
@@ -59,45 +59,48 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+      <Button fx:id="helpcenterlabel" layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
+      <Button fx:id="settingslabel" layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+      <Button fx:id="Aboutlabel" layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Dash Board" textFill="WHITE">
+      <Button fx:id="dashboardlabel" layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Dash Board" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="NONE" />
          </cursor>
       </Button>
-      <TextField layoutX="261.0" layoutY="186.0" prefHeight="25.0" prefWidth="214.0" promptText="Bride/Groom Name" />
-      <TextField layoutX="261.0" layoutY="218.0" prefHeight="25.0" prefWidth="190.0" promptText="00:00" />
+      <TextField fx:id="nametextfield" layoutX="261.0" layoutY="186.0" prefHeight="25.0" prefWidth="214.0" promptText="Bride/Groom Name" />
+      <TextField fx:id="timeTextfield" layoutX="261.0" layoutY="218.0" prefHeight="25.0" prefWidth="190.0" promptText="00:00" />
       <Label layoutX="206.0" layoutY="190.0" text="Name:" />
       <Label layoutX="211.0" layoutY="222.0" text="Time" />
       <Label layoutX="187.0" layoutY="256.0" text="Date of Event" />
-      <DatePicker layoutX="261.0" layoutY="252.0" prefHeight="25.0" prefWidth="190.0" />
+      <DatePicker fx:id="eventdatepicker" layoutX="261.0" layoutY="252.0" prefHeight="25.0" prefWidth="190.0" />
       <Label alignment="CENTER" layoutX="189.0" layoutY="135.0" prefHeight="41.0" prefWidth="223.0" text="For Bride/Groom" textFill="TEAL" underline="true">
          <font>
             <Font name="Constantia Italic" size="24.0" />
          </font>
       </Label>
       <Label layoutX="201.0" layoutY="288.0" text="Location" />
-      <Button layoutX="255.0" layoutY="331.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Show catalogue" />
-      <ComboBox layoutX="260.0" layoutY="284.0" prefWidth="150.0" />
-      <TableView layoutX="40.0" layoutY="370.0" prefHeight="170.0" prefWidth="529.0">
+      <Button fx:id="showbutton" layoutX="255.0" layoutY="331.0" mnemonicParsing="false" onAction="#showbuttonOnClick" prefHeight="25.0" prefWidth="112.0" text="Show catalogue" />
+      <ComboBox fx:id="locationcombobox" layoutX="260.0" layoutY="284.0" prefWidth="150.0" />
+      <TableView fx:id="CustomerEventtable" layoutX="47.0" layoutY="365.0" prefHeight="170.0" prefWidth="529.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="EventNameColumn" prefWidth="122.33334350585938" text="EventName" />
+          <TableColumn fx:id="usernameColumn" prefWidth="131.66665649414062" text="username" />
+            <TableColumn fx:id="locationTable" prefWidth="137.0" text="location" />
+            <TableColumn fx:id="Eventdatecolumn" prefWidth="137.66668701171875" text="Event Date" />
         </columns>
       </TableView>
+      <Button layoutX="29.0" layoutY="143.0" mnemonicParsing="false" onAction="#backbuttonOnclick" text="&lt;" />
    </children>
 </AnchorPane>

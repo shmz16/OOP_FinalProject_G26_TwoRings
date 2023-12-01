@@ -12,6 +12,7 @@ import java.time.LocalDate;
  */
 public class EventManager extends Employee{
     private String location;
+    private int serviceCharge;
     
     public EventManager(){
     

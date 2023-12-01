@@ -11,17 +11,17 @@ import java.time.LocalDate;
  * @author Lenovo
  */
 public class Event {
-    private String username;
-    private LocalDate eventdate;
-    private String eventname;
-    private Venue venue;
+    protected String username;
+    protected LocalDate eventdate;
+    protected String eventname;
+    protected Venue venue;
     
     public Event(){
     
     
 
     
-}
+};
 
     public Event(String username, LocalDate eventdate, String eventname, Venue venue) {
         this.username = username;

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="512.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="512.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.EventManagerAccountantController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -48,7 +48,7 @@
                   </Menu>
                </menus>
             </MenuBar>
-            <Label layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
+            <Label fx:id="tworingslogolabel" layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
                <font>
                   <Font name="Yu Gothic Regular" size="27.0" />
                </font>
@@ -58,31 +58,31 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+      <Button fx:id="helpcenterlabel" layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
+      <Button fx:id="settingslabel" layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+      <Button fx:id="Aboutlabel" layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Dash Board" textFill="WHITE">
+      <Button fx:id="dashboardlabel" layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Dash Board" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="NONE" />
          </cursor>
       </Button>
-      <TextField layoutX="93.0" layoutY="189.0" />
-      <TextField layoutX="93.0" layoutY="233.0" />
-      <TextField layoutX="426.0" layoutY="180.0" />
-      <TextField layoutX="426.0" layoutY="215.0" />
-      <TextField layoutX="426.0" layoutY="250.0" />
+      <TextField fx:id="EmailTextField" layoutX="93.0" layoutY="189.0" />
+      <TextField fx:id="payTextField" layoutX="93.0" layoutY="233.0" />
+      <TextField fx:id="CustomertextField" layoutX="426.0" layoutY="180.0" />
+      <TextField fx:id="paymentTextfield" layoutX="426.0" layoutY="215.0" />
+      <TextField fx:id="bankTextField" layoutX="426.0" layoutY="250.0" />
       <Label layoutX="32.0" layoutY="193.0" text="Email ID:" />
       <Label layoutX="31.0" layoutY="237.0" text="Payment:" />
       <Label layoutX="15.0" layoutY="281.0" text="Payment Increment" />
@@ -95,26 +95,26 @@
          </font>
       </Label>
       <Separator layoutX="287.0" layoutY="127.0" orientation="VERTICAL" prefHeight="200.0" />
-      <ComboBox layoutX="126.0" layoutY="273.0" prefWidth="150.0" />
+      <ComboBox fx:id="paycomboBox" layoutX="126.0" layoutY="273.0" prefWidth="150.0" />
       <Label alignment="CENTER" contentDisplay="TOP" layoutX="356.0" layoutY="144.0" prefHeight="32.0" prefWidth="183.0" text="For Bride/Groom" textFill="TEAL" underline="true">
          <font>
             <Font name="System Italic" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="426.0" layoutY="285.0" />
-      <TextField layoutX="426.0" layoutY="322.0" />
+      <TextField fx:id="BankAcctextField" layoutX="426.0" layoutY="285.0" />
+      <TextField fx:id="marriageCertificateTextField" layoutX="426.0" layoutY="322.0" />
       <Separator layoutX="287.0" layoutY="322.0" orientation="VERTICAL" prefHeight="200.0" />
       <Label layoutX="347.0" layoutY="289.0" text="Bank Acc No" />
       <Label layoutX="294.0" layoutY="326.0" text="Marriage Certificate No:" />
-      <Button layoutX="399.0" layoutY="476.0" mnemonicParsing="false" text="Submit" />
-      <Button layoutX="14.0" layoutY="135.0" mnemonicParsing="false" text="&lt;" />
-      <TextArea layoutX="14.0" layoutY="362.0" prefHeight="92.0" prefWidth="264.0" />
+      <Button layoutX="399.0" layoutY="476.0" mnemonicParsing="false" onAction="#submitButtonOnclick" text="Submit" />
+      <Button layoutX="14.0" layoutY="135.0" mnemonicParsing="false" onAction="#backbuttonOnclick" text="&lt;" />
+      <TextArea fx:id="customtextArea" layoutX="14.0" layoutY="362.0" prefHeight="92.0" prefWidth="264.0" />
       <Label layoutX="32.0" layoutY="321.0" text="Feedback from Customers" textFill="TEAL" underline="true">
          <font>
             <Font name="System Italic" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="298.0" layoutY="376.0" prefHeight="92.0" prefWidth="281.0" />
+      <TextArea fx:id="Feedbacktextarea" layoutX="298.0" layoutY="376.0" prefHeight="92.0" prefWidth="281.0" />
       <Label layoutX="298.0" layoutY="353.0" text="Provide Feedback" textFill="TEAL" underline="true">
          <font>
             <Font name="Corbel Italic" size="14.0" />

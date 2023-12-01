@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="356.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="356.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.lawyerScheduleController">
    <children>
       <AnchorPane layoutY="-52.0" prefHeight="96.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
-            <Label layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
+            <Label fx:id="tworingslogolabel" layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
                <font>
                   <Font name="Yu Gothic Regular" size="27.0" />
                </font>
@@ -26,68 +26,67 @@
             <Label layoutX="129.0" layoutY="14.0" text="Label" />
          </children>
       </AnchorPane>
-      <Button layoutX="335.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+      <Button fx:id="helpcenterlabel" layoutX="335.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="111.0" layoutY="26.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
+      <Button fx:id="settingslabel" layoutX="111.0" layoutY="26.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="WAIT" />
          </cursor>
       </Button>
-      <Button layoutX="223.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+      <Button fx:id="aboutlabel" layoutX="223.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="-1.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Profile" textFill="WHITE">
+      <Button fx:id="profilelabel" layoutX="-1.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Profile" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="NONE" />
          </cursor>
       </Button>
-      <Button layoutX="10.0" layoutY="62.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
+      <Button layoutX="10.0" layoutY="62.0" mnemonicParsing="false" onAction="#backbuttonOnClick" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="126.0" layoutY="261.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="ADD" textFill="#ccccff">
+      <Button layoutX="126.0" layoutY="261.0" mnemonicParsing="false" onAction="#addButtonOnClick" style="-fx-background-color: #008080;" text="ADD" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="523.0" layoutY="60.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
+      <Button layoutX="523.0" layoutY="60.0" mnemonicParsing="false" onAction="#signoutbuttonOnclick" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <DatePicker editable="false" layoutX="16.0" layoutY="147.0" prefHeight="25.0" prefWidth="148.0" promptText="DD/MM/YYYY" style="-fx-background-color: #008080;" />
-      <TextField layoutX="16.0" layoutY="186.0" promptText="Bride User name" />
-      <TextField layoutX="17.0" layoutY="225.0" promptText="Groom User name" />
-      <TextField layoutX="17.0" layoutY="110.0" promptText="ID" />
+      <DatePicker fx:id="datepicker" editable="false" layoutX="16.0" layoutY="147.0" prefHeight="25.0" prefWidth="148.0" promptText="DD/MM/YYYY" style="-fx-background-color: #008080;" />
+      <TextField fx:id="brideusername" layoutX="16.0" layoutY="186.0" promptText="Bride User name" />
+      <TextField fx:id="groomusername" layoutX="17.0" layoutY="225.0" promptText="Groom User name" />
+      <TextField fx:id="IDtextfield" layoutX="17.0" layoutY="110.0" promptText="ID" />
       <Label layoutX="275.0" layoutY="62.0" text="Schedule" textFill="TEAL" underline="true">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <TableView layoutX="175.0" layoutY="111.0" prefHeight="176.0" prefWidth="417.0">
+      <TableView fx:id="lawyertable" layoutX="175.0" layoutY="111.0" prefHeight="176.0" prefWidth="417.0">
          <columns>
-            <TableColumn prefWidth="107.0" text="Bride'user name" />
-            <TableColumn prefWidth="120.0" text="Groom's user name" />
-            <TableColumn prefWidth="93.0" text="Marriage date" />
-            <TableColumn prefWidth="96.0" text="Registar ID" />
+            <TableColumn fx:id="brideusertablecolumn" prefWidth="107.0" text="Bride'user name" />
+            <TableColumn fx:id="groomusercolumn" prefWidth="120.0" text="Groom's user name" />
+            <TableColumn fx:id="marriagedatecolumn" prefWidth="93.0" text="Marriage date" />
+            <TableColumn fx:id="registarIDcolumn" prefWidth="96.0" text="Registar ID" />
          </columns>
       </TableView>
-      <Button layoutX="545.0" layoutY="294.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Save" textFill="#ccccff">
+      <Button layoutX="545.0" layoutY="294.0" mnemonicParsing="false" onAction="#savebuttonOnclick" style="-fx-background-color: #008080;" text="Save" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="489.0" layoutY="294.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Reload" textFill="#ccccff">
+      <Button layoutX="489.0" layoutY="294.0" mnemonicParsing="false" onAction="#reloadButtonOnclick" style="-fx-background-color: #008080;" text="Reload" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
    </children>
 </AnchorPane>
-

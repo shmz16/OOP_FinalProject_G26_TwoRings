@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="530.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="530.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.LawyerResignationController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -47,7 +47,7 @@
                   </Menu>
                </menus>
             </MenuBar>
-            <Label layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
+            <Label fx:id="tworingslogolabel" layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
                <font>
                   <Font name="Yu Gothic Regular" size="27.0" />
                </font>
@@ -57,42 +57,42 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+      <Button fx:id="helpcenterlabel" layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
+      <Button fx:id="settingslabel" layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+      <Button fx:id="Aboutlabel" layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Dash Board" textFill="WHITE">
+      <Button fx:id="dashboardlabel" layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Dash Board" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="NONE" />
          </cursor>
       </Button>
-      <TextArea layoutX="23.0" layoutY="313.0" prefHeight="148.0" prefWidth="555.0" />
-      <TextField layoutX="84.0" layoutY="192.0" promptText="Name;" />
-      <TextField layoutX="84.0" layoutY="240.0" promptText="Email ID" />
-      <TextField layoutX="360.0" layoutY="240.0" promptText="Phone/Mobile" />
+      <TextArea fx:id="reasontextarea" layoutX="23.0" layoutY="313.0" prefHeight="148.0" prefWidth="555.0" />
+      <TextField fx:id="nametextfield" layoutX="84.0" layoutY="192.0" promptText="Name;" />
+      <TextField fx:id="IDtextfield" layoutX="84.0" layoutY="240.0" promptText="Email ID" />
+      <TextField fx:id="contacttextfield" layoutX="360.0" layoutY="240.0" promptText="Phone/Mobile" />
       <Label layoutX="38.0" layoutY="196.0" text="Name:" />
       <Label layoutX="32.0" layoutY="244.0" text="Email ID:" />
       <Label layoutX="253.0" layoutY="196.0" text="Date of joining" />
       <Label layoutX="279.0" layoutY="244.0" text=" Contact NO:" />
-      <DatePicker layoutX="348.0" layoutY="192.0" promptText="DD/MM/YYYY" />
+      <DatePicker fx:id="joindatepicker" layoutX="348.0" layoutY="192.0" promptText="DD/MM/YYYY" />
       <Label layoutX="22.0" layoutY="279.0" prefHeight="25.0" prefWidth="310.0" text="Reason for Leaving">
          <font>
             <Font name="System Italic" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="261.0" layoutY="478.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Submit" />
-      <Button layoutX="23.0" layoutY="145.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" text="&lt;" />
+      <Button layoutX="261.0" layoutY="478.0" mnemonicParsing="false" onAction="#submitButtonOnclick" prefHeight="25.0" prefWidth="79.0" text="Submit" />
+      <Button layoutX="23.0" layoutY="145.0" mnemonicParsing="false" onAction="#backbuttonOnclick" prefHeight="25.0" prefWidth="35.0" text="&lt;" />
       <Label alignment="CENTER" layoutX="100.0" layoutY="144.0" prefHeight="34.0" prefWidth="401.0" text="Thank You For Being With Us!!!" textFill="TEAL" underline="true">
          <font>
             <Font name="System Italic" size="18.0" />
