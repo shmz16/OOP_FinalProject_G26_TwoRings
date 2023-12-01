@@ -86,6 +86,7 @@ public class EmployeeReportController implements Initializable {
 
                 }
             } catch (Exception e) {
+                e.toString();
             }
         } catch (IOException ex) {
         } finally {

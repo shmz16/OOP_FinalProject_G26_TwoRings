@@ -112,24 +112,6 @@ public class ViewEmployeeListController implements Initializable {
         }
         empolyeTable.setItems(empList);
 
-//        ObjectInputStream ois = null;
-//        try {
-//            Employee e;
-//            ois = new ObjectInputStream(new FileInputStream("EmpListObsject.bin"));
-//            e = (Employee) ois.readObject();
-//            empolyeTable.getItems().add(e);
-//            //s = (Student) ois.readObject(); tableView.getItems().add(s);            
-//
-//        } catch (Exception ex) {
-//            try {
-//                if (ois != null) {
-//                    ois.close();
-//                }
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//            ex.printStackTrace();
-//        }
     }
 
     @FXML

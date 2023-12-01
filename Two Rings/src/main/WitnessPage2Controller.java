@@ -24,7 +24,7 @@ public class WitnessPage2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void photoBT(ActionEvent event) throws IOException {
@@ -49,5 +49,11 @@ public class WitnessPage2Controller implements Initializable {
         SceneSwitcher locatOffice = new SceneSwitcher("OfficeLocation.fxml", event);
         locatOffice.ConfirmSceneSwitch();
     }
-    
+
+    @FXML
+    private void registerWitness(ActionEvent event) throws IOException {
+        SceneSwitcher locatOffice = new SceneSwitcher("WitnessPage.fxml", event);
+        locatOffice.ConfirmSceneSwitch();
+    }
+
 }

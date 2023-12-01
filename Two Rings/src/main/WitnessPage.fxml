@@ -23,7 +23,7 @@
       <TextField fx:id="adressTextField" layoutX="447.0" layoutY="244.0" promptText="Your Address *" />
       <CheckBox fx:id="termsAndConditionCheckBox" layoutX="437.0" layoutY="471.0" mnemonicParsing="false" style="-fx-background-color: gray; -fx-background-radius: 21; -fx-border-radius: 21;" text="By registraing as a Witness you Accept our terms and conditions." />
       <ComboBox fx:id="countryCombo" layoutX="717.0" layoutY="199.0" prefHeight="31.0" prefWidth="187.0" promptText="Select Your Country" style="-fx-background-radius: 21; -fx-border-radius: 21;" />
-      <Button layoutX="593.0" layoutY="512.0" mnemonicParsing="false" onAction="#witnessRegisterButton" prefWidth="145.0" style="-fx-background-radius: 21; -fx-background-color: #0c84ff;" text="Register as witness" />
+      <Button fx:id="ConfirmationTextOnBT" layoutX="527.0" layoutY="512.0" mnemonicParsing="false" onAction="#witnessRegisterButton" prefHeight="31.0" prefWidth="277.0" style="-fx-background-radius: 21; -fx-background-color: #0c84ff;" text="Register as witness" textAlignment="CENTER" wrapText="true" />
       <RadioButton fx:id="brideTG" layoutX="453.0" layoutY="332.0" mnemonicParsing="false" selected="true" style="-fx-background-color: #0c84ff; -fx-background-radius: 21;" text="Bride">
          <toggleGroup>
             <ToggleGroup fx:id="gg" />

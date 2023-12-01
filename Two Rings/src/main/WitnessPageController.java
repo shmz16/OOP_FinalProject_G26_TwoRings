@@ -67,6 +67,8 @@ public class WitnessPageController implements Initializable {
     private DatePicker dateOfBirth;
     @FXML
     private ComboBox<String> genderCombo;
+    @FXML
+    private Button ConfirmationTextOnBT;
 
     /**
      * Initializes the controller class.
@@ -125,35 +127,35 @@ public class WitnessPageController implements Initializable {
 
         
 
-//        File f = null;
-//        FileOutputStream fos = null;      
-//        ObjectOutputStream oos = null;
-//        
-//        try {
-//            f = new File("EmpObjects.bin");
-//            if(f.exists()){
-//                fos = new FileOutputStream(f,true);
-//                oos = new AppendableObjectOutputStream(fos);                
-//            }
-//            else{
-//                fos = new FileOutputStream(f);
-//                oos = new ObjectOutputStream(fos);               
-//            }
-//            Witness w = new Witness(fname, lname, DOB, gender, nidNo,
-//                witnesingFor, cName, cId, pass1, witnessCounttry, witnesAddress,
-//                phoneNo, email);
-//            oos.writeObject(w);
-//        } catch (IOException ex) {
-//            Logger.getLogger(MainFXMLController.class.getName()).log(Level.SEVERE, null, ex);
-//        } finally {
-//            try {
-//                if(oos != null) oos.close();
-//            } catch (IOException ex) {
-//                Logger.getLogger(MainFXMLController.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//        } 
+        File f = null;
+        FileOutputStream fos = null;      
+        ObjectOutputStream oos = null;
         
+        try {
+            f = new File("WitnessData.bin");
+            if(f.exists()){
+                fos = new FileOutputStream(f,true);
+                oos = new AppendableObjectOutputStream(fos);                
+            }
+            else{
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);               
+            }
+            Witness w = new Witness(fname, lname, DOB, gender, nidNo,
+                witnesingFor, cName, cId, pass1, witnessCounttry, witnesAddress,
+                phoneNo, email);
+            oos.writeObject(w);
+        } catch (IOException ex) {
+            Logger.getLogger(WitnessPageController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(oos != null) oos.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WitnessPageController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } 
         
+        ConfirmationTextOnBT.setText("Registration Successful.");
         
     }
 

@@ -66,6 +66,7 @@
                   <Font name="System Bold Italic" size="35.0" />
                </font>
             </Label>
+            <Button layoutX="83.0" layoutY="109.0" mnemonicParsing="false" onAction="#registerWitness" prefHeight="125.0" prefWidth="133.0" text="Witness Registration" textAlignment="CENTER" wrapText="true" />
          </children>
       </AnchorPane>
    </center>
