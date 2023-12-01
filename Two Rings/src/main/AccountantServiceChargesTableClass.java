@@ -4,11 +4,13 @@
  */
 package main;
 
+import java.io.Serializable;
+
 /**
  *
  * @author User
  */
-public class AccountantServiceChargesTableClass {
+public class AccountantServiceChargesTableClass implements Serializable{
     
     private int employeeID;
     private String empName;

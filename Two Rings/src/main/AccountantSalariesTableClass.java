@@ -4,13 +4,14 @@
  */
 package main;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  *
  * @author User
  */
-public class AccountantSalariesTableClass {
+public class AccountantSalariesTableClass implements Serializable{
     
     private int employeeID;
     private String employeeName;

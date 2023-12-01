@@ -56,7 +56,7 @@ public class AccountantCheckSalariesSceneController implements Initializable {
                 "Marketing Manager",
                 "Accountant"
                 );
-        salariesTableEmployeeID.setCellValueFactory(new PropertyValueFactory<AccountantSalariesTableClass, Integer>("employeeName"));
+        salariesTableEmployeeID.setCellValueFactory(new PropertyValueFactory<AccountantSalariesTableClass, Integer>("employeeID"));
         salariesTableEmployeeName.setCellValueFactory(new PropertyValueFactory<AccountantSalariesTableClass, String>("employeeName"));
         salariesTableEmployeeDesignation.setCellValueFactory(new PropertyValueFactory<AccountantSalariesTableClass, String>("designation"));
         salariesTableEmployeeSalary.setCellValueFactory(new PropertyValueFactory<AccountantSalariesTableClass, Integer>("salary"));
