@@ -13,11 +13,27 @@ import java.io.Serializable;
 public class CEO implements Serializable{
     
     final String Name = "Md. Tamim";
-    final int ceoPass = 12345;
+    final String ceoPass = "12345";
+    final int id = 55555;
     
     String massage;
     Meeting date;
 
+    public CEO() {
+    }
+    
+    public String getName() {
+        return Name;
+    }
+
+    public String getCeoPass() {
+        return ceoPass;
+    }
+
+    public int getId() {
+        return id;
+    }
+    
     public CEO(String massage, Meeting date) {
         this.massage = massage;
         this.date = date;
@@ -43,7 +59,7 @@ public class CEO implements Serializable{
         this.date = date;
     }
     
-    public int givePass(){
+    public String givePass(){
         
         return ceoPass;
         

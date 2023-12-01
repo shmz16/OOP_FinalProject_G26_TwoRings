@@ -23,9 +23,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
@@ -51,6 +53,12 @@ public class CEOMeetingController implements Initializable {
     private TableColumn<Meeting, String> meetingTimeColomn;
     @FXML
     private ComboBox<String> meetingWithCombo;
+    @FXML
+    private RadioButton amTG;
+    @FXML
+    private ToggleGroup amTg;
+    @FXML
+    private RadioButton pmTG;
 
     /**
      * Initializes the controller class.
@@ -67,7 +75,11 @@ public class CEOMeetingController implements Initializable {
         ObservableList<Meeting> meetingIns = FXCollections.observableArrayList();
         String meetWithVal = meetingWithCombo.getValue();
         LocalDate meetingDay = meetingDate.getValue();
-        String time = timeTextField.getText();
+        String meridiem = " PM";
+        if (amTG.isSelected()) {
+            meridiem = " AM";
+        }
+        String time = timeTextField.getText() + meridiem;
 
         Meeting meet1 = new Meeting(meetingDay, meetWithVal, time);
 
@@ -132,7 +144,7 @@ public class CEOMeetingController implements Initializable {
                     System.out.println(emp.toString());
 
                 }
-            } catch (Exception e){
+            } catch (Exception e) {
             }
 
         } catch (IOException ex) {

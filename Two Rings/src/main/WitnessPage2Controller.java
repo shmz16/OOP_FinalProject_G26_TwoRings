@@ -56,4 +56,11 @@ public class WitnessPage2Controller implements Initializable {
         locatOffice.ConfirmSceneSwitch();
     }
 
+    @FXML
+    private void closeTwoRingsOnClickBT(ActionEvent event) throws IOException {
+        SceneSwitcher witnessScene = new SceneSwitcher("WitnessPage.fxml", event);
+        witnessScene.closeScene();
+        
+    }
+
 }

@@ -194,4 +194,16 @@ public class CEOpageController implements Initializable {
         switchToViewProfitsScene.ConfirmSceneSwitch();
     }
 
+    @FXML
+    private void ceoSignOutBT(ActionEvent event) throws IOException {
+        SceneSwitcher backToLoginPage = new SceneSwitcher("LoginPage.fxml", event);
+        backToLoginPage.ConfirmSceneSwitch();
+    }
+
+    @FXML
+    private void closeOnClickBT(ActionEvent event) throws IOException {
+        SceneSwitcher closeScene = new SceneSwitcher("LoginPage.fxml", event);
+        closeScene.closeScene();
+    }
+
 }

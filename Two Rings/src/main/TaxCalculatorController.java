@@ -49,7 +49,7 @@ public class TaxCalculatorController implements Initializable {
 
         } else {
             a.setTitle("Error Alert");
-            a.setHeaderText("Change tax ammount");
+            a.setHeaderText("Change tax rate");
             a.setContentText("Invalid Tax Percentage");
             a.showAndWait();
         }

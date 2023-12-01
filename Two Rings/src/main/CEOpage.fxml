@@ -21,6 +21,7 @@
             <Button layoutX="14.0" layoutY="166.0" mnemonicParsing="false" onAction="#addNewEmployeeOnClick" text="Add New Employee" />
             <Button layoutX="14.0" layoutY="422.0" mnemonicParsing="false" onAction="#updatePolicyOnClick" text="Update policy" wrapText="true" />
             <Button layoutX="14.0" layoutY="464.0" mnemonicParsing="false" onAction="#testWitnes" text="test witness scene" wrapText="true" />
+            <Button layoutX="14.0" layoutY="507.0" mnemonicParsing="false" onAction="#ceoSignOutBT" text="Sign-Out" wrapText="true" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="720.0" fitWidth="897.0" layoutX="183.0" pickOnBounds="true">
@@ -42,5 +43,6 @@
       <ComboBox fx:id="sendToCombo" layoutX="942.0" layoutY="471.0" prefHeight="31.0" prefWidth="84.0" promptText="To" />
       <Button layoutX="754.0" layoutY="675.0" mnemonicParsing="false" onAction="#receiveMassageBT" text="Receive" />
       <TextArea fx:id="massageTextArea" layoutX="706.0" layoutY="465.0" prefHeight="200.0" prefWidth="200.0" promptText="Write Here:  " />
+      <Button layoutX="1037.0" layoutY="17.0" mnemonicParsing="false" onAction="#closeOnClickBT" text="X" />
    </children>
 </AnchorPane>
