@@ -96,7 +96,6 @@
             <Font name="Arial Black" size="12.0" />
          </font>
       </Text>
-      <Label layoutX="158.0" layoutY="175.0" prefHeight="17.0" prefWidth="433.0" text="Package Genarate successfully!!" textFill="#d30606" />
       <Button layoutX="10.0" layoutY="138.0" mnemonicParsing="false" onAction="#backbuttononclick" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -109,7 +108,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <ComboBox layoutX="184.0" layoutY="232.0" prefHeight="25.0" prefWidth="175.0" promptText="choose package number" />
+      <ComboBox fx:id="choosepkgcombobox" layoutX="184.0" layoutY="232.0" prefHeight="25.0" prefWidth="175.0" promptText="choose package number" />
       <Label layoutX="361.0" layoutY="184.0" text="Packages: " />
       <TextArea fx:id="packagesTextArea" editable="false" layoutX="367.0" layoutY="205.0" prefHeight="94.0" prefWidth="188.0" />
    </children>
