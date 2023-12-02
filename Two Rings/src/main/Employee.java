@@ -3,20 +3,42 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package main;
+
 import java.io.Serializable;
 import java.time.LocalDate;
+
 /**
  *
  * @author User
  */
 public class Employee extends User implements Serializable {
-    
-    protected int employeeID;
-    protected LocalDate joinDate;
-    protected int salary;
-    protected String designation;
 
+    int employeeID;
+    LocalDate joinDate;
+    int salary;
+    String designation;
+    float ratings;
+
+//    Turjo added ratings
+
+    public Employee(int employeeID, LocalDate joinDate, int salary, String designation, float ratings, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
+        super(name, gender, email, phoneNo, password, dateOfBirth);
+        this.employeeID = employeeID;
+        this.joinDate = joinDate;
+        this.salary = salary;
+        this.designation = designation;
+        this.ratings = ratings;
+    }
+
+    public float getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(float ratings) {
+        this.ratings = ratings;
+    }
     
+
     public Employee(int employeeID, LocalDate joinDate, int salary, String designation, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
         super(name, gender, email, phoneNo, password, dateOfBirth);
         this.employeeID = employeeID;
@@ -59,7 +81,9 @@ public class Employee extends User implements Serializable {
 
     @Override
     public String toString() {
-        return "Employee{" + "employeeID=" + employeeID + ", joinDate=" + joinDate + ", salary=" + salary + ", designation=" + designation + '}';
+        return "Employee{" + "employeeID=" + employeeID + ", joinDate=" + joinDate + ", salary=" + salary + ", designation=" + designation + ", ratings=" + ratings + '}';
     }
+
     
+
 }

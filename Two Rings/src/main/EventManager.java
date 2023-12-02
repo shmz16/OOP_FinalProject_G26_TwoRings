@@ -10,18 +10,20 @@ import java.time.LocalDate;
  *
  * @author Lenovo
  */
-public class EventManager extends Employee{
+public class EventManager extends Employee {
+
     private String location;
     private int serviceCharge;
-    
-    public EventManager(){
-    
-    
-};
 
-    public EventManager(String location) {
-        this.location = location;
-    }
+//    public EventManager() {
+//
+//    }
+//
+//    
+//
+//    public EventManager(String location) {
+//        this.location = location;
+//    }
 
     public EventManager(String location, int employeeID, LocalDate joinDate, int salary, String designation, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
         super(employeeID, joinDate, salary, designation, name, gender, email, phoneNo, password, dateOfBirth);
@@ -44,6 +46,5 @@ public class EventManager extends Employee{
         sb.append('}');
         return sb.toString();
     }
-    
-    
+
 }

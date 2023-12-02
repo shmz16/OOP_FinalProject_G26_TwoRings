@@ -42,19 +42,19 @@ public class ViewEmployeeListController implements Initializable {
 
 //    private Employee model = new Employee();
     @FXML
-    private TableView<MyEmployee> empolyeTable;
+    private TableView<Employee> empolyeTable;
     @FXML
-    private TableColumn<MyEmployee, String> nameColomn;
+    private TableColumn<Employee, String> nameColomn;
     @FXML
-    private TableColumn<MyEmployee, Integer> idColomn;
+    private TableColumn<Employee, Integer> idColomn;
     @FXML
-    private TableColumn<MyEmployee, String> genderColomn;
+    private TableColumn<Employee, String> genderColomn;
     @FXML
-    private TableColumn<MyEmployee, String> postColomn;
+    private TableColumn<Employee, String> postColomn;
     @FXML
     private Label pieChartInfoLabel;
     @FXML
-    private TableColumn<MyEmployee, String> phoneNoColomn;
+    private TableColumn<Employee, String> phoneNoColomn;
 
     @FXML
     private TextArea TextArea;
@@ -74,13 +74,13 @@ public class ViewEmployeeListController implements Initializable {
 
     @FXML
     private void showEmployeeOnClick(ActionEvent event) throws IOException, ClassNotFoundException {
-        ObservableList<MyEmployee> empList = FXCollections.observableArrayList();
+        ObservableList<Employee> empList = FXCollections.observableArrayList();
 
-        nameColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("name"));
-        idColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, Integer>("id"));
-        genderColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("gender"));
-        postColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("designation"));
-        phoneNoColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("phoneNo"));
+        nameColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("name"));
+        idColomn.setCellValueFactory(new PropertyValueFactory<Employee, Integer>("employeeID"));
+        genderColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("gender"));
+        postColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("designation"));
+        phoneNoColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("phoneNo"));
 
         File f = null;
         FileInputStream fis = null;
@@ -90,10 +90,10 @@ public class ViewEmployeeListController implements Initializable {
             f = new File("EmployeeList.bin");
             fis = new FileInputStream(f);
             ois = new ObjectInputStream(fis);
-            MyEmployee emp;
+            Employee emp;
             try {
                 while (true) {
-                    emp = (MyEmployee) ois.readObject();
+                    emp = (Employee) ois.readObject();
                     empList.add(emp);
                     System.out.println(emp.toString());
 

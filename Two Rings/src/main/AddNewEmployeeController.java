@@ -65,7 +65,7 @@ public class AddNewEmployeeController implements Initializable {
     @FXML
     private TextField empEmail;
 
-    public ObservableList<MyEmployee> employeeList;
+    public ObservableList<Employee> employeeList;
     @FXML
     private DatePicker dateOfBirth;
     @FXML
@@ -126,7 +126,7 @@ public class AddNewEmployeeController implements Initializable {
     @FXML
     private void addEmployeeButton(ActionEvent event) {
         String name = fNameField.getText();
-        LocalDate DOB = dateOfBirth.getValue();
+        LocalDate janmoDin = dateOfBirth.getValue();
 
         int employeeId = Integer.parseInt(assignId.getText());
         String phoneNo = empPhoneNo.getText();
@@ -158,7 +158,7 @@ public class AddNewEmployeeController implements Initializable {
                 oos = new ObjectOutputStream(fos);
                 
             }
-            MyEmployee temp = new MyEmployee(name, employeeId, salaryy, DOB, dateOfJoin, phoneNo, email, newPass, gender, post,ratings);
+            Employee temp = new Employee(employeeId, dateOfJoin, salaryy, post, ratings, name, gender, email, phoneNo, newPass, janmoDin);
             
             oos.writeObject(temp);
             System.out.println(temp);

@@ -28,19 +28,19 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class EmployeeReportController implements Initializable {
 
     @FXML
-    private TableView<MyEmployee> empolyeTable;
+    private TableView<Employee> empolyeTable;
     @FXML
-    private TableColumn<MyEmployee, String> nameColomn;
+    private TableColumn<Employee, String> nameColomn;
     @FXML
-    private TableColumn<MyEmployee, Integer> idColomn;
+    private TableColumn<Employee, Integer> idColomn;
     @FXML
-    private TableColumn<MyEmployee, String> genderColomn;
+    private TableColumn<Employee, String> genderColomn;
     @FXML
-    private TableColumn<MyEmployee, Integer> salryColomn;
+    private TableColumn<Employee, Integer> salryColomn;
     @FXML
-    private TableColumn<MyEmployee, String> postColomn;
+    private TableColumn<Employee, String> postColomn;
     @FXML
-    private TableColumn<MyEmployee, Float> ratingColomn;
+    private TableColumn<Employee, Float> ratingColomn;
 
     /**
      * Initializes the controller class.
@@ -60,14 +60,14 @@ public class EmployeeReportController implements Initializable {
 
     @FXML
     private void empReportBT(ActionEvent event) {
-        ObservableList<MyEmployee> empList = FXCollections.observableArrayList();
-        nameColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("name"));
-        idColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, Integer>("id"));
-        genderColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("gender"));
-        salryColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, Integer>("salary"));
-        postColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("designation"));
+        ObservableList<Employee> empList = FXCollections.observableArrayList();
+        nameColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("name"));
+        idColomn.setCellValueFactory(new PropertyValueFactory<Employee, Integer>("employeeID"));
+        genderColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("gender"));
+        salryColomn.setCellValueFactory(new PropertyValueFactory<Employee, Integer>("salary"));
+        postColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("designation"));
         
-        ratingColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, Float>("ratings"));
+        ratingColomn.setCellValueFactory(new PropertyValueFactory<Employee, Float>("ratings"));
         
         File f = null;
         FileInputStream fis = null;
@@ -77,10 +77,10 @@ public class EmployeeReportController implements Initializable {
             f = new File("EmployeeList.bin");
             fis = new FileInputStream(f);
             ois = new ObjectInputStream(fis);
-            MyEmployee emp;
+            Employee emp;
             try {
                 while (true) {
-                    emp = (MyEmployee) ois.readObject();
+                    emp = (Employee) ois.readObject();
                     empList.add(emp);
                     System.out.println(emp.toString());
 

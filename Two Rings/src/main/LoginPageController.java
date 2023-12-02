@@ -114,7 +114,7 @@ public class LoginPageController implements Initializable {
 
     @FXML
     private void witnessDashOnClickBt(ActionEvent event) throws IOException {
-        SceneSwitcher WitnessDas = new SceneSwitcher("WitnessPage2.fxml", event);
+        SceneSwitcher WitnessDas = new SceneSwitcher("CEOpage.fxml", event);
         WitnessDas.ConfirmSceneSwitch();
     }
 

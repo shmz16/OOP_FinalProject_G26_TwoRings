@@ -15,10 +15,10 @@ public class Lawyer extends Employee{
     private int serviceCharge;
     private List<Object> customers;
 
-    public Lawyer(int serviceCharge, List<Object> customers) {
-        this.serviceCharge = serviceCharge;
-        this.customers = customers;
-    }
+//    public Lawyer(int serviceCharge, List<Object> customers) {
+//        this.serviceCharge = serviceCharge;
+//        this.customers = customers;
+//    }
 
     public Lawyer(int serviceCharge, List<Object> customers, int employeeID, LocalDate joinDate, int salary, String designation, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
         super(employeeID, joinDate, salary, designation, name, gender, email, phoneNo, password, dateOfBirth);
