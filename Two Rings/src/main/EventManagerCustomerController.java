@@ -4,6 +4,7 @@
  */
 package main;
 
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -12,6 +13,8 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -52,7 +55,7 @@ public class EventManagerCustomerController implements Initializable {
     @FXML
     private ComboBox<?> locationcombobox;
     @FXML
-    private TableView<String> CustomerEventtable;
+    private TableView<Customertable> CustomerEventtable;
     @FXML
     private TableColumn<Customertable, String> EventNameColumn;
     @FXML
@@ -63,10 +66,9 @@ public class EventManagerCustomerController implements Initializable {
     private TableColumn<Customertable, Venue> locationTable;
     @FXML
     private TableColumn<Customertable, LocalDate> Eventdatecolumn;
-    @FXML
-    private TableColumn<Customertable, String> commentcolumn;
+   
     
-    public ArrayList<Event> empList= new ArrayList<Event>();
+    public ArrayList<Event> eventList= new ArrayList<Event>();
     
     
 
@@ -84,21 +86,23 @@ public class EventManagerCustomerController implements Initializable {
         // TODO
         FileInputStream fis = null;
         ObjectInputStream ois = null;
-        File employeeFile = null;
+        File xFile = null;
         
         
         try{
-            employeeFile = new File("Customer info to event manegment.bin");
-            fis = new FileInputStream(employeeFile);
+            xFile = new File("Customer info to event manegment.bin");
+            fis = new FileInputStream(xFile);
             ois = new ObjectInputStream(fis);
-            Employee tempEmp;
+            Event tempEvent;
             try{
                 while(true){
-                    tempEmp = (Employee) ois.readObject();
-                    empList.add(tempEmp);
+                    tempEvent = (Event) ois.readObject();
+                    eventList.add(tempEvent);
                 }
             }
-            catch(IOException | ClassNotFoundException e){
+            catch(EOFException e){
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(EventManagerCustomerController.class.getName()).log(Level.SEVERE, null, ex);
             }
             
         }
@@ -115,13 +119,12 @@ public class EventManagerCustomerController implements Initializable {
         }
         }
         int i =0;
-        while(i<=empList.size()){
+        while(i<=eventList.size()){
             CustomerEventtable.getItems().add(new Customertable(
-                    empList.get(i).eventname,
-                    empList.get(i).username,
-                   
-                    empList.get(i).venue,
-                    empList.get(i).eventdate
+                    eventList.get(i).eventname,
+                    eventList.get(i).username,
+                    eventList.get(i).venue,
+                    eventList.get(i).eventdate)
             );
             i++;
         }

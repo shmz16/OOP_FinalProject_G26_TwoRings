@@ -5,6 +5,7 @@
 package main;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 /**
  *
@@ -13,16 +14,16 @@ import java.io.Serializable;
 public class Customertable implements Serializable{
     private String EventNameColumn;
     private String usernameColumn;
-    private String locationTable;
-    private String EventdateColumn;
-    private String commentcolumn;
+    private Venue locationTable;
+    private LocalDate EventdateColumn;
+    
 
-    public Customertable(String EventNameColumn, String usernameColumn, String locationTable, String EventdateColumn, String commentcolumn) {
+    public Customertable(String EventNameColumn, String usernameColumn, Venue locationTable, LocalDate EventdateColumn) {
         this.EventNameColumn = EventNameColumn;
         this.usernameColumn = usernameColumn;
         this.locationTable = locationTable;
         this.EventdateColumn = EventdateColumn;
-        this.commentcolumn = commentcolumn;
+        
     }
 
     public String getEventNameColumn() {
@@ -41,35 +42,32 @@ public class Customertable implements Serializable{
         this.usernameColumn = usernameColumn;
     }
 
-    public String getLocationTable() {
+    public Venue getLocationTable() {
         return locationTable;
     }
 
-    public void setLocationTable(String locationTable) {
+    public void setLocationTable(Venue locationTable) {
         this.locationTable = locationTable;
     }
 
-    public String getEventdateColumn() {
+    public LocalDate getEventdateColumn() {
         return EventdateColumn;
     }
 
-    public void setEventdateColumn(String EventdateColumn) {
+    public void setEventdateColumn(LocalDate EventdateColumn) {
         this.EventdateColumn = EventdateColumn;
-    }
-
-    public String getCommentcolumn() {
-        return commentcolumn;
-    }
-
-    public void setCommentcolumn(String commentcolumn) {
-        this.commentcolumn = commentcolumn;
     }
 
     @Override
     public String toString() {
-        return "Customertable{" + "EventNameColumn=" + EventNameColumn + ", usernameColumn=" + usernameColumn + ", locationTable=" + locationTable + ", EventdateColumn=" + EventdateColumn + ", commentcolumn=" + commentcolumn + '}';
+        return "Customertable{" + "EventNameColumn=" + EventNameColumn + ", usernameColumn=" + usernameColumn + ", locationTable=" + locationTable + ", EventdateColumn=" + EventdateColumn + '}';
     }
+
     
+
+    
+
+  
     
     
     

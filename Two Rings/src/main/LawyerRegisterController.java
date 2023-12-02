@@ -59,7 +59,9 @@ public class LawyerRegisterController implements Initializable {
         String name = nametextfield.getText();
         String employeeID = IDtextfield.getText();
         String location = addresstextfield.getText();
-        LocalDate date = DOEdatepicker.getValue(); 
+        LocalDate date = DOEdatepicker.getValue();
+        
+        
         
         
         

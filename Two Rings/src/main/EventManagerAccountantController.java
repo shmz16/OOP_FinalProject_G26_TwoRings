@@ -72,7 +72,7 @@ public class EventManagerAccountantController implements Initializable {
         String bankAcc = BankAcctextField.getText();
         String marriageCertificate = marriageCertificateTextField.getText();
         String Feedback = customtextArea.getText();
-        String paymentIncrease = paycomboBox.getItems().addAll("20%","30%","40%");
+        paycomboBox.getItems().addAll("20%","30%","40%");
         
         
         StringBuilder textToset = new StringBuilder();
