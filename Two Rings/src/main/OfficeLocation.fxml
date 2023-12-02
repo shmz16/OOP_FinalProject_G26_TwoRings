@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="668.0" prefWidth="1021.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.OfficeLocationController">
    <children>
-      <Label layoutX="432.0" layoutY="31.0" text="Loact Us!">
+      <Label layoutX="432.0" layoutY="31.0" text="Locate Us!">
          <font>
             <Font name="System Bold" size="35.0" />
          </font>
