@@ -4,12 +4,16 @@
  */
 package main;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
 <<<<<<< HEAD
 public class AppendableObjectOutputStream extends ObjectOutputStream {
+
+    public AppendableObjectOutputStream(FileOutputStream fos) {
+    }
 
 =======
 class AppendableObjectOutputStream extends ObjectOutputStream {

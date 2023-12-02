@@ -19,14 +19,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-<<<<<<< HEAD
-        Parent root = FXMLLoader.load(getClass().getResource("AccountantCheckSalariesScene.fxml"));
+//<<<<<<< HEAD
+//        Parent root = FXMLLoader.load(getClass().getResource("AccountantCheckSalariesScene.fxml"));
 
-=======
-        Parent root = FXMLLoader.load(getClass().getResource("CostumerDashBoardScene.fxml"));
+//=======
+        Parent Parent Object root = FXMLLoader.load(getClass().getResource("CostumerDashBoardScene.fxml"));
         
->>>>>>> FahimsBranch01
-        Scene scene = new Scene(root);
+//>>>>>>> FahimsBranch01
+        Scene scene = new Scene((Parent) root);
 
         stage.setScene(scene);
         stage.show();

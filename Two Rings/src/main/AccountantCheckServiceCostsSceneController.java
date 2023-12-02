@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ///*
 // * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 // * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
@@ -190,7 +190,7 @@
 //    }
 //    
 //}
-=======
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
@@ -382,4 +382,4 @@ public class AccountantCheckServiceCostsSceneController implements Initializable
     }
     
 } */
->>>>>>> 1340f36b2f992cb7aa3e16d903673c731d63a681
+//>>>>>>> 1340f36b2f992cb7aa3e16d903673c731d63a681
