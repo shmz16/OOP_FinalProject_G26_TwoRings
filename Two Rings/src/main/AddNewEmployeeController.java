@@ -30,6 +30,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -41,7 +42,7 @@ import javafx.scene.image.ImageView;
  * @author acer
  */
 public class AddNewEmployeeController implements Initializable {
-
+    Alert a = new Alert(Alert.AlertType.WARNING);
     @FXML
     private ComboBox<String> genderCombo;
     @FXML
