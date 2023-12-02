@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.AccountantDashboardSceneController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="113.0" prefWidth="800.0" style="-fx-background-color: #008080;" />
+      <Button layoutX="239.0" layoutY="164.0" mnemonicParsing="false" onAction="#viewProfitsButtonOnClick" prefHeight="31.0" prefWidth="322.0" style="-fx-background-color: #008080; -fx-text-fill: white;" text="VIEW PROFITS" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="239.0" layoutY="223.0" mnemonicParsing="false" onAction="#viewSalaryListButtonOnClick" prefHeight="31.0" prefWidth="322.0" style="-fx-background-color: #008080; -fx-text-fill: white;" text="VIEW SALARY LIST" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="239.0" layoutY="283.0" mnemonicParsing="false" onAction="#adjustRecordsButtonOnClick" prefHeight="31.0" prefWidth="322.0" style="-fx-background-color: #008080; -fx-text-fill: white;" text="ADJUST RECORDS" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="239.0" layoutY="346.0" mnemonicParsing="false" onAction="#eventVenuesButtonOnClick" prefHeight="31.0" prefWidth="322.0" style="-fx-background-color: #008080; -fx-text-fill: white;" text="EVENT VENUES" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="239.0" layoutY="407.0" mnemonicParsing="false" onAction="#viewServiceChargesButtonOnClick" prefHeight="31.0" prefWidth="322.0" style="-fx-background-color: #008080; -fx-text-fill: white;" text="VIEW SERVICE CHARGES" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="239.0" layoutY="468.0" mnemonicParsing="false" onAction="#packageServiceButtonOnClick" prefHeight="44.0" prefWidth="322.0" style="-fx-background-color: #008080; -fx-text-fill: white;" text="PACKAGE SERVICE" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutY="78.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" style="-fx-background-color: #008080; -fx-border-color: #008080;" text="Home" textFill="WHITE" />
+      <Button layoutX="109.0" layoutY="78.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="210.0" style="-fx-background-color: #008080; -fx-border-color: #008080;" text="Settings &amp; Privacy" textFill="WHITE" />
+   </children>
+</AnchorPane>

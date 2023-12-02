@@ -3,19 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package main;
+import java.io.Serializable;
 import java.time.LocalDate;
 /**
  *
  * @author User
  */
-public class User {
+public class User implements Serializable {
     
-    private String name;
-    private String gender;
-    private String email;
-    private String phoneNo;
-    private String password;
-    private LocalDate dateOfBirth;
+    protected String name;
+    protected String gender;
+    protected String email;
+    protected String phoneNo;
+    protected String password;
+    protected LocalDate dateOfBirth;
     
     public User(){
     
