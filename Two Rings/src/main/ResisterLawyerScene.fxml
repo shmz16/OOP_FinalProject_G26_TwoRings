@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerWitnessController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ResisterLawyerSceneController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -91,12 +91,12 @@
             <Font name="Arial Black" size="12.0" />
          </font>
       </Label>
-      <TableView layoutX="11.0" layoutY="167.0" prefHeight="178.0" prefWidth="579.0">
+      <TableView fx:id="lawyerInfoTable" layoutX="11.0" layoutY="167.0" prefHeight="178.0" prefWidth="579.0">
         <columns>
-          <TableColumn prefWidth="110.0" text="user name" />
-          <TableColumn prefWidth="161.0" text="lawyer Id" />
-            <TableColumn prefWidth="137.0" text="Event date" />
-            <TableColumn prefWidth="170.0" text="venue" />
+          <TableColumn fx:id="userNamecol" prefWidth="110.0" text="user name" />
+          <TableColumn fx:id="lawyerIDcol" prefWidth="161.0" text="lawyer Id" />
+            <TableColumn fx:id="eventdatecol" prefWidth="137.0" text="Event date" />
+            <TableColumn fx:id="locationcol" prefWidth="170.0" text="venue" />
         </columns>
       </TableView>
    </children>
