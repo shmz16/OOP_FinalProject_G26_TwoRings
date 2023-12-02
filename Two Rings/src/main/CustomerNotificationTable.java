@@ -11,6 +11,10 @@ import java.io.Serializable;
  * @author LENOVO ThinkPad
  */
 public class CustomerNotificationTable implements Serializable{
+
+    static void add(CustomerNotificationTable p) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     private String notification;
     
     /**

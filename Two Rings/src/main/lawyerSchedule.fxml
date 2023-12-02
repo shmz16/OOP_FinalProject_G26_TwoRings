@@ -62,8 +62,8 @@
          </cursor>
       </Button>
       <DatePicker fx:id="datepicker" editable="false" layoutX="16.0" layoutY="147.0" prefHeight="25.0" prefWidth="148.0" promptText="DD/MM/YYYY" style="-fx-background-color: #008080;" />
-      <TextField fx:id="brideusername" layoutX="16.0" layoutY="186.0" promptText="Bride User name" />
-      <TextField fx:id="groomusername" layoutX="17.0" layoutY="225.0" promptText="Groom User name" />
+      <TextField fx:id="customerusername" layoutX="16.0" layoutY="186.0" promptText="Bride/groom name?" />
+      <TextField fx:id="locationtextfield" layoutX="17.0" layoutY="225.0" promptText="Address" />
       <TextField fx:id="IDtextfield" layoutX="17.0" layoutY="110.0" promptText="ID" />
       <Label layoutX="275.0" layoutY="62.0" text="Schedule" textFill="TEAL" underline="true">
          <font>
@@ -72,10 +72,10 @@
       </Label>
       <TableView fx:id="lawyertable" layoutX="175.0" layoutY="111.0" prefHeight="176.0" prefWidth="417.0">
          <columns>
-            <TableColumn fx:id="brideusertablecolumn" prefWidth="107.0" text="Bride'user name" />
-            <TableColumn fx:id="groomusercolumn" prefWidth="120.0" text="Groom's user name" />
-            <TableColumn fx:id="marriagedatecolumn" prefWidth="93.0" text="Marriage date" />
-            <TableColumn fx:id="registarIDcolumn" prefWidth="96.0" text="Registar ID" />
+            <TableColumn fx:id="Customertable" prefWidth="107.0" text="Customer name" />
+            <TableColumn fx:id="locationtable" prefWidth="120.0" text="location" />
+            <TableColumn fx:id="Eventdatecolumn" prefWidth="93.0" text="EventDate" />
+            <TableColumn fx:id="IDcolumn" prefWidth="96.0" text="ID" />
          </columns>
       </TableView>
       <Button layoutX="545.0" layoutY="294.0" mnemonicParsing="false" onAction="#savebuttonOnclick" style="-fx-background-color: #008080;" text="Save" textFill="#ccccff">
