@@ -123,7 +123,7 @@ public class CostumerDashBoardSceneController implements Initializable {
 
     @FXML
     private void reloadOnClick(ActionEvent event) {
-         ObservableList<CustomerNotificationTable> venueschedules = FXCollections.observableArrayList();
+         ObservableList<CustomerNotificationTable> notificationarr = FXCollections.observableArrayList();
         
             notificationCol.setCellValueFactory(new PropertyValueFactory<>("My Window"));
             
@@ -139,7 +139,7 @@ public class CostumerDashBoardSceneController implements Initializable {
             try {
                 while (true) {
                     p = (CustomerNotificationTable) ois.readObject();
-                    venueschedules.add(p);
+                    notificationarr.add(p);
                 }
             } catch (Exception e) {
             }
@@ -152,7 +152,7 @@ public class CostumerDashBoardSceneController implements Initializable {
             } catch (IOException ex) {
             }
         }
-        userDashNotificationTable.setItems(venueschedules);
+        userDashNotificationTable.setItems(notificationarr);
     }
 
    

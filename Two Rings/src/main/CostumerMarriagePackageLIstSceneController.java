@@ -43,6 +43,8 @@ public class CostumerMarriagePackageLIstSceneController implements Initializable
     private TableColumn<MarriagePackageTable, String> priceCol;
     @FXML
     private TextArea packagesTextArea;
+    @FXML
+    private ComboBox<Integer> choosepkgcombobox;
 
     /**
      * Initializes the controller class.
@@ -61,6 +63,8 @@ public class CostumerMarriagePackageLIstSceneController implements Initializable
            
         }
         eventCombobox.getItems().addAll(countryNames);
+        packagesTextArea.setText("1: Registrar and Lawyer \n" + "2: Registrar only \n" + "3: Registrar, Lawyer, Event Manager \n)" + "4: Event Manager only \n" + "5: Lawyer Only");
+        choosepkgcombobox.getItems().addAll(1,2,3,4,5);
     }    
 
     @FXML
@@ -89,81 +93,13 @@ public class CostumerMarriagePackageLIstSceneController implements Initializable
 
     @FXML
     private void backbuttononclick(ActionEvent event)throws IOException{
-           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerDashBoardScene.fxml", event);
+        SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerDashBoardScene.fxml", event);
         switchTolawyerScene.ConfirmSceneSwitch();
     }
 
     @FXML
-    private void donebuttononclick(ActionEvent event) {
-         MarriagePackageTable i = new MarriagePackageTable(
-                eventdatepik.getValue(),
-                eventCombobox.getValue());
-        
-        FileOutputStream fos = null;
-        ObjectOutputStream oos = null;
-        File f = null;
-        try {
-            f = new File("Customer Marriage Package info.bin");
-            if (f.exists()) {
-                fos = new FileOutputStream(f, true);
-                oos = new AppendableObjectOutputStream(fos);
-            } else {
-                fos = new FileOutputStream(f);
-                oos = new ObjectOutputStream(fos);
-            }
-
-            oos.writeObject(i);
-            System.out.println("write object sucessfull ");
-
-        } catch (IOException ex) {
-            Logger.getLogger(CostumerMarriagePackageLIstSceneController.class
-                    .getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                if (oos != null) {
-                    oos.close();
-
-                }
-            } catch (IOException ex) {
-                Logger.getLogger(CostumerMarriagePackageLIstSceneController.class
-                        .getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        
-        
-        ObservableList<MarriagePackageTable> venueschedules = FXCollections.observableArrayList();
-        
-            codeCol.setCellValueFactory(new PropertyValueFactory<>("code"));
-            pkgCol.setCellValueFactory(new PropertyValueFactory<>("pkg"));
-            priceCol.setCellValueFactory(new PropertyValueFactory<>("Price"));
-            
-        
-        FileInputStream fis = null;
-        ObjectInputStream ois = null;
-
-        try {
-            f = new File("Customer Marriage Package info.bin");
-            fis = new FileInputStream(f);
-            ois = new ObjectInputStream(fis);
-            MarriagePackageTable p;
-            try {
-                while (true) {
-                    p = (MarriagePackageTable) ois.readObject();
-                    venueschedules.add(p);
-                }
-            } catch (IOException | ClassNotFoundException e) {
-            }
-        } catch (IOException ex) {
-        } finally {
-            try {
-                if (ois != null) {
-                    ois.close();
-                }
-            } catch (IOException ex) {
-            }
-        }
-        MarriagePackageTable.setItems(venueschedules);
+    private void donebuttononclick(ActionEvent event) {      
+        currentCustomer.MarriagePackage.packageCode = choosepkgcombobox.getValue();
+        currentCustomer.MarriagePackage.location = eventCombobox.getValue();
     }
-
-    
 }
