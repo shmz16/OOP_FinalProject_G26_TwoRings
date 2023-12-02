@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="402.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="402.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumesLawyerSceneController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -109,6 +109,11 @@
          </cursor>
       </Button>
       <Button layoutX="223.0" layoutY="152.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #008080;" text="reload" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="5.0" layoutY="132.0" mnemonicParsing="false" onAction="#backbuttononclick" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

@@ -27,8 +27,6 @@ public class SignInSceneController implements Initializable {
     @FXML
     private TextField passcodeTextField;
     @FXML
-    private Label errorLabel;
-    @FXML
     private TextField userNameTextField;
     @FXML
     private AnchorPane forgetPasswordLabel;
@@ -44,22 +42,16 @@ public class SignInSceneController implements Initializable {
     }    
 
     @FXML
-    private void signInButtonOnClick(ActionEvent event){
-        String username = userNameTextField.getText();
-        String password = passcodeTextField.getText();
-        
-        System.out.println("Username: " + username);
-        System.out.println("Password: " + password);
+    private void signInButtonOnClick(ActionEvent event)throws IOException{
+         SceneSwitcher switchTo = new SceneSwitcher("CostumerDashBoardScene.fxml", event);
+         switchTo.ConfirmSceneSwitch();
+//        String username = userNameTextField.getText();
+//        String password = passcodeTextField.getText();
+//        
+//        System.out.println("Username: " + username);
+//        System.out.println("Password: " + password);
+          
     }
 
-    @FXML
-    private void creatAccountButtonOnClick(ActionEvent event)throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("JoinInScene.fxml"));
-        Parent openingPageParent = loader.load();
-        Scene openingPageScene = new Scene(openingPageParent);
-        Stage openingPageStage = (Stage) userNameTextField.getScene().getWindow();
-        openingPageStage.setScene(openingPageScene);
-        openingPageStage.show();
-    }
     
 }

@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerWitnessController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -64,17 +64,17 @@
             <Label layoutX="115.0" layoutY="59.0" prefHeight="17.0" prefWidth="242.0" />
          </children>
       </AnchorPane>
-      <Button layoutX="14.0" layoutY="138.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="21.0" style="-fx-background-color: #008080;" text="&lt;" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <Button layoutX="14.0" layoutY="138.0" mnemonicParsing="false" onAction="#backbuttononclick" prefHeight="25.0" prefWidth="21.0" style="-fx-background-color: #008080;" text="&lt;" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="517.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
+      <Button layoutX="517.0" layoutY="361.0" mnemonicParsing="false" onAction="#signoutbuttononclick" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" onAction="#helpcenteronclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -84,33 +84,33 @@
             <Cursor fx:constant="WAIT" />
          </cursor>
       </Button>
-      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" onAction="#aboutonclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Home" textFill="WHITE">
+      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" onAction="#homebuttononclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Home" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="NONE" />
          </cursor>
       </Button>
-      <TextField layoutX="320.0" layoutY="168.0" prefHeight="25.0" prefWidth="177.0" promptText="Enter your id here" />
-      <TextField layoutX="83.0" layoutY="168.0" prefHeight="25.0" prefWidth="189.0" promptText="Enter your name here" />
+      <TextField fx:id="idtextfield" layoutX="320.0" layoutY="168.0" prefHeight="25.0" prefWidth="177.0" promptText="Enter your id here" />
+      <TextField fx:id="usernametextfield" layoutX="83.0" layoutY="168.0" prefHeight="25.0" prefWidth="189.0" promptText="Enter your name here" />
       <Label layoutX="269.0" layoutY="142.0" text="WITHESS" textFill="TEAL" underline="true">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="264.0" layoutY="331.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #008080;" text="Confirm" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <Button layoutX="264.0" layoutY="331.0" mnemonicParsing="false" onAction="#confirmbuttononclick" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #008080;" text="Confirm" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField layoutX="334.0" layoutY="211.0" promptText="Enter your id here" />
-      <TextField layoutX="88.0" layoutY="211.0" prefHeight="25.0" prefWidth="177.0" promptText="Enter your name here" />
-      <TextField layoutX="334.0" layoutY="246.0" promptText="Enter your id here" />
-      <TextField layoutX="88.0" layoutY="246.0" prefHeight="25.0" prefWidth="177.0" promptText="Enter your name here" />
-      <TextField layoutX="334.0" layoutY="280.0" promptText="Enter your id here" />
-      <TextField layoutX="88.0" layoutY="280.0" prefHeight="25.0" prefWidth="177.0" promptText="Enter your name here" />
+      <TextField fx:id="witness1id" layoutX="334.0" layoutY="211.0" promptText="Enter id here" />
+      <TextField fx:id="withness1name" layoutX="88.0" layoutY="211.0" prefHeight="25.0" prefWidth="177.0" promptText="Enter witness name here" />
+      <TextField fx:id="withness2id" layoutX="334.0" layoutY="246.0" promptText="Enter id here" />
+      <TextField fx:id="withness3id" layoutX="334.0" layoutY="280.0" promptText="Enter id here" />
+      <TextField fx:id="withness3name" layoutX="89.0" layoutY="280.0" prefHeight="25.0" prefWidth="177.0" promptText="Enter witness name here" />
+      <TextField fx:id="withness2name" layoutX="89.0" layoutY="246.0" prefHeight="25.0" prefWidth="177.0" promptText="Enter witness name here" />
    </children>
 </AnchorPane>

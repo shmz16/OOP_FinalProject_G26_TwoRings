@@ -10,17 +10,24 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
  *
  * @author LENOVO ThinkPad
  */
-public class RegistarDashboardController implements Initializable {
+public class RegistarResignationSceneController implements Initializable {
 
     @FXML
-    private TableColumn<?, ?> notificationCol;
+    private TextField usernametextfield;
+    @FXML
+    private TextField idtestfield;
+    @FXML
+    private TextField phonenumbertextfield;
+    @FXML
+    private DatePicker datepik;
 
     /**
      * Initializes the controller class.
@@ -29,12 +36,6 @@ public class RegistarDashboardController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-    @FXML
-    private void signoutonmousclick(ActionEvent event) throws IOException{
-           SceneSwitcher switchTolawyerScene = new SceneSwitcher("SignInScene.fxml", event);
-        switchTolawyerScene.ConfirmSceneSwitch();
-    }
 
     @FXML
     private void helpcenteronclick(ActionEvent event) throws IOException{
@@ -49,19 +50,13 @@ public class RegistarDashboardController implements Initializable {
     }
 
     @FXML
-    private void lawyeronclick(ActionEvent event) throws IOException{
-           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerAboutScene.fxml", event);
-        switchTolawyerScene.ConfirmSceneSwitch();
+    private void submitbuttononclick(ActionEvent event) {
     }
 
     @FXML
-    private void customeronclick(ActionEvent event)throws IOException{
-           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerAboutScene.fxml", event);
+    private void backonclick(ActionEvent event) throws IOException{
+           SceneSwitcher switchTolawyerScene = new SceneSwitcher("RegistarDashboard.fxml", event);
         switchTolawyerScene.ConfirmSceneSwitch();
-    }
-
-    @FXML
-    private void reloadonclick(ActionEvent event) {
     }
     
 }

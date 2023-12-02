@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumesRegistarSceneController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -98,6 +98,11 @@
       <TextField layoutX="55.0" layoutY="348.0" prefHeight="25.0" prefWidth="218.0" />
       <TextArea layoutX="55.0" layoutY="162.0" prefHeight="185.0" prefWidth="258.0" />
       <Button layoutX="54.0" layoutY="143.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="258.0" style="-fx-background-color: #008080;" text="Registar's Inbox" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#backbuttononclick" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

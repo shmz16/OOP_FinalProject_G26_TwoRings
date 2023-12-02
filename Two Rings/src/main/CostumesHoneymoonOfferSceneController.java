@@ -4,8 +4,11 @@
  */
 package main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -22,5 +25,43 @@ public class CostumesHoneymoonOfferSceneController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void signoutbuttononclick(ActionEvent event) throws IOException{
+           SceneSwitcher switchTolawyerScene = new SceneSwitcher("SignInScene.fxml", event);
+        switchTolawyerScene.ConfirmSceneSwitch();
+    }
+
+    @FXML
+    private void helpcenteronclick(ActionEvent event) throws IOException{
+           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerHelpCenterScene.fxml", event);
+        switchTolawyerScene.ConfirmSceneSwitch();
+    }
+
+    @FXML
+    private void aboutonclick(ActionEvent event) throws IOException{
+           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerAboutScene.fxml", event);
+        switchTolawyerScene.ConfirmSceneSwitch();
+    }
+
+    @FXML
+    private void homebuttononclick(ActionEvent event) throws IOException{
+           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerDashBoardScene.fxml", event);
+        switchTolawyerScene.ConfirmSceneSwitch();
+    }
+
+    @FXML
+    private void genarateonclick(ActionEvent event) {
+    }
+
+    @FXML
+    private void backbuttononclick(ActionEvent event) throws IOException{
+           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerDashBoardScene.fxml", event);
+        switchTolawyerScene.ConfirmSceneSwitch();
+    }
+
+    @FXML
+    private void reloadonclock(ActionEvent event) {
+    }
     
 }

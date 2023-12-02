@@ -6,12 +6,12 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerHelpCenterSceneController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerWitnessController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -56,54 +56,48 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="5.0" layoutY="133.0" mnemonicParsing="false" onAction="#backButtonOnClick" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
+      <Button layoutX="14.0" layoutY="138.0" mnemonicParsing="false" onAction="#backbuttononclick" prefHeight="25.0" prefWidth="21.0" style="-fx-background-color: #008080;" text="&lt;" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="WHITE">
+      <Button layoutX="517.0" layoutY="361.0" mnemonicParsing="false" onAction="#signoutbuttononclick" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
          <cursor>
-            <Cursor fx:constant="NONE" />
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" onAction="#helpcenteronclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
       <Button layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
          <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="WAIT" />
          </cursor>
       </Button>
-      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" onAction="#aboutbuttononclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" onAction="#aboutonclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" onAction="#homebuttononclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Home" textFill="#ccccff">
+      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" onAction="#homebuttononclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Home" textFill="WHITE">
          <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="NONE" />
          </cursor>
       </Button>
-      <Button layoutX="279.0" layoutY="301.0" mnemonicParsing="false" onAction="#sentonclick" style="-fx-background-color: #008080;" text="Send" textFill="#ccccff">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Text fill="#ccccff" layoutX="21.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name : " />
-      <Text fill="#ccccff" layoutX="22.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID : " />
-      <Text fill="#ccccff" layoutX="22.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address : " />
-      <Text fill="#ccccff" layoutX="22.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number : " />
-      <Label layoutX="112.0" layoutY="22.0" prefHeight="17.0" prefWidth="242.0" />
-      <Label layoutX="112.0" layoutY="41.0" prefHeight="17.0" prefWidth="242.0" />
-      <Label layoutX="112.0" layoutY="59.0" prefHeight="17.0" prefWidth="242.0" />
-      <Label layoutX="112.0" layoutY="78.0" prefHeight="17.0" prefWidth="242.0" />
-      <TextArea fx:id="textareafield" layoutX="21.0" layoutY="186.0" prefHeight="104.0" prefWidth="561.0" promptText="Write down your any queries" />
-      <Text layoutX="32.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Any problem?" wrappingWidth="131.337890625">
+      <Label layoutX="269.0" layoutY="142.0" text="Lawyer Info" textFill="TEAL" underline="true">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
-      </Text>
-      <Button layoutX="519.0" layoutY="361.0" mnemonicParsing="false" onAction="#signOutButtonOnClick" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
+      </Label>
+      <TableView layoutX="11.0" layoutY="167.0" prefHeight="178.0" prefWidth="579.0">
+        <columns>
+          <TableColumn prefWidth="110.0" text="user name" />
+          <TableColumn prefWidth="161.0" text="lawyer Id" />
+            <TableColumn prefWidth="137.0" text="Event date" />
+            <TableColumn prefWidth="170.0" text="venue" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

@@ -15,9 +15,6 @@ public class Employee extends User{
     private int salary;
     private String designation;
 
-    public Employee(){
-    
-    };
     
     public Employee(int employeeID, LocalDate joinDate, int salary, String designation, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
         super(name, gender, email, phoneNo, password, dateOfBirth);

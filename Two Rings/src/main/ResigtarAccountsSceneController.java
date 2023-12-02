@@ -4,7 +4,6 @@
  */
 package main;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -16,7 +15,7 @@ import javafx.fxml.Initializable;
  *
  * @author LENOVO ThinkPad
  */
-public class CostumesRegistarSceneController implements Initializable {
+public class ResigtarAccountsSceneController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -27,9 +26,23 @@ public class CostumesRegistarSceneController implements Initializable {
     }    
 
     @FXML
-    private void backbuttononclick(ActionEvent event)  throws IOException{
-           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerDashBoardScene.fxml", event);
-        switchTolawyerScene.ConfirmSceneSwitch();
+    private void helpcenteronclick(ActionEvent event) {
+    }
+
+    @FXML
+    private void aboutbuttononclick(ActionEvent event) {
+    }
+
+    @FXML
+    private void homeonclick(ActionEvent event) {
+    }
+
+    @FXML
+    private void submitonclick(ActionEvent event) {
+    }
+
+    @FXML
+    private void backonclick(ActionEvent event) {
     }
     
 }

@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerEventManegmenntController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -66,12 +66,12 @@
             <Label layoutX="115.0" layoutY="59.0" prefHeight="17.0" prefWidth="242.0" />
          </children>
       </AnchorPane>
-      <Button layoutX="14.0" layoutY="138.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="21.0" style="-fx-background-color: #008080;" text="&lt;" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <Button layoutX="14.0" layoutY="138.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="25.0" prefWidth="21.0" style="-fx-background-color: #008080;" text="&lt;" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="517.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
+      <Button layoutX="517.0" layoutY="361.0" mnemonicParsing="false" onAction="#signOutButtonOnClick" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -96,31 +96,26 @@
             <Cursor fx:constant="NONE" />
          </cursor>
       </Button>
-      <Button layoutX="502.0" layoutY="155.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #008080;" text="Reload " textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <Button layoutX="502.0" layoutY="155.0" mnemonicParsing="false" onAction="#reloadOnClick" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #008080;" text="Reload " textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <DatePicker layoutX="106.0" layoutY="290.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter event date" />
-      <TextField layoutX="106.0" layoutY="198.0" promptText="Enter your id here" />
-      <TextArea layoutX="333.0" layoutY="235.0" prefHeight="71.0" prefWidth="242.0" promptText="sent any note to the event manegment you want" />
-      <TextField layoutX="55.0" layoutY="167.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter the event name here" />
+      <DatePicker fx:id="eventdatepik" layoutX="106.0" layoutY="290.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter event date" />
+      <TextField fx:id="idTextField" layoutX="106.0" layoutY="198.0" promptText="Enter your id here" />
+      <TextArea fx:id="textarea" layoutX="333.0" layoutY="235.0" prefHeight="71.0" prefWidth="242.0" promptText="sent any note to the event manegment you want" />
+      <TextField fx:id="eventNameTestField" layoutX="55.0" layoutY="167.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter the event name here" />
       <Label layoutX="237.0" layoutY="142.0" text="EVENT MANEGMENT" textFill="TEAL" underline="true">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="106.0" layoutY="228.0" promptText="Enter your name here" />
-      <Button layoutX="182.0" layoutY="325.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #008080;" text="Confirm" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <TextField fx:id="usernametexttield" layoutX="106.0" layoutY="228.0" promptText="Enter your name here" />
+      <Button layoutX="307.0" layoutY="338.0" mnemonicParsing="false" onAction="#sentButtonOnClick" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #008080;" text="sent" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="523.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #008080;" text="sent" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <TextField layoutX="107.0" layoutY="258.0" promptText="Enter your location here" />
+      <TextField fx:id="locationtextfield" layoutX="107.0" layoutY="258.0" promptText="Enter your location here" />
    </children>
 </AnchorPane>

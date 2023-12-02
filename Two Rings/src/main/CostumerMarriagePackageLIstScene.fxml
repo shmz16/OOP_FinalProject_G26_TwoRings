@@ -8,14 +8,12 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerMarriagePackageLIstSceneController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -60,12 +58,12 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="523.0" layoutY="355.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
+      <Button layoutX="523.0" layoutY="355.0" mnemonicParsing="false" onAction="#signOutButtonOnClick" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" onAction="#helpcenteronclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -75,12 +73,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" onAction="#aboutbuttononclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Home" textFill="#ccccff">
+      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" onAction="#homebuttononclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Home" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="NONE" />
          </cursor>
@@ -93,41 +91,26 @@
       <Label layoutX="113.0" layoutY="42.0" prefHeight="17.0" prefWidth="242.0" />
       <Label layoutX="113.0" layoutY="60.0" prefHeight="17.0" prefWidth="242.0" />
       <Label layoutX="113.0" layoutY="79.0" prefHeight="17.0" prefWidth="242.0" />
-      <TableView layoutX="184.0" layoutY="191.0" prefHeight="132.0" prefWidth="408.0" style="-fx-background-color: #ccccff;">
-        <columns>
-          <TableColumn prefWidth="76.0" text="Code" />
-          <TableColumn prefWidth="245.0" text="Package Details" />
-            <TableColumn minWidth="0.0" prefWidth="87.0" text="Price" />
-        </columns>
-      </TableView>
       <Text fill="TEAL" layoutX="28.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MARRIAGE PACKAGE" textAlignment="CENTER" underline="true" wrappingWidth="559.13671875">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
       </Text>
-      <Button layoutX="514.0" layoutY="322.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #008080;" text="Genarate" textFill="#ccccff">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
       <Label layoutX="158.0" layoutY="175.0" prefHeight="17.0" prefWidth="433.0" text="Package Genarate successfully!!" textFill="#d30606" />
-      <Button layoutX="10.0" layoutY="138.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
+      <Button layoutX="10.0" layoutY="138.0" mnemonicParsing="false" onAction="#backbuttononclick" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField layoutX="259.0" layoutY="322.0" prefHeight="25.0" prefWidth="255.0" promptText="Enter Your Package Code" />
-      <Button layoutX="183.0" layoutY="322.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #008080;" text="Reload" textFill="#ccccff">
+      <DatePicker fx:id="eventdatepik" layoutX="10.0" layoutY="232.0" prefHeight="25.0" prefWidth="165.0" promptText="your event date" />
+      <ComboBox fx:id="eventCombobox" layoutX="10.0" layoutY="192.0" prefHeight="25.0" prefWidth="165.0" promptText="choose event location" />
+      <Button layoutX="311.0" layoutY="273.0" mnemonicParsing="false" onAction="#donebuttononclick" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #008080;" text="Done" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <DatePicker layoutX="10.0" layoutY="232.0" prefHeight="25.0" prefWidth="165.0" promptText="your event date" />
-      <ComboBox layoutX="10.0" layoutY="192.0" prefHeight="25.0" prefWidth="165.0" promptText="choose event location" />
-      <Button layoutX="126.0" layoutY="274.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #008080;" text="Done" textFill="#ccccff">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
+      <ComboBox layoutX="184.0" layoutY="232.0" prefHeight="25.0" prefWidth="175.0" promptText="choose package number" />
+      <Label layoutX="361.0" layoutY="184.0" text="Packages: " />
+      <TextArea fx:id="packagesTextArea" editable="false" layoutX="367.0" layoutY="205.0" prefHeight="94.0" prefWidth="188.0" />
    </children>
 </AnchorPane>

@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerFeedBackSceneController">
    <children>
       <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
          <children>
@@ -57,7 +57,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="523.0" layoutY="355.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
+      <Button layoutX="523.0" layoutY="355.0" mnemonicParsing="false" onAction="#signOutButtonOnClick" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -72,12 +72,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" onAction="#aboutbuttononclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Home" textFill="#ccccff">
+      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" onAction="#homebuttononclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Home" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="NONE" />
          </cursor>
@@ -90,15 +90,15 @@
       <Label layoutX="113.0" layoutY="42.0" prefHeight="17.0" prefWidth="242.0" />
       <Label layoutX="113.0" layoutY="60.0" prefHeight="17.0" prefWidth="242.0" />
       <Label layoutX="113.0" layoutY="79.0" prefHeight="17.0" prefWidth="242.0" />
-      <Button layoutX="10.0" layoutY="138.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
+      <Button layoutX="10.0" layoutY="138.0" mnemonicParsing="false" onAction="#backButtonOnClick" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextArea layoutX="19.0" layoutY="240.0" prefHeight="104.0" prefWidth="555.0" promptText="Submit your feedback" />
-      <TextField layoutX="21.0" layoutY="203.0" prefHeight="25.0" prefWidth="414.0" promptText="Email" />
-      <TextField layoutX="21.0" layoutY="168.0" prefHeight="25.0" prefWidth="414.0" promptText="Name" />
-      <Button layoutX="447.0" layoutY="168.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="123.0" style="-fx-background-color: #008080;" text="submit feedback" textFill="#ccccff">
+      <TextArea fx:id="textareafield" layoutX="19.0" layoutY="240.0" prefHeight="104.0" prefWidth="555.0" promptText="Submit your feedback" />
+      <TextField fx:id="emailtextfield" layoutX="21.0" layoutY="203.0" prefHeight="25.0" prefWidth="414.0" promptText="Email" />
+      <TextField fx:id="nametextfield" layoutX="21.0" layoutY="168.0" prefHeight="25.0" prefWidth="414.0" promptText="Name" />
+      <Button layoutX="447.0" layoutY="168.0" mnemonicParsing="false" onAction="#submitbuttononclick" prefHeight="60.0" prefWidth="123.0" style="-fx-background-color: #008080;" text="submit feedback" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

@@ -66,44 +66,40 @@
             <Label layoutX="115.0" layoutY="59.0" prefHeight="17.0" prefWidth="242.0" />
          </children>
       </AnchorPane>
-      <Button layoutX="13.0" layoutY="178.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="CREAT PACKAGE" textFill="#ccccff">
+      <Button layoutX="14.0" layoutY="285.0" mnemonicParsing="false" onAction="#lawyerButtonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="MY LAWYER" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="14.0" layoutY="322.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="MY LAWYER" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <Button layoutX="13.0" layoutY="213.0" mnemonicParsing="false" onAction="#eventManegButtonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="EVENT MANEGMENT" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="13.0" layoutY="250.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="EVENT MANEGMENT" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <Button layoutX="13.0" layoutY="177.0" mnemonicParsing="false" onAction="#hmOfferButtonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="HONEYMOON OFFERS" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="13.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="HONEYMOON OFFERS" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></Button>
-      <Button layoutX="13.0" layoutY="142.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="MARRIAGE PACKAGE" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <Button layoutX="13.0" layoutY="142.0" mnemonicParsing="false" onAction="#marriagePackageButtonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="MARRIAGE PACKAGE" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <opaqueInsets>
             <Insets />
          </opaqueInsets></Button>
-      <Button layoutX="13.0" layoutY="286.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="MY REGISTAR" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <Button layoutX="13.0" layoutY="249.0" mnemonicParsing="false" onAction="#registarbuttonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="MY REGISTAR" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="14.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="Confirm Witness" textFill="#ccccff">
+      <Button layoutX="14.0" layoutY="321.0" mnemonicParsing="false" onAction="#witnessButtononClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="Confirm Witness" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="517.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
+      <Button layoutX="517.0" layoutY="361.0" mnemonicParsing="false" onAction="#signOutOnClick" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" onAction="#helpcenteronclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -113,7 +109,7 @@
             <Cursor fx:constant="WAIT" />
          </cursor>
       </Button>
-      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" onAction="#aboutOnClick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -123,20 +119,20 @@
             <Cursor fx:constant="NONE" />
          </cursor>
       </Button>
-      <TableView layoutX="172.0" layoutY="139.0" mouseTransparent="true" prefHeight="164.0" prefWidth="416.0" style="-fx-background-color: #ccccff;">
+      <TableView fx:id="userDashNotificationTable" layoutX="172.0" layoutY="139.0" mouseTransparent="true" prefHeight="164.0" prefWidth="416.0" style="-fx-background-color: #ccccff;">
         <columns>
-          <TableColumn prefWidth="415.0" sortType="DESCENDING" text="My Window" />
+          <TableColumn fx:id="notificationCol" prefWidth="415.0" sortType="DESCENDING" text="My Window" />
         </columns>
          <cursor>
             <Cursor fx:constant="NONE" />
          </cursor>
       </TableView>
-      <Button layoutX="306.0" layoutY="308.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="Reload Window" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <Button layoutX="462.0" layoutY="321.0" mnemonicParsing="false" onAction="#reloadOnClick" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #008080;" text="Reload Window" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="420.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #008080;" text="Feedback" textFill="#ccccff">
+      <Button layoutX="420.0" layoutY="361.0" mnemonicParsing="false" onAction="#feedBackOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #008080;" text="Feedback" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
