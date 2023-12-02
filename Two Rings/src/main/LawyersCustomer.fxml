@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.LawyersCustomerController">
+   <children>
+      <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
+         <children>
+            <MenuBar accessibleRole="MENU_ITEM" layoutY="-25.0" prefHeight="15.0" prefWidth="600.0" style="-fx-background-color: #008080;">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Flight">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="US Bangla Air-lines" />
+                        <MenuItem mnemonicParsing="false" text="Fly Emirates" />
+                        <MenuItem mnemonicParsing="false" text="Novo Air " />
+                        <MenuItem mnemonicParsing="false" text="Qatar Air-ways" />
+                        <MenuItem mnemonicParsing="false" text="Bangladesh Biman" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Taxi-cab">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="inDrive" />
+                        <MenuItem mnemonicParsing="false" text="Ubar" />
+                        <MenuItem mnemonicParsing="false" text="Cabify" />
+                        <MenuItem mnemonicParsing="false" text="Grab" />
+                        <MenuItem mnemonicParsing="false" text="OLA Cabs" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Hotel">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="The Plaza Hotel, New York" />
+                        <MenuItem mnemonicParsing="false" text="Raffles, Singapore" />
+                        <MenuItem mnemonicParsing="false" text="Taj Mahal Palace, Mumbai" />
+                        <MenuItem mnemonicParsing="false" text="Pan Pacific Sonargaon Dhaka" />
+                        <MenuItem mnemonicParsing="false" text="The Zabeer Jashore" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Label fx:id="tworingslogolabel" layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
+               <font>
+                  <Font name="Yu Gothic Regular" size="27.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="helpcenterlabel" layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="settingslabel" layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="Aboutlabel" layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="dashboardlabel" layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Dash Board" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Button>
+      <TableView fx:id="lawyerCustomertable" layoutX="48.0" layoutY="162.0" prefHeight="159.0" prefWidth="531.0">
+        <columns>
+          <TableColumn fx:id="usernamecolumn" prefWidth="88.33331298828125" text="username" />
+            <TableColumn fx:id="emailaddcolumn" prefWidth="145.66668701171875" text="Email address" />
+            <TableColumn fx:id="eventdatecolumn" prefWidth="135.33331298828125" text="event date" />
+            <TableColumn fx:id="locationcolumn" prefWidth="160.66668701171875" text="event location" />
+        </columns>
+      </TableView>
+      <Button layoutX="257.0" layoutY="321.0" mnemonicParsing="false" onAction="#showbuttonOnclick" text="Show" />
+      <TextArea fx:id="lawyercustomertextarea" layoutX="48.0" layoutY="381.0" prefHeight="136.0" prefWidth="505.0" promptText="Is there anything you want to share?" />
+      <Button layoutX="258.0" layoutY="517.0" mnemonicParsing="false" onAction="#sendbuttonOnclick" text="Send" />
+      <TextField layoutX="111.0" layoutY="353.0" />
+      <Label layoutX="55.0" layoutY="357.0" text="username" />
+      <Button layoutX="22.0" layoutY="128.0" mnemonicParsing="false" onAction="#backbuttononclick" text="&lt;" />
+   </children>
+</AnchorPane>
