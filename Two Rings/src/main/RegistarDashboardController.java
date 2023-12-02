@@ -50,7 +50,7 @@ public class RegistarDashboardController implements Initializable {
 
     @FXML
     private void lawyeronclick(ActionEvent event) throws IOException{
-           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerAboutScene.fxml", event);
+           SceneSwitcher switchTolawyerScene = new SceneSwitcher("ResisterLawyerScene.fxml", event);
         switchTolawyerScene.ConfirmSceneSwitch();
     }
 
