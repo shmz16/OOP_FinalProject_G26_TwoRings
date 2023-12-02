@@ -4,6 +4,7 @@
  */
 package main;
 
+import com.sun.istack.internal.logging.Logger;
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -12,6 +13,7 @@ import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -58,13 +60,53 @@ public class LawyerRegisterController implements Initializable {
     }    
 
     @FXML
-    private void showButtonOnclick(ActionEvent event) {
+    private void showButtonOnclick(ActionEvent event) throws IOException {
+        LawyerInfoTable i;
+        i = new LawyerInfoTable(
+                nametextfield.getText(),
+                IDtextfield.getText(),
+                DOEdatepicker.getValue(),
+                addresstextfield.getText()
+                
+        );
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+        File xFile = null;
         
-        String name = nametextfield.getText();
-        String employeeID = IDtextfield.getText();
-        String location = addresstextfield.getText();
-        LocalDate date = DOEdatepicker.getValue();
-        Employee tempEmployee = new Employee(0, date);
+        try{
+            xFile = new File("LawyerInfoToRegistor.bin");
+            if(xFile.exists()){
+                fos = new FileOutputStream(xFile);
+                oos = new AppendableObjectOutputStream(fos);
+            }else{
+                fos = new FileOutputStream(xFile);
+                oos = new ObjectOutputStream(fos);
+            }
+            oos.writeObject(i);
+            System.out.println("write object successful");
+           
+            }catch (IOException ex){
+                Logger.getLogger(LawyerRegisterController.class.getName()).log(level.SEVERE,null,ex);
+            }finally{
+            try{
+                if(oos!=null){
+                    oos.close();
+                }
+            }catch(IOException ex){
+                Logger.getLogger(LawyerRegisterController.class.getName()).log(level.SEVERE,null,ex);
+            }
+        }
+                
+                
+         
+        
+        
+        
+        
+    }
+        
+       
+        
     
         
         
@@ -72,54 +114,12 @@ public class LawyerRegisterController implements Initializable {
         
         
         
-        FileOutputStream fos = null;
-        ObjectOutputStream oos = null;
-        File xFile = null;
-        
-        try{
-            xFile new File("LawyerInfoToRegistor.bin"); 
-            fos = new FileOutputStream(xFile);
-            oos = new ObjectOutputStream(fos);
-           
-            try{
-                while(true){
-                    tempEvent = (Event) oos.writeObject();
-                    eventList.add(tempEvent);
-                }
-            }
-            catch(EOFException e){
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(EventManagerCustomerController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-        }
-        catch (IOException ex){
-            
-        }
-        finally {
-            try{
-                if (oos != null){
-                    oos.close();
-                }
-            }
-            catch(IOException e){
-        }
-        }
-        int i =0;
-        while(i<=eventList.size()){
-            CustomerEventtable.getItems().add(new Customertable(
-                    eventList.get(i).eventname,
-                    eventList.get(i).username,
-                    eventList.get(i).venue,
-                    eventList.get(i).eventdate)
-            );
-            i++;
-        }
+       
             
         
         
         
-    }
+    
 
     @FXML
     private void backbuttononclick(ActionEvent event)  throws IOException{

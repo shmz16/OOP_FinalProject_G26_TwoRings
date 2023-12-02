@@ -5,6 +5,7 @@
 package main;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import javafx.collections.ObservableList;
 
 /**
@@ -23,9 +24,9 @@ public class LawyerInfoTable implements Serializable{
     /**
      *
      */
-    protected String locationcol;
+    protected LocalDate locationcol;
 
-    public LawyerInfoTable(String userNamecol, String lawyerIDcol, String eventdatecol, String locationcol) {
+    public LawyerInfoTable(String userNamecol, String lawyerIDcol, String eventdatecol, LocalDate locationcol) {
         this.userNamecol = userNamecol;
         this.lawyerIDcol = lawyerIDcol;
         this.eventdatecol = eventdatecol;
@@ -56,11 +57,11 @@ public class LawyerInfoTable implements Serializable{
         this.eventdatecol = eventdatecol;
     }
 
-    public String getLocationcol() {
+    public LocalDate getLocationcol() {
         return locationcol;
     }
 
-    public void setLocationcol(String locationcol) {
+    public void setLocationcol(LocalDate locationcol) {
         this.locationcol = locationcol;
     }
 

@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -35,7 +36,7 @@ public class ResisterLawyerSceneController implements Initializable {
     @FXML
     private TableColumn<LawyerInfoTable, String> eventdatecol;
     @FXML
-    private TableColumn<LawyerInfoTable, String> locationcol;
+    private TableColumn<LawyerInfoTable, LocalDate> locationcol;
 
     /**
      * Initializes the controller class.
