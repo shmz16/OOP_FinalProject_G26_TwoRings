@@ -37,21 +37,21 @@ public class lawyerScheduleController implements Initializable {
     @FXML
     private DatePicker datepicker;
     @FXML
-    private TextField brideusername;
+    private TextField customerusername;
     @FXML
-    private TextField groomusername;
+    private TextField locationtextfield;
     @FXML
     private TextField IDtextfield;
     @FXML
     private TableView<?> lawyertable;
     @FXML
-    private TableColumn<?, ?> brideusertablecolumn;
+    private TableColumn<?, ?> Customertable;
     @FXML
-    private TableColumn<?, ?> groomusercolumn;
+    private TableColumn<?, ?> locationtable;
     @FXML
-    private TableColumn<?, ?> marriagedatecolumn;
+    private TableColumn<?, ?> Eventdatecolumn;
     @FXML
-    private TableColumn<?, ?> registarIDcolumn;
+    private TableColumn<?, ?> IDcolumn;
 
     /**
      * Initializes the controller class.
@@ -62,10 +62,11 @@ public class lawyerScheduleController implements Initializable {
     }    
 
     @FXML
-    private void backbuttonOnClick(ActionEvent event)  throws IOException{
+    private void backbuttonOnClick(ActionEvent event) throws IOException{
         SceneSwitcher toProfileScene = new SceneSwitcher("lawyer dashboard.fxml",event);
         toProfileScene.ConfirmSceneSwitch();
     }
+    
 
     @FXML
     private void addButtonOnClick(ActionEvent event) {

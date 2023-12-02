@@ -25,6 +25,11 @@ public class Employee extends User implements Serializable {
         this.designation = designation;
     }
 
+    public Employee(int employeeID, LocalDate joinDate) {
+        this.employeeID = employeeID;
+        this.joinDate = joinDate;
+    }
+    
     public int getEmployeeID() {
         return employeeID;
     }

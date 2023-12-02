@@ -4,7 +4,11 @@
  */
 package main;
 
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -60,9 +64,58 @@ public class LawyerRegisterController implements Initializable {
         String employeeID = IDtextfield.getText();
         String location = addresstextfield.getText();
         LocalDate date = DOEdatepicker.getValue();
+        Employee tempEmployee = new Employee(0, date);
+    
         
         
         
+        
+        
+        
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+        File xFile = null;
+        
+        try{
+            xFile new File("LawyerInfoToRegistor.bin"); 
+            fos = new FileOutputStream(xFile);
+            oos = new ObjectOutputStream(fos);
+           
+            try{
+                while(true){
+                    tempEvent = (Event) oos.writeObject();
+                    eventList.add(tempEvent);
+                }
+            }
+            catch(EOFException e){
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(EventManagerCustomerController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+        catch (IOException ex){
+            
+        }
+        finally {
+            try{
+                if (oos != null){
+                    oos.close();
+                }
+            }
+            catch(IOException e){
+        }
+        }
+        int i =0;
+        while(i<=eventList.size()){
+            CustomerEventtable.getItems().add(new Customertable(
+                    eventList.get(i).eventname,
+                    eventList.get(i).username,
+                    eventList.get(i).venue,
+                    eventList.get(i).eventdate)
+            );
+            i++;
+        }
+            
         
         
         
