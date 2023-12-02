@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="596.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.EventManagerProfileController">
+   <children>
+      <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
+         <children>
+            <MenuBar accessibleRole="MENU_ITEM" layoutY="-25.0" prefHeight="15.0" prefWidth="600.0" style="-fx-background-color: #008080;">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Flight">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="US Bangla Air-lines" />
+                        <MenuItem mnemonicParsing="false" text="Fly Emirates" />
+                        <MenuItem mnemonicParsing="false" text="Novo Air " />
+                        <MenuItem mnemonicParsing="false" text="Qatar Air-ways" />
+                        <MenuItem mnemonicParsing="false" text="Bangladesh Biman" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Taxi-cab">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="inDrive" />
+                        <MenuItem mnemonicParsing="false" text="Ubar" />
+                        <MenuItem mnemonicParsing="false" text="Cabify" />
+                        <MenuItem mnemonicParsing="false" text="Grab" />
+                        <MenuItem mnemonicParsing="false" text="OLA Cabs" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Hotel">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="The Plaza Hotel, New York" />
+                        <MenuItem mnemonicParsing="false" text="Raffles, Singapore" />
+                        <MenuItem mnemonicParsing="false" text="Taj Mahal Palace, Mumbai" />
+                        <MenuItem mnemonicParsing="false" text="Pan Pacific Sonargaon Dhaka" />
+                        <MenuItem mnemonicParsing="false" text="The Zabeer Jashore" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Label fx:id="tworingslogolabel" layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
+               <font>
+                  <Font name="Yu Gothic Regular" size="27.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <Button layoutX="534.0" layoutY="-12.0" mnemonicParsing="false" onAction="#signoutbuttonOnclick" text="Sign out" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="507.0" layoutY="380.0" mnemonicParsing="false" onAction="#deletebuttonOnclick" style="-fx-background-color: #008080;" text="Delete" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="86.0" layoutY="476.0" mnemonicParsing="false" onAction="#createbuttonOnclick" style="-fx-background-color: #008080;" text="Create" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="helpcenterlabel" layoutX="335.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="settingslabel" layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="Aboutlabel" layoutX="223.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="dashboardlabel" layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Dash Board" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Button>
+      <Label layoutX="30.0" layoutY="231.0" prefHeight="17.0" prefWidth="112.0" text="Name:" />
+      <Label alignment="CENTER" layoutX="460.0" layoutY="128.0" prefHeight="32.0" prefWidth="140.0" text="My Profile" textFill="TEAL">
+         <font>
+            <Font name="Corbel Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="272.0" prefHeight="25.0" prefWidth="112.0" text="Contact" />
+      <Label layoutX="22.0" layoutY="308.0" prefHeight="32.0" prefWidth="112.0" text="Email ID:" />
+      <TextField fx:id="nametextfield" layoutX="81.0" layoutY="227.0" promptText="Name" />
+      <TextField fx:id="contacttextfield" layoutX="81.0" layoutY="272.0" promptText="Contact" />
+      <TextField fx:id="emailtextfield" layoutX="81.0" layoutY="312.0" promptText="Email ID" />
+      <Label layoutX="23.0" layoutY="352.0" text="Password" />
+      <PasswordField fx:id="passwordtextfield" layoutX="81.0" layoutY="348.0" />
+      <Label alignment="CENTER" layoutX="20.0" layoutY="189.0" prefHeight="25.0" prefWidth="132.0" text="Create Profile" textFill="TEAL" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="profiletextarea" layoutX="356.0" layoutY="162.0" prefHeight="200.0" prefWidth="236.0" />
+      <Separator layoutX="297.0" layoutY="318.0" orientation="VERTICAL" prefHeight="200.0" />
+      <DatePicker fx:id="DOBdatepicker" layoutX="93.0" layoutY="393.0" prefHeight="25.0" prefWidth="149.0" promptText="DD/MM/YYYY" />
+      <Label layoutX="5.0" layoutY="397.0" prefHeight="17.0" prefWidth="85.0" text="Date of Birth:" />
+      <DatePicker fx:id="joindatepicker" layoutX="93.0" layoutY="430.0" prefHeight="25.0" prefWidth="149.0" promptText="DD/MM/YYYY" />
+      <Label layoutX="13.0" layoutY="434.0" text="Joining Date:" />
+      <Button layoutX="14.0" layoutY="144.0" mnemonicParsing="false" onAction="#backbuttonOnclick" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="297.0" layoutY="127.0" orientation="VERTICAL" prefHeight="200.0" />
+   </children>
+</AnchorPane>

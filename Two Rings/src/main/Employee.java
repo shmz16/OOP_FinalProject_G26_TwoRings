@@ -16,9 +16,6 @@ public class Employee extends User implements Serializable {
     protected int salary;
     protected String designation;
 
-    public Employee(){
-    
-    };
     
     public Employee(int employeeID, LocalDate joinDate, int salary, String designation, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
         super(name, gender, email, phoneNo, password, dateOfBirth);

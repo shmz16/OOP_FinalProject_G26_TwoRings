@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+   <children>
+      <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
+         <children>
+            <MenuBar accessibleRole="MENU_ITEM" layoutY="-25.0" prefHeight="15.0" prefWidth="600.0" style="-fx-background-color: #008080;">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Flight">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="US Bangla Air-lines" />
+                        <MenuItem mnemonicParsing="false" text="Fly Emirates" />
+                        <MenuItem mnemonicParsing="false" text="Novo Air " />
+                        <MenuItem mnemonicParsing="false" text="Qatar Air-ways" />
+                        <MenuItem mnemonicParsing="false" text="Bangladesh Biman" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Taxi-cab">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="inDrive" />
+                        <MenuItem mnemonicParsing="false" text="Ubar" />
+                        <MenuItem mnemonicParsing="false" text="Cabify" />
+                        <MenuItem mnemonicParsing="false" text="Grab" />
+                        <MenuItem mnemonicParsing="false" text="OLA Cabs" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Hotel">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="The Plaza Hotel, New York" />
+                        <MenuItem mnemonicParsing="false" text="Raffles, Singapore" />
+                        <MenuItem mnemonicParsing="false" text="Taj Mahal Palace, Mumbai" />
+                        <MenuItem mnemonicParsing="false" text="Pan Pacific Sonargaon Dhaka" />
+                        <MenuItem mnemonicParsing="false" text="The Zabeer Jashore" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Label layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
+               <font>
+                  <Font name="Yu Gothic Regular" size="27.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <Text fill="#ccccff" layoutX="24.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name : " />
+            <Text fill="#ccccff" layoutX="25.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID : " />
+            <Text fill="#ccccff" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address : " />
+            <Text fill="#ccccff" layoutX="25.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number : " />
+            <Label layoutX="115.0" layoutY="3.0" prefHeight="17.0" prefWidth="242.0" />
+            <Label layoutX="115.0" layoutY="22.0" prefHeight="17.0" prefWidth="242.0" />
+            <Label layoutX="115.0" layoutY="40.0" prefHeight="17.0" prefWidth="242.0" />
+            <Label layoutX="115.0" layoutY="59.0" prefHeight="17.0" prefWidth="242.0" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="14.0" layoutY="285.0" mnemonicParsing="false" onAction="#lawyerButtonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="MY LAWYER" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="13.0" layoutY="213.0" mnemonicParsing="false" onAction="#eventManegButtonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="EVENT MANEGMENT" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="13.0" layoutY="177.0" mnemonicParsing="false" onAction="#hmOfferButtonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="HONEYMOON OFFERS" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="13.0" layoutY="142.0" mnemonicParsing="false" onAction="#marriagePackageButtonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="MARRIAGE PACKAGE" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Button>
+      <Button layoutX="13.0" layoutY="249.0" mnemonicParsing="false" onAction="#registarbuttonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="MY REGISTAR" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="14.0" layoutY="321.0" mnemonicParsing="false" onAction="#witnessButtononClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="Confirm Witness" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="517.0" layoutY="361.0" mnemonicParsing="false" onAction="#signOutOnClick" style="-fx-background-color: #008080;" text="Sign Out" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="335.0" layoutY="102.0" mnemonicParsing="false" onAction="#helpcenteronclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="111.0" layoutY="101.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="WAIT" />
+         </cursor>
+      </Button>
+      <Button layoutX="223.0" layoutY="102.0" mnemonicParsing="false" onAction="#aboutOnClick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="-1.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Home" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Button>
+      <TableView fx:id="userDashNotificationTable" layoutX="172.0" layoutY="139.0" mouseTransparent="true" prefHeight="164.0" prefWidth="416.0" style="-fx-background-color: #ccccff;">
+        <columns>
+          <TableColumn fx:id="notificationCol" prefWidth="415.0" sortType="DESCENDING" text="My Window" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </TableView>
+      <Button layoutX="462.0" layoutY="321.0" mnemonicParsing="false" onAction="#reloadOnClick" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #008080;" text="Reload Window" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="420.0" layoutY="361.0" mnemonicParsing="false" onAction="#feedBackOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #008080;" text="Feedback" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
