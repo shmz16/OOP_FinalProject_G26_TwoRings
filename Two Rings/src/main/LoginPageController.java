@@ -62,7 +62,7 @@ public class LoginPageController implements Initializable {
         } else if (userType.equals("Laywer")) {
 
 //            Give this                                             
-            if ("Your_User_password()Fixed".equals(password) && (userId == 78)) {
+            if ("faiad".equals(password) && (userId == 11111)) {
                 SceneSwitcher lawyerDash = new SceneSwitcher("EnterYourLawyerPage_FXML_File_Here.fxml", event);
                 lawyerDash.ConfirmSceneSwitch();
             }
@@ -86,7 +86,7 @@ public class LoginPageController implements Initializable {
         } else if (userType.equals("Event Maneger")) {
 
 //            Give this                                             
-            if ("Your_User_password()Fixed".equals(password) && (userId == 78)) {
+            if ("faiad".equals(password) && (userId == 22222)) {
                 SceneSwitcher eventManegerPage = new SceneSwitcher("EnterYour_Event Maneger_Page_FXML_File_Here.fxml", event);
                 eventManegerPage.ConfirmSceneSwitch();
             }
