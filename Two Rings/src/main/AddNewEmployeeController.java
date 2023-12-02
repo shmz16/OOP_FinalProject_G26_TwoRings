@@ -13,6 +13,7 @@ import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -64,7 +65,7 @@ public class AddNewEmployeeController implements Initializable {
     @FXML
     private TextField empEmail;
 
-    public ObservableList<Employee> employeeList;
+    public ObservableList<MyEmployee> employeeList;
     @FXML
     private DatePicker dateOfBirth;
     @FXML
@@ -73,7 +74,7 @@ public class AddNewEmployeeController implements Initializable {
     private ImageView bigImg;
     @FXML
     private Label confirmAddThisEmployee;
-
+    Random randomNo = new Random();
     /**
      * Initializes the controller class.
      */
@@ -137,6 +138,7 @@ public class AddNewEmployeeController implements Initializable {
         String post = postCombo.getValue();
         int salaryy = Integer.parseInt(salary.getText());
         String email = empEmail.getText();
+        float ratings = (randomNo.nextInt(4)+randomNo.nextFloat());
 
         LocalDate dateOfJoin = DOJ.getValue();
 
@@ -156,7 +158,7 @@ public class AddNewEmployeeController implements Initializable {
                 oos = new ObjectOutputStream(fos);
                 
             }
-            Employee temp = new Employee(name, employeeId, salaryy, DOB, dateOfJoin, phoneNo, email, newPass, gender, post);
+            MyEmployee temp = new MyEmployee(name, employeeId, salaryy, DOB, dateOfJoin, phoneNo, email, newPass, gender, post,ratings);
             
             oos.writeObject(temp);
             System.out.println(temp);

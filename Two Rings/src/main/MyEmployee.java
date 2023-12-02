@@ -3,23 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package main;
+
 import java.io.Serializable;
 import java.time.LocalDate;
-import javafx.collections.ObservableList;
+
 /**
  *
- * @author User
+ * @author acer
  */
-public class Employee implements Serializable{
-
-     
+public class MyEmployee implements Serializable{
     String name;
     int id,salary;
     LocalDate dateOfBirth,dateOfjoining;
     String phoneNo;
-    String email,password,gender,designation,ratings;
+    String email,password,gender,designation;
+    float ratings;
 
-    public Employee(String name, int id, int salary, LocalDate dateOfBirth, LocalDate dateOfjoining, String phoneNo, String email, String password, String gender, String designation) {
+    public MyEmployee(String name, int id, int salary, LocalDate dateOfBirth, LocalDate dateOfjoining, String phoneNo, String email, String password, String gender, String designation) {
         this.name = name;
         this.id = id;
         this.salary = salary;
@@ -30,22 +30,22 @@ public class Employee implements Serializable{
         this.password = password;
         this.gender = gender;
         this.designation = designation;
-        
     }
 
-    public Employee(String ratings) {
+    public MyEmployee(String name, int id, int salary, LocalDate dateOfBirth, LocalDate dateOfjoining, String phoneNo, String email, String password, String gender, String designation, float ratings) {
+        this.name = name;
+        this.id = id;
+        this.salary = salary;
+        this.dateOfBirth = dateOfBirth;
+        this.dateOfjoining = dateOfjoining;
+        this.phoneNo = phoneNo;
+        this.email = email;
+        this.password = password;
+        this.gender = gender;
+        this.designation = designation;
         this.ratings = ratings;
     }
-    
-    public String getRatings() {
-        return ratings;
-    }
 
-    public void setRatings(String ratings) {
-        this.ratings = ratings;
-    }
-
-    
     public String getName() {
         return name;
     }
@@ -126,14 +126,25 @@ public class Employee implements Serializable{
         this.designation = designation;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" + "name=" + name + ", id=" + id + ", salary=" + salary + ", dateOfBirth=" + dateOfBirth + ", dateOfjoining=" + dateOfjoining + ", phoneNo=" + phoneNo + ", email=" + email + ", password=" + password + ", gender=" + gender + ", designation=" + designation + ", ratings=" + ratings + '}';
+    public float getRatings() {
+        return ratings;
     }
 
+    public void setRatings(float ratings) {
+        this.ratings = ratings;
+    }
+
+    @Override
+    public String toString() {
+        return "MyEmployee{" + "name=" + name + ", id=" + id + ", salary=" + salary + ", dateOfBirth=" + dateOfBirth + ", dateOfjoining=" + dateOfjoining + ", phoneNo=" + phoneNo + ", email=" + email + ", password=" + password + ", gender=" + gender + ", designation=" + designation + ", ratings=" + ratings + '}';
+    }
     
     
     
-  
+    
+    
+    
+    
+    
     
 }

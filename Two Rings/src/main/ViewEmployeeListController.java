@@ -42,19 +42,19 @@ public class ViewEmployeeListController implements Initializable {
 
 //    private Employee model = new Employee();
     @FXML
-    private TableView<Employee> empolyeTable;
+    private TableView<MyEmployee> empolyeTable;
     @FXML
-    private TableColumn<Employee, String> nameColomn;
+    private TableColumn<MyEmployee, String> nameColomn;
     @FXML
-    private TableColumn<Employee, Integer> idColomn;
+    private TableColumn<MyEmployee, Integer> idColomn;
     @FXML
-    private TableColumn<Employee, String> genderColomn;
+    private TableColumn<MyEmployee, String> genderColomn;
     @FXML
-    private TableColumn<Employee, String> postColomn;
+    private TableColumn<MyEmployee, String> postColomn;
     @FXML
     private Label pieChartInfoLabel;
     @FXML
-    private TableColumn<Employee, String> phoneNoColomn;
+    private TableColumn<MyEmployee, String> phoneNoColomn;
 
     @FXML
     private TextArea TextArea;
@@ -74,13 +74,13 @@ public class ViewEmployeeListController implements Initializable {
 
     @FXML
     private void showEmployeeOnClick(ActionEvent event) throws IOException, ClassNotFoundException {
-        ObservableList<Employee> empList = FXCollections.observableArrayList();
+        ObservableList<MyEmployee> empList = FXCollections.observableArrayList();
 
-        nameColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("name"));
-        idColomn.setCellValueFactory(new PropertyValueFactory<Employee, Integer>("id"));
-        genderColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("gender"));
-        postColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("designation"));
-        phoneNoColomn.setCellValueFactory(new PropertyValueFactory<Employee, String>("phoneNo"));
+        nameColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("name"));
+        idColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, Integer>("id"));
+        genderColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("gender"));
+        postColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("designation"));
+        phoneNoColomn.setCellValueFactory(new PropertyValueFactory<MyEmployee, String>("phoneNo"));
 
         File f = null;
         FileInputStream fis = null;
@@ -90,10 +90,10 @@ public class ViewEmployeeListController implements Initializable {
             f = new File("EmployeeList.bin");
             fis = new FileInputStream(f);
             ois = new ObjectInputStream(fis);
-            Employee emp;
+            MyEmployee emp;
             try {
                 while (true) {
-                    emp = (Employee) ois.readObject();
+                    emp = (MyEmployee) ois.readObject();
                     empList.add(emp);
                     System.out.println(emp.toString());
 
@@ -127,10 +127,10 @@ public class ViewEmployeeListController implements Initializable {
 
     @FXML
     private void loadPieChartOnClick(ActionEvent event) throws FileNotFoundException, IOException, ClassNotFoundException {
-        Class myClass ;
+        
 
-//      
-//        ObservableList<Employee> employee = FXCollections.observableArrayList();
+//        ArrayList<MyEmployee.> ll;
+//        ObservableList<MyEmployee> employee = FXCollections.observableArrayList();
 //        Random random = new Random();
 //
 //        ObservableList<PieChart.Data> list = FXCollections.observableArrayList();
@@ -142,14 +142,15 @@ public class ViewEmployeeListController implements Initializable {
 //            f = new File("EmployeeList.bin");
 //            fis = new FileInputStream(f);
 //            ois = new ObjectInputStream(fis);
-//            Employee emp;
+//            MyEmployee emp;
 //            try {
 //                while (true) {
-//                    emp = (Employee) ois.readObject();
+//                    emp = (MyEmployee) ois.readObject();
+//                    ll.add(emp.designation.charAt(8));
 //                    employee.add(emp);
 //                    System.out.println(emp.toString());
 //                    
-//                    list.add(new PieChart.Data(emp.designation, random.nextInt(15)));
+//                    
 //                }
 //            } catch (Exception e) {
 //            }
