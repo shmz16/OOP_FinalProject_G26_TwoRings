@@ -43,7 +43,7 @@ public class AccountantCheckSalariesSceneController implements Initializable {
     @FXML
     private TableColumn<AccountantSalariesTableClass, Integer> salariesTableEmployeeID;
     
-    public ArrayList<Employee> empList = new ArrayList<Employee>();
+    public ArrayList<MyEmployee> empList = new ArrayList<MyEmployee>();
     /**
      * Initializes the controller class.
      */
@@ -67,13 +67,13 @@ public class AccountantCheckSalariesSceneController implements Initializable {
         File employeesFile = null;
         
         try {
-            employeesFile = new File("Employees.bin");
+            employeesFile = new File("EmployeeList.bin");
             fis = new FileInputStream(employeesFile);
             ois = new ObjectInputStream(fis);
-            Employee tempEmp;
+            MyEmployee tempEmp;
             try {
                 while (true) {
-                    tempEmp = (Employee) ois.readObject();
+                    tempEmp = (MyEmployee) ois.readObject();
                     empList.add(tempEmp);
                 }
             } 
@@ -92,13 +92,13 @@ public class AccountantCheckSalariesSceneController implements Initializable {
             }
         }
         int i = 0;
-        while (i <= empList.size()) {
+        while (i < empList.size()) {
             salariesTable.getItems().add(new AccountantSalariesTableClass(
-                    empList.get(i).employeeID,
+                    empList.get(i).id,
                     empList.get(i).name,
                     empList.get(i).designation,
                     empList.get(i).salary,
-                    empList.get(i).joinDate)
+                    empList.get(i).dateOfjoining)
             );
             i++;
         }
@@ -114,14 +114,14 @@ public class AccountantCheckSalariesSceneController implements Initializable {
     private void applyFilterButton(ActionEvent event) {
         salariesTable.getItems().clear();
         int i = 0;
-        while (i <= empList.size()) {
+        while (i < empList.size()) {
             if (empList.get(i).designation == filterComboBox.getValue()) {
                 salariesTable.getItems().add(new AccountantSalariesTableClass(
-                        empList.get(i).employeeID,
+                        empList.get(i).id,
                         empList.get(i).name,
                         empList.get(i).designation,
                         empList.get(i).salary,
-                        empList.get(i).joinDate)
+                        empList.get(i).dateOfjoining)
                 );
             }
             i++;
@@ -132,13 +132,13 @@ public class AccountantCheckSalariesSceneController implements Initializable {
     private void resetFilterButton(ActionEvent event) {
         salariesTable.getItems().clear();
         int i = 0;
-        while (i <= empList.size()) {
+        while (i < empList.size()) {
             salariesTable.getItems().add(new AccountantSalariesTableClass(
-                    empList.get(i).employeeID,
+                    empList.get(i).id,
                     empList.get(i).name,
                     empList.get(i).designation,
                     empList.get(i).salary,
-                    empList.get(i).joinDate)
+                    empList.get(i).dateOfjoining)
             );
             i++;
         }

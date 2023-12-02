@@ -24,7 +24,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  * FXML Controller class
  *
  * @author User
- */
+ 
 public class AccountantCheckServiceCostsSceneController implements Initializable {
 
     @FXML
@@ -188,4 +188,4 @@ public class AccountantCheckServiceCostsSceneController implements Initializable
         }
     }
     
-}
+} */
