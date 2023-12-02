@@ -20,6 +20,7 @@ public class AccountantSalariesTableClass implements Serializable{
     private LocalDate joinDate;
 
     public AccountantSalariesTableClass(int employeeID, String employeeName, String designation, int salary, LocalDate joinDate) {
+        this.employeeID = employeeID;
         this.employeeName = employeeName;
         this.designation = designation;
         this.salary = salary;
