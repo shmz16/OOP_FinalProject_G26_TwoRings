@@ -64,17 +64,18 @@ public class LawyersCustomerController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-
-    @FXML
-    private void showbuttonOnclick(ActionEvent event) {
+        
         usernamecolumn.setCellValueFactory(new PropertyValueFactory<Customerlawyertable, String>("EventName"));
         emailaddcolumn.setCellValueFactory(new PropertyValueFactory<Customerlawyertable, String>("username"));
         
         eventdatecolumn.setCellValueFactory(new PropertyValueFactory<Customerlawyertable, LocalDate>("location"));
         locationcolumn.setCellValueFactory(new PropertyValueFactory<Customerlawyertable, Venue>("Eventdate"));
         
+        // TODO
+    }    
+
+    @FXML
+    private void showbuttonOnclick(ActionEvent event) {
         
         
         
@@ -87,11 +88,11 @@ public class LawyersCustomerController implements Initializable {
             xFile = new File("Customer info to event manegment.bin");
             fis = new FileInputStream(xFile);
             ois = new ObjectInputStream(fis);
-            Event tempEvent;
+            CustomerLawyerModel tempVar;
             try{
                 while(true){
-                    tempEvent = (Event) ois.readObject();
-                    eventList.add(tempEvent);
+                    tempVar = (CustomerLawyerModel) ois.readObject();
+                    eventList.add(tempVar);
                 }
             }
             catch(EOFException e){
