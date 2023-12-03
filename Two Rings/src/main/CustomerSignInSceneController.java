@@ -90,6 +90,14 @@ public class CustomerSignInSceneController implements Initializable {
                 loginSuccess = true;
             }
         }
+        if (loginSuccess == true) {    
+            SceneSwitcher switchToCustomerDashboard = new SceneSwitcher("CostumerDashBoardScene", event);
+            switchToCustomerDashboard.ConfirmSceneSwitch();
+        }
+        else {
+            errorLabel1.setText("ID or password invalid. try again");
+        }
+        
           
     }
 
