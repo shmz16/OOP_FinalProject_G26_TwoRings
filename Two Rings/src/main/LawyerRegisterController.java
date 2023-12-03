@@ -4,7 +4,6 @@
  */
 package main;
 
-import com.sun.istack.internal.logging.Logger;
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -14,6 +13,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -23,6 +23,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+
 
 /**
  * FXML Controller class
@@ -86,7 +87,7 @@ public class LawyerRegisterController implements Initializable {
             System.out.println("write object successful");
            
             }catch (IOException ex){
-                Logger.getLogger(LawyerRegisterController.class.getName()).log(Level.SEVERE,null,ex);
+                Logger.getLogger(LawyerRegisterController.class.getName()).log(Level.SEVERE, null, ex);
             }finally{
             try{
                 if(oos!=null){
