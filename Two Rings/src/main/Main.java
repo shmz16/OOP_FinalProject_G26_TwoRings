@@ -24,7 +24,7 @@ public class Main extends Application {
         //Parent root = FXMLLoader.load(getClass().getResource("AccountantCheckSalariesScene.fxml"));
 
 //=======
-        Parent root = FXMLLoader.load(getClass().getResource("EventManagerCustomer.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("CostumerDashBoardScene.fxml"));
 //=======
        // Parent root = FXMLLoader.load(getClass().getResource("LawyerResignation.fxml"));
 //>>>>>>> faiadkazi
