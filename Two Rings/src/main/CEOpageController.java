@@ -196,7 +196,7 @@ public class CEOpageController implements Initializable {
 
     @FXML
     private void ceoSignOutBT(ActionEvent event) throws IOException {
-        SceneSwitcher backToLoginPage = new SceneSwitcher("LoginPage.fxml", event);
+        SceneSwitcher backToLoginPage = new SceneSwitcher("ZeroZero.fxml", event);
         backToLoginPage.ConfirmSceneSwitch();
     }
 

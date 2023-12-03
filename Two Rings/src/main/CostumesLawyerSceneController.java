@@ -54,7 +54,7 @@ public class CostumesLawyerSceneController implements Initializable {
                 userTextField.getText(), 
                 emailTextField.getText(),
                 eventdatePik.getValue(),
-                eventLocationTextField.getText());
+                null);
         
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;

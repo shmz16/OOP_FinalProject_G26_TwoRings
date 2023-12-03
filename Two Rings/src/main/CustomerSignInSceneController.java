@@ -2,8 +2,10 @@ package main;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -81,20 +83,29 @@ public class CustomerSignInSceneController implements Initializable {
         boolean loginSuccess = false;
         int i = 0;
         Customer currentCustomer = null;
-        
-        while (i < custList.size() || loginSuccess == false) {
-            if (userNameTextField.getText() == custList.get(i).username
-                    && passcodeTextField.getText() == custList.get(i).password) {
+
+        while (i < custList.size() && !loginSuccess) {
+            if (userNameTextField.getText().equals(custList.get(i).username)
+                    && passcodeTextField.getText().equals(custList.get(i).password)) {
                 currentCustomer = custList.get(i);
                 loginSuccess = true;
             }
+            i++;
         }
-        if (loginSuccess == true) {    
+
+        if (loginSuccess) {
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+            File currentUserFile = null;
+
+            currentUserFile = new File("CurrentUser.bin");
+            fos = new FileOutputStream(currentUserFile);
+            oos.writeObject(currentCustomer);
+
             SceneSwitcher switchToCustomerDashboard = new SceneSwitcher("CostumerDashBoardScene", event);
             switchToCustomerDashboard.ConfirmSceneSwitch();
-        }
-        else {
-            errorLabel1.setText("ID or password invalid. try again");
+        } else {
+            errorLabel1.setText("ID or password invalid. Try again.");
         }
     }
 

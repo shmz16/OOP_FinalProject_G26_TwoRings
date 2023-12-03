@@ -46,8 +46,23 @@ public class CostumerMarriagePackageLIstSceneController implements Initializable
     /**
      * Initializes the controller class.
      */
+    Customer currentCustomer = new Customer();
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        File currentUserFile = null;
+        currentUserFile = new File("CurrentUser.bin");
+        
+        try {
+            Customer currentCustomer = (Customer) ois.readObject();
+        } catch (IOException ex) {
+            Logger.getLogger(CostumerMarriagePackageLIstSceneController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CostumerMarriagePackageLIstSceneController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         String[] countryCodes = Locale.getISOCountries();
 
         // Create an array to store country names
@@ -95,7 +110,10 @@ public class CostumerMarriagePackageLIstSceneController implements Initializable
     }
 
     @FXML
-    private void donebuttononclick(ActionEvent event) {      
-        MarriagePackage currentCustomer.chosenMarriagePackage = new MarriagePackage(choosepkgcombobox.getValue,null,null,null,eventCombobox.getValue);
+    private void donebuttononclick(ActionEvent event) {
+        MarriagePackage mp = new MarriagePackage();
+        mp.packageCode = choosepkgcombobox.getValue();
+        mp.location = eventCombobox.getValue();
+        currentCustomer.chosenMarriagePackage = mp;
     }
 }

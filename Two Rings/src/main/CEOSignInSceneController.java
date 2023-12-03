@@ -41,7 +41,7 @@ public class CEOSignInSceneController implements Initializable {
     @FXML
     private void signInButtonOnClick(ActionEvent event) throws IOException {
         CEO ceo = new CEO();
-        if (ceo.id == Integer.parseInt(ceoIdTextField.getText()) && ceo.ceoPass == passcodeTextField.getText()) {
+        if (ceo.getId() == Integer.parseInt(ceoIdTextField.getText()) && passcodeTextField.getText().equals(ceo.getCeoPass())) {
             SceneSwitcher ceoDashboard = new SceneSwitcher("CEOpage.fxml", event);
             ceoDashboard.ConfirmSceneSwitch();
         }

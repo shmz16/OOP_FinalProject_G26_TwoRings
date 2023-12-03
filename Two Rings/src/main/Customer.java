@@ -17,6 +17,9 @@ public class Customer extends User implements Serializable {
     protected Event myevent;
     protected MarriagePackage chosenMarriagePackage;
 
+    public Customer() {
+    }
+
     public Customer(String username, String religion, Event myevent, 
             MarriagePackage chosenMarriagePackage, String name, 
             String gender, String email, String phoneNo, String password, 

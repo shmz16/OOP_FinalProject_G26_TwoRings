@@ -12,12 +12,12 @@
    <children>
       <AnchorPane layoutX="300.0" layoutY="94.0" prefHeight="233.0" prefWidth="311.0" style="-fx-background-color: #008080;">
          <children>
-            <TextField fx:id="ceoIdTextField" editable="false" layoutX="53.0" layoutY="71.0" mouseTransparent="true" prefHeight="27.0" prefWidth="216.0" promptText="CEO ID" style="-fx-background-color: #ccccff;">
+            <TextField fx:id="ceoIdTextField" layoutX="53.0" layoutY="71.0" prefHeight="27.0" prefWidth="216.0" promptText="CEO ID" style="-fx-background-color: #ccccff;">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="passcodeTextField" layoutX="53.0" layoutY="105.0" mouseTransparent="true" prefHeight="27.0" prefWidth="216.0" promptText="Password" style="-fx-background-color: #ccccff;">
+            <TextField fx:id="passcodeTextField" layoutX="53.0" layoutY="105.0" prefHeight="27.0" prefWidth="216.0" promptText="Password" style="-fx-background-color: #ccccff;">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -27,7 +27,7 @@
                   <Font name="Arial Black" size="19.0" />
                </font>
             </Text>
-            <Button layoutX="125.0" layoutY="159.0" mnemonicParsing="false" mouseTransparent="true" onAction="#signInButtonOnClick" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #ccccff;" text="SIGN IN">
+            <Button layoutX="125.0" layoutY="159.0" mnemonicParsing="false" onAction="#signInButtonOnClick" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #ccccff;" text="SIGN IN">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

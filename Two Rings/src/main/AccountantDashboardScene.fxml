@@ -28,12 +28,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="239.0" layoutY="407.0" mnemonicParsing="false" onAction="#viewServiceChargesButtonOnClick" prefHeight="31.0" prefWidth="322.0" style="-fx-background-color: #008080; -fx-text-fill: white;" text="VIEW SERVICE CHARGES" textAlignment="CENTER">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button layoutX="239.0" layoutY="468.0" mnemonicParsing="false" onAction="#packageServiceButtonOnClick" prefHeight="44.0" prefWidth="322.0" style="-fx-background-color: #008080; -fx-text-fill: white;" text="PACKAGE SERVICE" textAlignment="CENTER">
+      <Button layoutX="239.0" layoutY="405.0" mnemonicParsing="false" onAction="#packageServiceButtonOnClick" prefHeight="44.0" prefWidth="322.0" style="-fx-background-color: #008080; -fx-text-fill: white;" text="PACKAGE SERVICE" textAlignment="CENTER">
          <font>
             <Font size="20.0" />
          </font>

@@ -6,8 +6,10 @@ package main;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -79,30 +81,40 @@ public class EmployeeSignInSceneController implements Initializable {
         Employee currentEmp = null;
         String sceneToSwitch = null;
         
+        Integer givenID = Integer.parseInt(employeeIDTextField.getText());
+        String givenpassword = passcodeTextField.getText();
+        
         while (i < empList.size() || loginSuccess == false) {
-            if (Integer.parseInt(employeeIDTextField.getText()) == empList.get(i).employeeID 
-                    && passcodeTextField.getText() == empList.get(i).password) {
+            if (givenID == empList.get(i).getEmployeeID() 
+                    && givenpassword.equals(empList.get(i).getPassword())) {
                 currentEmp = empList.get(i);
                 loginSuccess = true;
             }
             i++;
         }
         if (loginSuccess == true) {
-            if (currentEmp.designation == "Register") {
+            if ("Register".equals(currentEmp.getDesignation())) {
                 sceneToSwitch = "RegistarDashboard.fxml";
             }
-            else if (currentEmp.designation == "Accountant") {
+            else if ("Accountant".equals(currentEmp.getDesignation())) {
                 sceneToSwitch = "AccountantDashboardScene.fxml";
             }
-            else if (currentEmp.designation == "Lawyer") {
+            else if ("Lawyer".equals(currentEmp.getDesignation())) {
                 sceneToSwitch = "lawyer dashboard.fxml";
             }
-            else if (currentEmp.designation == "Marketing Maneger") {
+            else if ("Marketing Maneger".equals(currentEmp.getDesignation())) {
                 sceneToSwitch = "MarketingDashboardScene.fxml";
             }
-            else if (currentEmp.designation == "Event Maneger") {
+            else if ("Event Maneger".equals(currentEmp.getDesignation())) {
                 sceneToSwitch = "EventManager Dashboard.fxml";
             }
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+            File currentUserFile = null;
+            currentUserFile = new File("CurrentUser.bin");
+            fos = new FileOutputStream(currentUserFile, true);
+            //oos.writeObject(currentEmp);
+            
             SceneSwitcher switchToEmployeeDashboard = new SceneSwitcher(sceneToSwitch, event);
             switchToEmployeeDashboard.ConfirmSceneSwitch();
         }

@@ -10,11 +10,14 @@ package main;
  */
 public class MarriagePackage {
     
-    private int packageCode;
-    private int LawyerID;
-    private int RegistrarID;
-    private int eventManagerID;
-    private String location;
+    protected int packageCode;
+    protected int LawyerID;
+    protected int RegistrarID;
+    protected int eventManagerID;
+    protected String location;
+
+    public MarriagePackage() {
+    }
 
     public MarriagePackage(int packageCode, int LawyerID, int RegistrarID, int eventManagerID, String location) {
         this.packageCode = packageCode;
