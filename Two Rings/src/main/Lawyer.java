@@ -12,10 +12,10 @@ import java.util.List;
  * @author Lenovo
  */
 public class Lawyer extends Employee{
-    private int serviceCharge;
-    private List<Object> customers;
+    protected int serviceCharge;
+    protected List<Customer> customers;
 
-    public Lawyer(int serviceCharge, List<Object> customers, int employeeID, LocalDate joinDate, int salary, String designation, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
+    public Lawyer(int serviceCharge, List<Customer> customers, int employeeID, LocalDate joinDate, int salary, String designation, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
         super(employeeID, joinDate, salary, designation, name, gender, email, phoneNo, password, dateOfBirth);
         this.serviceCharge = serviceCharge;
         this.customers = customers;
@@ -29,11 +29,11 @@ public class Lawyer extends Employee{
         this.serviceCharge = serviceCharge;
     }
 
-    public List<Object> getCustomers() {
+    public List<Customer> getCustomers() {
         return customers;
     }
 
-    public void setCustomers(List<Object> customers) {
+    public void setCustomers(List<Customer> customers) {
         this.customers = customers;
     }
 
