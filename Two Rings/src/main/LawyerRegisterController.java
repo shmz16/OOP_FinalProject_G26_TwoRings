@@ -96,14 +96,14 @@ public class LawyerRegisterController implements Initializable {
                 Logger.getLogger(LawyerRegisterController.class.getName()).log(Level.SEVERE,null,ex);
             }
         }
-                
+    }               
                 
          
         
         
         
         
-    }
+ 
         
        
         
