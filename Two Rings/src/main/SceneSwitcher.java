@@ -30,4 +30,12 @@ public class SceneSwitcher {
         Stage currentStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         currentStage.setScene(targetScene);
     };
+    
+    public void closeScene() throws IOException{
+       
+        Stage currentStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        currentStage.close();
+    };
+    
+    
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.UpdatePolicyController">
+   <children>
+      <Label layoutX="23.0" layoutY="14.0" prefHeight="21.0" prefWidth="610.0" text="Update Company Policy And Privecy" wrapText="true">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="policyTextArea" layoutX="29.0" layoutY="72.0" prefHeight="530.0" prefWidth="1042.0" text="xcv sx" />
+      <Button layoutX="508.0" layoutY="634.0" mnemonicParsing="false" onAction="#updatePolicyOnClick" text="Update" />
+      <Button layoutX="985.0" layoutY="24.0" mnemonicParsing="false" onAction="#prevPage" text="&lt;" />
+      <Button layoutX="588.0" layoutY="634.0" mnemonicParsing="false" onAction="#updatePolicyOnClickButTextFile" text="Update" />
+      <Button layoutX="667.0" layoutY="634.0" mnemonicParsing="false" onAction="#textF" text="Feed from textFile" />
+   </children>
+</AnchorPane>

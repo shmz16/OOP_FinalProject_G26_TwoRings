@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="356.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.RegistarDashboardController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="111.0" prefWidth="600.0" style="-fx-background-color: #008080;">
+         <children>
+            <Label layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
+               <font>
+                  <Font name="Yu Gothic Regular" size="27.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <Text fill="#ccccff" layoutX="24.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name : " />
+            <Text fill="#ccccff" layoutX="25.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID : " />
+            <Text fill="#ccccff" layoutX="25.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number : " />
+            <Label layoutX="115.0" layoutY="14.0" prefHeight="17.0" prefWidth="242.0" />
+            <Label layoutX="115.0" layoutY="33.0" prefHeight="17.0" prefWidth="242.0" />
+            <Label layoutX="115.0" layoutY="51.0" prefHeight="17.0" prefWidth="242.0" />
+            <Label layoutX="115.0" layoutY="70.0" prefHeight="17.0" prefWidth="242.0" />
+            <Button layoutX="518.0" layoutY="14.0" mnemonicParsing="false" onAction="#signoutonmousclick" style="-fx-background-color: #ccccff;" text="Sign Out" textFill="#088080">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button layoutX="335.0" layoutY="84.0" mnemonicParsing="false" onAction="#helpcenteronclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Help Center" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="111.0" layoutY="84.0" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Settings &amp; Privacy" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="WAIT" />
+         </cursor>
+      </Button>
+      <Button layoutX="223.0" layoutY="84.0" mnemonicParsing="false" onAction="#aboutbuttononclick" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="About" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="-1.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #008080;" text="Profile" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Button>
+      <Button layoutX="14.0" layoutY="115.0" mnemonicParsing="false" onAction="#backbuttonOnClick" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="lawyerInfoTableView" layoutX="73.0" layoutY="128.0" prefHeight="124.0" prefWidth="492.0">
+         <columns>
+            <TableColumn fx:id="usernammeCol" prefWidth="81.0" text="User name" />
+            <TableColumn fx:id="emailCol1" prefWidth="126.0" text="Email" />
+            <TableColumn fx:id="roleCol2" prefWidth="107.0" text="Role" />
+            <TableColumn fx:id="eventdateCol3" text="Event date" />
+            <TableColumn fx:id="locationCol4" prefWidth="97.0" text="location" />
+         </columns>
+      </TableView>
+      <Button layoutX="512.0" layoutY="252.0" mnemonicParsing="false" onAction="#reloadonclick" style="-fx-background-color: #008080;" text="Reload" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextArea fx:id="notificationTextField" layoutX="289.0" layoutY="276.0" prefHeight="58.0" prefWidth="278.0" />
+      <TextField fx:id="customerusernametextfield" layoutX="140.0" layoutY="277.0" promptText="Customer username" />
+      <Button layoutX="247.0" layoutY="305.0" mnemonicParsing="false" onAction="#setOnClick" style="-fx-background-color: #008080;" text="sent" textFill="#ccccff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

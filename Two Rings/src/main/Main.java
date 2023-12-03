@@ -5,6 +5,7 @@
 package main;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,13 +16,22 @@ import javafx.stage.Stage;
  * @author acer
  */
 public class Main extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+//<<<<<<< HEAD
+//<<<<< HEAD
+        //Parent root = FXMLLoader.load(getClass().getResource("AccountantCheckSalariesScene.fxml"));
+
+//=======
+        Parent root = FXMLLoader.load(getClass().getResource("lawyerSchedule.fxml"));
+//=======
+       // Parent root = FXMLLoader.load(getClass().getResource("LawyerResignation.fxml"));
+//>>>>>>> faiadkazi
         
+//>>>>>>> FahimsBranch01
         Scene scene = new Scene(root);
-        
+
         stage.setScene(scene);
         stage.show();
     }
@@ -32,5 +42,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

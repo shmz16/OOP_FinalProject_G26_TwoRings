@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/pdfa-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/kernel-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/pdftest-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/io-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/barcodes-7.1.15 (1).pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/font-asian-7.1.15 (1).pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/font-asian-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/hyph-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/styled-xml-parser-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/svg-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/itext7-core-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/forms-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/sign-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/barcodes-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/layout-7.1.15.pom" />
+        <option value="$PROJECT_DIR$/Two Rings/iText7-Core-7.1.15/root-7.1.15.pom" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
