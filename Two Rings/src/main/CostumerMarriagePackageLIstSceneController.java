@@ -96,7 +96,6 @@ public class CostumerMarriagePackageLIstSceneController implements Initializable
 
     @FXML
     private void donebuttononclick(ActionEvent event) {      
-        currentCustomer.chosenMarriagePackage.packageCode = choosepkgcombobox.getValue();
-        currentCustomer.chosenMarriagePackage.location = eventCombobox.getValue();
+        MarriagePackage currentCustomer.chosenMarriagePackage = new MarriagePackage(choosepkgcombobox.getValue,null,null,null,eventCombobox.getValue);
     }
 }
