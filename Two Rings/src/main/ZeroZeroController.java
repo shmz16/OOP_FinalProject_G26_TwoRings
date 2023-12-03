@@ -40,7 +40,9 @@ public class ZeroZeroController implements Initializable {
     }
 
     @FXML
-    private void employeeLoginButton(ActionEvent event) {
+    private void employeeLoginButton(ActionEvent event) throws IOException{
+        SceneSwitcher toEmployeeLoginScene = new SceneSwitcher("EmployeeSignInScene.fxml", event);
+        toEmployeeLoginScene.ConfirmSceneSwitch();
     }
 
     @FXML

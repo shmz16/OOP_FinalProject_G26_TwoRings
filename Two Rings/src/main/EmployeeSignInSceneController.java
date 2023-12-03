@@ -94,7 +94,7 @@ public class EmployeeSignInSceneController implements Initializable {
                 sceneToSwitch = "AccountantDashboardScene.fxml";
             }
             else if (currentEmp.designation == "Lawyer") {
-                sceneToSwitch = ".fxml";
+                sceneToSwitch = "lawyer dashboard.fxml";
             }
             else if (currentEmp.designation == "Marketing Manager") {
                 sceneToSwitch = "MarketingDashboardScene.fxml";
