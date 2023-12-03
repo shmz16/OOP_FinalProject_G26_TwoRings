@@ -27,11 +27,13 @@ public class SignInSceneController implements Initializable {
     @FXML
     private TextField passcodeTextField;
     @FXML
-    private TextField userNameTextField;
-    @FXML
     private AnchorPane forgetPasswordLabel;
     @FXML
     private Label errorLabel1;
+    @FXML
+    private TextField employeeIDTextField;
+    @FXML
+    private Label errorLabel;
 
     /**
      * Initializes the controller class.
