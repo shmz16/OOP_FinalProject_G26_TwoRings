@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 /**
  * FXML Controller class
@@ -20,7 +21,15 @@ import javafx.scene.control.TableColumn;
 public class RegistarDashboardController implements Initializable {
 
     @FXML
-    private TableColumn<?, ?> notificationCol;
+    private TableView<?> dashNotificationTable;
+    @FXML
+    private TableColumn<?, ?> usernameCol;
+    @FXML
+    private TableColumn<?, ?> lawyerCol;
+    @FXML
+    private TableColumn<?, ?> registarCol;
+    @FXML
+    private TableColumn<?, ?> evenntmanegmentCol;
 
     /**
      * Initializes the controller class.

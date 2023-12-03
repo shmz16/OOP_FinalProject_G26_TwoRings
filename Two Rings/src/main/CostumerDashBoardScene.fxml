@@ -11,13 +11,12 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="614.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumerDashBoardSceneController">
    <children>
-      <AnchorPane layoutY="24.0" prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: #008080;">
+      <AnchorPane layoutX="-14.0" layoutY="23.0" prefHeight="104.0" prefWidth="629.0" style="-fx-background-color: #008080;">
          <children>
-            <MenuBar accessibleRole="MENU_ITEM" layoutY="-25.0" prefHeight="15.0" prefWidth="600.0" style="-fx-background-color: #008080;">
+            <MenuBar accessibleRole="MENU_ITEM" layoutY="-25.0" prefHeight="25.0" prefWidth="629.0" style="-fx-background-color: #008080;">
                <menus>
                   <Menu mnemonicParsing="false" text="Flight">
                      <items>
@@ -48,7 +47,7 @@
                   </Menu>
                </menus>
             </MenuBar>
-            <Label layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
+            <Label layoutX="475.0" layoutY="59.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
                <font>
                   <Font name="Yu Gothic Regular" size="27.0" />
                </font>
@@ -56,14 +55,7 @@
                   <Cursor fx:constant="NONE" />
                </cursor>
             </Label>
-            <Text fill="#ccccff" layoutX="24.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name : " />
-            <Text fill="#ccccff" layoutX="25.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID : " />
-            <Text fill="#ccccff" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address : " />
-            <Text fill="#ccccff" layoutX="25.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number : " />
-            <Label layoutX="115.0" layoutY="3.0" prefHeight="17.0" prefWidth="242.0" />
             <Label layoutX="115.0" layoutY="22.0" prefHeight="17.0" prefWidth="242.0" />
-            <Label layoutX="115.0" layoutY="40.0" prefHeight="17.0" prefWidth="242.0" />
-            <Label layoutX="115.0" layoutY="59.0" prefHeight="17.0" prefWidth="242.0" />
          </children>
       </AnchorPane>
       <Button layoutX="14.0" layoutY="285.0" mnemonicParsing="false" onAction="#lawyerButtonOnClick" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #008080;" text="MY LAWYER" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
@@ -119,9 +111,12 @@
             <Cursor fx:constant="NONE" />
          </cursor>
       </Button>
-      <TableView fx:id="userDashNotificationTable" layoutX="172.0" layoutY="139.0" mouseTransparent="true" prefHeight="164.0" prefWidth="416.0" style="-fx-background-color: #ccccff;">
+      <TableView fx:id="dashNotificationTable" layoutX="176.0" layoutY="156.0" mouseTransparent="true" prefHeight="164.0" prefWidth="436.0" style="-fx-background-color: #ccccff;">
         <columns>
-          <TableColumn fx:id="notificationCol" prefWidth="415.0" sortType="DESCENDING" text="My Window" />
+          <TableColumn fx:id="usernameCol" prefWidth="99.0" sortType="DESCENDING" text="USER NAME" />
+            <TableColumn fx:id="lawyerCol" prefWidth="97.0" sortType="DESCENDING" text="LAWYER ID" />
+            <TableColumn fx:id="registarCol" prefWidth="113.0" sortType="DESCENDING" text="REGISTAR ID" />
+            <TableColumn fx:id="evenntmanegmentCol" prefWidth="126.0" sortType="DESCENDING" text="EVENT MANEGMENT" />
         </columns>
          <cursor>
             <Cursor fx:constant="NONE" />

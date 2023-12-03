@@ -7,11 +7,10 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="337.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.RegistarDashboardController">
    <children>
-      <AnchorPane layoutY="-1.0" prefHeight="111.0" prefWidth="600.0" style="-fx-background-color: #008080;">
+      <AnchorPane layoutY="-1.0" prefHeight="111.0" prefWidth="603.0" style="-fx-background-color: #008080;">
          <children>
             <Label layoutX="444.0" layoutY="63.0" mouseTransparent="true" prefHeight="41.0" prefWidth="154.0" text="TWO RINGS" textFill="#ccccff" wrapText="true">
                <font>
@@ -21,13 +20,6 @@
                   <Cursor fx:constant="NONE" />
                </cursor>
             </Label>
-            <Text fill="#ccccff" layoutX="24.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name : " />
-            <Text fill="#ccccff" layoutX="25.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID : " />
-            <Text fill="#ccccff" layoutX="25.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number : " />
-            <Label layoutX="115.0" layoutY="14.0" prefHeight="17.0" prefWidth="242.0" />
-            <Label layoutX="115.0" layoutY="33.0" prefHeight="17.0" prefWidth="242.0" />
-            <Label layoutX="115.0" layoutY="51.0" prefHeight="17.0" prefWidth="242.0" />
-            <Label layoutX="115.0" layoutY="70.0" prefHeight="17.0" prefWidth="242.0" />
             <Button layoutX="518.0" layoutY="14.0" mnemonicParsing="false" onAction="#signoutonmousclick" style="-fx-background-color: #ccccff;" text="Sign Out" textFill="#088080">
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -75,11 +67,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TableView layoutX="194.0" layoutY="127.0" prefHeight="170.0" prefWidth="395.0">
-        <columns>
-          <TableColumn fx:id="notificationCol" prefWidth="393.0" text="Notifications" />
-        </columns>
-      </TableView>
       <Button layoutX="55.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #008080;" text="Accounts" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -90,5 +77,16 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <TableView fx:id="dashNotificationTable" layoutX="167.0" layoutY="131.0" mouseTransparent="true" prefHeight="164.0" prefWidth="436.0" style="-fx-background-color: #ccccff;">
+         <columns>
+            <TableColumn fx:id="usernameCol" prefWidth="99.0" sortType="DESCENDING" text="USER NAME" />
+            <TableColumn fx:id="lawyerCol" prefWidth="97.0" sortType="DESCENDING" text="LAWYER ID" />
+            <TableColumn fx:id="registarCol" prefWidth="113.0" sortType="DESCENDING" text="REGISTAR ID" />
+            <TableColumn fx:id="evenntmanegmentCol" prefWidth="126.0" sortType="DESCENDING" text="EVENT MANEGMENT" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </TableView>
    </children>
 </AnchorPane>

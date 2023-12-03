@@ -31,10 +31,18 @@ import javafx.scene.control.cell.PropertyValueFactory;
  */
 public class CostumerDashBoardSceneController implements Initializable {
 
+    private TableView<dashBoardTabelModel> userDashNotificationTable;
+    private TableColumn<dashBoardTabelModel, String> notificationCol;
     @FXML
-    private TableView<CustomerNotificationTable> userDashNotificationTable;
+    private TableView<?> dashNotificationTable;
     @FXML
-    private TableColumn<CustomerNotificationTable, String> notificationCol;
+    private TableColumn<?, ?> usernameCol;
+    @FXML
+    private TableColumn<?, ?> lawyerCol;
+    @FXML
+    private TableColumn<?, ?> registarCol;
+    @FXML
+    private TableColumn<?, ?> evenntmanegmentCol;
 
 
 
