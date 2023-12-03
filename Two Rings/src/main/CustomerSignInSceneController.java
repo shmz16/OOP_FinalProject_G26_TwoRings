@@ -47,11 +47,11 @@ public class CustomerSignInSceneController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         FileInputStream fis = null;
         ObjectInputStream ois = null;
-        File employeesFile = null;
+        File customersFile = null;
         
         try {
-            employeesFile = new File("EmployeeList.bin");
-            fis = new FileInputStream(employeesFile);
+            customersFile = new File("CustomerList.bin");
+            fis = new FileInputStream(customersFile);
             ois = new ObjectInputStream(fis);
             Customer tempCustomer;
             try {
@@ -76,16 +76,14 @@ public class CustomerSignInSceneController implements Initializable {
         }
     }    
 
-    }    
-
     @FXML
-    private void signInButtonOnClick(ActionEvent event) throws IOException{
+    private void signInButtonOnClick(ActionEvent event) throws IOException {
         boolean loginSuccess = false;
         int i = 0;
         Customer currentCustomer = null;
         
         while (i < custList.size() || loginSuccess == false) {
-            if (userNameTextField.getText()) == custList.get(i).username
+            if (userNameTextField.getText() == custList.get(i).username
                     && passcodeTextField.getText() == custList.get(i).password) {
                 currentCustomer = custList.get(i);
                 loginSuccess = true;
@@ -98,13 +96,13 @@ public class CustomerSignInSceneController implements Initializable {
         else {
             errorLabel1.setText("ID or password invalid. try again");
         }
-        
-          
     }
 
     @FXML
-    private void creatAccountButtonOnClick(ActionEvent event) {
+    private void creatAccountButtonOnClick(ActionEvent event) throws IOException {
+        SceneSwitcher toCreateAccount = new SceneSwitcher("CustomerCreateAccountScene.fxml", event);
+        toCreateAccount.ConfirmSceneSwitch();
     }
 
-    
-}
+ }    
+

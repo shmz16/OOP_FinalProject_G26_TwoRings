@@ -38,9 +38,6 @@ public class CostumerMarriagePackageLIstSceneController implements Initializable
     private DatePicker eventdatepik;
     @FXML
     private ComboBox<String> eventCombobox;
-    private TableColumn<MarriagePackageTable, String> codeCol;
-    private TableColumn<MarriagePackageTable, String> pkgCol;
-    private TableColumn<MarriagePackageTable, String> priceCol;
     @FXML
     private TextArea packagesTextArea;
     @FXML
@@ -69,25 +66,25 @@ public class CostumerMarriagePackageLIstSceneController implements Initializable
 
     @FXML
     private void signOutButtonOnClick(ActionEvent event) throws IOException{
-           SceneSwitcher switchTolawyerScene = new SceneSwitcher("SignInScene.fxml", event);
+        SceneSwitcher switchTolawyerScene = new SceneSwitcher("SignInScene.fxml", event);
         switchTolawyerScene.ConfirmSceneSwitch();
     }
 
     @FXML
     private void helpcenteronclick(ActionEvent event)throws IOException{
-           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerHelpCenterScene.fxml", event);
+        SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerHelpCenterScene.fxml", event);
         switchTolawyerScene.ConfirmSceneSwitch();
     }
 
     @FXML
     private void aboutbuttononclick(ActionEvent event) throws IOException{
-           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerHelpCenterScene.fxml", event);
+        SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerHelpCenterScene.fxml", event);
         switchTolawyerScene.ConfirmSceneSwitch();
     }
 
     @FXML
     private void homebuttononclick(ActionEvent event)throws IOException{
-           SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerAboutScene.fxml", event);
+        SceneSwitcher switchTolawyerScene = new SceneSwitcher("CostumerAboutScene.fxml", event);
         switchTolawyerScene.ConfirmSceneSwitch();
     }
 
@@ -99,7 +96,7 @@ public class CostumerMarriagePackageLIstSceneController implements Initializable
 
     @FXML
     private void donebuttononclick(ActionEvent event) {      
-        currentCustomer.MarriagePackage.packageCode = choosepkgcombobox.getValue();
-        currentCustomer.MarriagePackage.location = eventCombobox.getValue();
+        currentCustomer.chosenMarriagePackage.packageCode = choosepkgcombobox.getValue();
+        currentCustomer.chosenMarriagePackage.location = eventCombobox.getValue();
     }
 }

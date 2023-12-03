@@ -13,16 +13,16 @@ import java.time.LocalDate;
  */
 public class Customer extends User implements Serializable {
     protected String username;
-    protected String phonenumber;
     protected String religion;
     protected Event myevent;
+    protected MarriagePackage chosenMarriagePackage;
 
-    public Customer(String username, String phonenumber, String religion, Event myevent, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
+    public Customer(String username, String religion, Event myevent, MarriagePackage chosenMarriagePackage, String name, String gender, String email, String phoneNo, String password, LocalDate dateOfBirth) {
         super(name, gender, email, phoneNo, password, dateOfBirth);
         this.username = username;
-        this.phonenumber = phonenumber;
         this.religion = religion;
         this.myevent = myevent;
+        this.chosenMarriagePackage = chosenMarriagePackage;
     }
 
     public String getUsername() {
@@ -31,14 +31,6 @@ public class Customer extends User implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPhonenumber() {
-        return phonenumber;
-    }
-
-    public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
     }
 
     public String getReligion() {
@@ -55,6 +47,14 @@ public class Customer extends User implements Serializable {
 
     public void setMyevent(Event myevent) {
         this.myevent = myevent;
+    }
+
+    public MarriagePackage getChosenMarriagePackage() {
+        return chosenMarriagePackage;
+    }
+
+    public void setChosenMarriagePackage(MarriagePackage chosenMarriagePackage) {
+        this.chosenMarriagePackage = chosenMarriagePackage;
     }
 
     public String getName() {
@@ -107,7 +107,7 @@ public class Customer extends User implements Serializable {
 
     @Override
     public String toString() {
-        return "CustomerModel{" + "username=" + username + ", phonenumber=" + phonenumber + ", religion=" + religion + ", myevent=" + myevent + '}';
+        return "Customer{" + "username=" + username + ", religion=" + religion + ", myevent=" + myevent + ", chosenMarriagePackage=" + chosenMarriagePackage + '}';
     }
-     
+   
 }
