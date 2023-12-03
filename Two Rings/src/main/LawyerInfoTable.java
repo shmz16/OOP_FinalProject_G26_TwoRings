@@ -19,14 +19,14 @@ public class LawyerInfoTable implements Serializable{
     }
     protected String userNamecol;
     protected String lawyerIDcol;
-    protected String eventdatecol;
+    protected LocalDate eventdatecol;
 
     /**
      *
      */
-    protected LocalDate locationcol;
+    protected String locationcol;
 
-    public LawyerInfoTable(String userNamecol, String lawyerIDcol, String eventdatecol, LocalDate locationcol) {
+    public LawyerInfoTable(String userNamecol, String lawyerIDcol, LocalDate eventdatecol, String locationcol) {
         this.userNamecol = userNamecol;
         this.lawyerIDcol = lawyerIDcol;
         this.eventdatecol = eventdatecol;
@@ -49,19 +49,19 @@ public class LawyerInfoTable implements Serializable{
         this.lawyerIDcol = lawyerIDcol;
     }
 
-    public String getEventdatecol() {
+    public LocalDate getEventdatecol() {
         return eventdatecol;
     }
 
-    public void setEventdatecol(String eventdatecol) {
+    public void setEventdatecol(LocalDate eventdatecol) {
         this.eventdatecol = eventdatecol;
     }
 
-    public LocalDate getLocationcol() {
+    public String getLocationcol() {
         return locationcol;
     }
 
-    public void setLocationcol(LocalDate locationcol) {
+    public void setLocationcol(String locationcol) {
         this.locationcol = locationcol;
     }
 

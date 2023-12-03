@@ -86,14 +86,14 @@ public class LawyerRegisterController implements Initializable {
             System.out.println("write object successful");
            
             }catch (IOException ex){
-                Logger.getLogger(LawyerRegisterController.class.getName()).log(level.SEVERE,null,ex);
+                Logger.getLogger(LawyerRegisterController.class.getName()).log(Level.SEVERE,null,ex);
             }finally{
             try{
                 if(oos!=null){
                     oos.close();
                 }
             }catch(IOException ex){
-                Logger.getLogger(LawyerRegisterController.class.getName()).log(level.SEVERE,null,ex);
+                Logger.getLogger(LawyerRegisterController.class.getName()).log(Level.SEVERE,null,ex);
             }
         }
                 
