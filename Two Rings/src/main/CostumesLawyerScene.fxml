@@ -10,6 +10,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="402.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CostumesLawyerSceneController">
    <children>
@@ -54,9 +55,17 @@
                   <Cursor fx:constant="NONE" />
                </cursor>
             </Label>
+            <Text fill="#ccccff" layoutX="24.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name : " />
+            <Text fill="#ccccff" layoutX="25.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID : " />
+            <Text fill="#ccccff" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address : " />
+            <Text fill="#ccccff" layoutX="25.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number : " />
+            <Label layoutX="115.0" layoutY="3.0" prefHeight="17.0" prefWidth="242.0" />
+            <Label layoutX="115.0" layoutY="22.0" prefHeight="17.0" prefWidth="242.0" />
+            <Label layoutX="115.0" layoutY="40.0" prefHeight="17.0" prefWidth="242.0" />
+            <Label layoutX="115.0" layoutY="59.0" prefHeight="17.0" prefWidth="242.0" />
          </children>
       </AnchorPane>
-      <Button layoutX="264.0" layoutY="319.0" mnemonicParsing="false" onAction="#sentButtonOnMouseClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #008080;" text="sent" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
+      <Button layoutX="268.0" layoutY="312.0" mnemonicParsing="false" onAction="#sentButtonOnMouseClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #008080;" text="sent" textAlignment="CENTER" textFill="#ccccff" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -86,22 +95,14 @@
             <Cursor fx:constant="NONE" />
          </cursor>
       </Button>
-      <TextField fx:id="userTextField" layoutX="118.0" layoutY="177.0" prefHeight="25.0" prefWidth="183.0" promptText="user name" />
+      <TextField fx:id="emailTextField" layoutX="101.0" layoutY="242.0" prefHeight="25.0" prefWidth="384.0" promptText="emailaddress@gmail.com" />
       <Button layoutX="5.0" layoutY="132.0" mnemonicParsing="false" onAction="#backbuttononclick" style="-fx-background-color: #008080;" text="&lt;" textFill="#ccccff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="eventLocationTextField" layoutX="118.0" layoutY="268.0" prefHeight="25.0" prefWidth="373.0" promptText="event venue " />
-      <TextField fx:id="emailTextField" layoutX="117.0" layoutY="222.0" prefHeight="25.0" prefWidth="373.0" promptText="Email address" />
-      <DatePicker fx:id="eventdatePik" layoutX="315.0" layoutY="177.0" promptText="event date" />
-      <Label layoutX="214.0" layoutY="144.0" mouseTransparent="true" prefHeight="26.0" prefWidth="203.0" text="sent info to lawyer" textFill="#000017" wrapText="true">
-         <font>
-            <Font name="Yu Gothic Regular" size="21.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="NONE" />
-         </cursor>
-      </Label>
+      <TextField fx:id="userTextField" layoutX="101.0" layoutY="204.0" prefHeight="25.0" prefWidth="195.0" promptText="user name" />
+      <TextField fx:id="eventLocationTextField" layoutX="101.0" layoutY="277.0" prefHeight="25.0" prefWidth="384.0" promptText="event venue details" />
+      <DatePicker fx:id="eventdatePik" layoutX="304.0" layoutY="204.0" prefHeight="25.0" prefWidth="180.0" promptText="event date" />
    </children>
 </AnchorPane>
