@@ -51,13 +51,13 @@ public class LawyersCustomerController implements Initializable {
     @FXML
     private TableColumn<Customerlawyertable, String> emailaddcolumn;
     @FXML
-    private TableColumn<Customerlawyertable, Venue> eventdatecolumn;
+    private TableColumn<Customerlawyertable, LocalDate> eventdatecolumn;
     @FXML
-    private TableColumn<Customerlawyertable, LocalDate> locationcolumn;
+    private TableColumn<Customerlawyertable, Venue> locationcolumn;
     @FXML
     private TextArea lawyercustomertextarea;
     
-    public ArrayList<> eventList= new ArrayList<>();
+    public ArrayList<CustomerLawyerModel> eventList= new ArrayList<CustomerLawyerModel>();
 
     /**
      * Initializes the controller class.
@@ -69,14 +69,13 @@ public class LawyersCustomerController implements Initializable {
 
     @FXML
     private void showbuttonOnclick(ActionEvent event) {
-    }
-
-    @FXML
-    private void sendbuttonOnclick(ActionEvent event) {
-        usernamecolumn.setCellvalueFactory(PropertyValueFactory<Customerlawyertable,String>("username: "));
-        emailaddcolumn.setCellvalueFactory(PropertyValueFactory<Customerlawyertable,String>("emailadd: "));
-        eventdatecolumn.setCellvalueFactory(PropertyValueFactory<Customerlawyertable,LocalDate>("eventdate: "));
-        locationcolumn.setCellvalueFactory(PropertyValueFactory<Customerlawyertable,Venue>("location:  "));
+        usernamecolumn.setCellValueFactory(new PropertyValueFactory<Customerlawyertable, String>("EventName"));
+        emailaddcolumn.setCellValueFactory(new PropertyValueFactory<Customerlawyertable, String>("username"));
+        
+        eventdatecolumn.setCellValueFactory(new PropertyValueFactory<Customerlawyertable, LocalDate>("location"));
+        locationcolumn.setCellValueFactory(new PropertyValueFactory<Customerlawyertable, Venue>("Eventdate"));
+        
+        
         
         
         FileInputStream fis = null;
@@ -97,7 +96,7 @@ public class LawyersCustomerController implements Initializable {
             }
             catch(EOFException e){
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(EventManagerCustomerController.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(LawyersCustomerController.class.getName()).log(Level.SEVERE, null, ex);
             }
             
         }
@@ -117,12 +116,24 @@ public class LawyersCustomerController implements Initializable {
         while(i<=eventList.size()){
             lawyerCustomertable.getItems().add(new Customerlawyertable(
                     eventList.get(i).username,
-                    eventList.get(i).emailadd,
+                    eventList.get(i).email,
                     eventList.get(i).eventdate,
-                    eventList.get(i).location)
+                    eventList.get(i).venue)
             );
             i++;
         }
+        
+    
+        
+        
+    }
+
+    @FXML
+    private void sendbuttonOnclick(ActionEvent event) {
+       
+        
+        
+        
         
     }
 
