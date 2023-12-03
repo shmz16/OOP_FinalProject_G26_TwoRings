@@ -83,12 +83,5 @@ public class FinanceReportController implements Initializable {
         
     }
 
-    @FXML
-    private void salesPerMonthChartOnClick(ActionEvent event) {
-    }
-
-    @FXML
-    private void suscriberGrowth(ActionEvent event) {
-    }
     
 }

@@ -202,7 +202,7 @@ public class CEOpageController implements Initializable {
 
     @FXML
     private void closeOnClickBT(ActionEvent event) throws IOException {
-        SceneSwitcher closeScene = new SceneSwitcher("LoginPage.fxml", event);
+        SceneSwitcher closeScene = new SceneSwitcher("CEOpage.fxml", event);
         closeScene.closeScene();
     }
 

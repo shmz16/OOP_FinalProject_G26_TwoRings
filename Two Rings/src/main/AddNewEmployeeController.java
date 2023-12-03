@@ -42,6 +42,7 @@ import javafx.scene.image.ImageView;
  * @author acer
  */
 public class AddNewEmployeeController implements Initializable {
+
     Alert a = new Alert(Alert.AlertType.WARNING);
     @FXML
     private ComboBox<String> genderCombo;
@@ -76,6 +77,7 @@ public class AddNewEmployeeController implements Initializable {
     @FXML
     private Label confirmAddThisEmployee;
     Random randomNo = new Random();
+
     /**
      * Initializes the controller class.
      */
@@ -121,7 +123,6 @@ public class AddNewEmployeeController implements Initializable {
 //                
 //            }
 //        }
-
     }
 
     @FXML
@@ -139,33 +140,32 @@ public class AddNewEmployeeController implements Initializable {
         String post = postCombo.getValue();
         int salaryy = Integer.parseInt(salary.getText());
         String email = empEmail.getText();
-        float ratings = (randomNo.nextInt(4)+randomNo.nextFloat());
+        float ratings = (4 + randomNo.nextFloat());
 
         LocalDate dateOfJoin = DOJ.getValue();
 
-        
         File f = null;
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
-       
+
         try {
             f = new File("EmployeeList.bin");
             if (f.exists()) {
-                fos = new FileOutputStream(f,true);
+                fos = new FileOutputStream(f, true);
                 oos = new AppendableObjectOutputStream(fos);
-                
+
             } else {
                 fos = new FileOutputStream(f);
                 oos = new ObjectOutputStream(fos);
-                
+
             }
             Employee temp = new Employee(employeeId, dateOfJoin, salaryy, post, ratings, name, gender, email, phoneNo, newPass, janmoDin);
-            
+
             oos.writeObject(temp);
             System.out.println(temp);
-            
+
         } catch (IOException ex) {
-            Logger.getLogger(AddNewEmployeeController.class.getName()).log(Level.SEVERE,null,ex);
+            Logger.getLogger(AddNewEmployeeController.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 if (oos != null) {
@@ -173,7 +173,7 @@ public class AddNewEmployeeController implements Initializable {
                 }
             } catch (IOException ex) {
                 Logger.getLogger(AddNewEmployeeController.class.getName())
-                        .log(Level.SEVERE,null, ex);
+                        .log(Level.SEVERE, null, ex);
             }
         }
 //        employeeList.add(temp);
@@ -198,19 +198,20 @@ public class AddNewEmployeeController implements Initializable {
             }
             oos.writeObject(employeeList);
         } catch (IOException ex) {
-            Logger.getLogger(MainFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AddNewEmployeeController.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 if(oos != null) oos.close();
             } catch (IOException ex) {
-                Logger.getLogger(MainFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(AddNewEmployeeController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
          */
-        
         confirmAddThisEmployee.setText("Succesfuly added New Employee");
     }
 
+//    Testing update #Turjjo
+    
     @FXML
     private void prevPage(ActionEvent event) throws IOException {
         Parent sceneA = FXMLLoader.load(getClass().getResource("CEOpage.fxml"));
