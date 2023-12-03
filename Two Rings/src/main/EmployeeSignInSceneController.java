@@ -85,6 +85,7 @@ public class EmployeeSignInSceneController implements Initializable {
                 currentEmp = empList.get(i);
                 loginSuccess = true;
             }
+            i++;
         }
         if (loginSuccess == true) {
             if (currentEmp.designation == "Registrar") {

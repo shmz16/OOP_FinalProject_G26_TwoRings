@@ -97,31 +97,9 @@ public class LawyerRegisterController implements Initializable {
                 Logger.getLogger(LawyerRegisterController.class.getName()).log(Level.SEVERE,null,ex);
             }
         }
-    }               
+                   
                 
-         
-        
-        
-        
-        
- 
-        
-       
-        
-    
-        
-        
-        
-        
-        
-        
-       
-            
-        
-        
-        
-    
-
+    }    
     @FXML
     private void backbuttononclick(ActionEvent event)  throws IOException{
         SceneSwitcher toProfileScene = new SceneSwitcher("lawyer dashboard.fxml",event);
