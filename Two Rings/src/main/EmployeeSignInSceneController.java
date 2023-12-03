@@ -88,7 +88,7 @@ public class EmployeeSignInSceneController implements Initializable {
             i++;
         }
         if (loginSuccess == true) {
-            if (currentEmp.designation == "Registrar") {
+            if (currentEmp.designation == "Register") {
                 sceneToSwitch = "RegistarDashboard.fxml";
             }
             else if (currentEmp.designation == "Accountant") {
@@ -97,8 +97,11 @@ public class EmployeeSignInSceneController implements Initializable {
             else if (currentEmp.designation == "Lawyer") {
                 sceneToSwitch = "lawyer dashboard.fxml";
             }
-            else if (currentEmp.designation == "Marketing Manager") {
+            else if (currentEmp.designation == "Marketing Maneger") {
                 sceneToSwitch = "MarketingDashboardScene.fxml";
+            }
+            else if (currentEmp.designation == "Event Maneger") {
+                sceneToSwitch = "EventManager Dashboard.fxml";
             }
             SceneSwitcher switchToEmployeeDashboard = new SceneSwitcher(sceneToSwitch, event);
             switchToEmployeeDashboard.ConfirmSceneSwitch();

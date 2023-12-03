@@ -27,12 +27,15 @@ public class ZeroZeroController implements Initializable {
     }    
 
     @FXML
-    private void joinAsWitnessButton(ActionEvent event) {
-        
+    private void joinAsWitnessButton(ActionEvent event) throws IOException {
+        SceneSwitcher toWitnessPage = new SceneSwitcher("WitnessPage2.fxml", event);
+        toWitnessPage.ConfirmSceneSwitch();
     }
 
     @FXML
-    private void customerLoginButton(ActionEvent event) {
+    private void customerLoginButton(ActionEvent event) throws IOException {
+        SceneSwitcher toCustomerScene = new SceneSwitcher("CustomerSignInScene.fxml", event);
+        toCustomerScene.ConfirmSceneSwitch();
     }
 
     @FXML
