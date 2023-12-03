@@ -4,6 +4,7 @@
  */
 package main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -23,11 +24,11 @@ public class CEOSignInSceneController implements Initializable {
     @FXML
     private AnchorPane forgetPasswordLabel;
     @FXML
-    private TextField userNameTextField;
-    @FXML
     private TextField passcodeTextField;
     @FXML
-    private Label errorLabel1;
+    private TextField ceoIdTextField;
+    @FXML
+    private Label loginFailedLabel;
 
     /**
      * Initializes the controller class.
@@ -38,7 +39,15 @@ public class CEOSignInSceneController implements Initializable {
     }    
 
     @FXML
-    private void signInButtonOnClick(ActionEvent event) {
+    private void signInButtonOnClick(ActionEvent event) throws IOException {
+        CEO ceo = new CEO();
+        if (ceo.id == Integer.parseInt(ceoIdTextField.getText()) && ceo.ceoPass == passcodeTextField.getText()) {
+            SceneSwitcher ceoDashboard = new SceneSwitcher("CEOpage.fxml", event);
+            ceoDashboard.ConfirmSceneSwitch();
+        }
+        else {
+            loginFailedLabel.setText("ID or password invalid. try again");
+        }
     }
     
 }
