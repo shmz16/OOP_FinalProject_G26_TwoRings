@@ -31,18 +31,18 @@ import javafx.scene.control.cell.PropertyValueFactory;
  */
 public class CostumerDashBoardSceneController implements Initializable {
 
-    private TableView<dashBoardTabelModel> userDashNotificationTable;
-    private TableColumn<dashBoardTabelModel, String> notificationCol;
+    
+    
     @FXML
-    private TableView<?> dashNotificationTable;
+    private TableView<dashBoardTabelModel> dashNotificationTable;
     @FXML
-    private TableColumn<?, ?> usernameCol;
+    private TableColumn<dashBoardTabelModel, String> usernameCol;
     @FXML
-    private TableColumn<?, ?> lawyerCol;
+    private TableColumn<dashBoardTabelModel, String> lawyerCol;
     @FXML
-    private TableColumn<?, ?> registarCol;
+    private TableColumn<dashBoardTabelModel, String> registarCol;
     @FXML
-    private TableColumn<?, ?> evenntmanegmentCol;
+    private TableColumn<dashBoardTabelModel, String> evenntmanegmentCol;
 
 
 
@@ -131,9 +131,12 @@ public class CostumerDashBoardSceneController implements Initializable {
 
     @FXML
     private void reloadOnClick(ActionEvent event) {
-         ObservableList<CustomerNotificationTable> notificationarr = FXCollections.observableArrayList();
+         ObservableList<dashBoardTabelModel> notificationarr = FXCollections.observableArrayList();
         
-            notificationCol.setCellValueFactory(new PropertyValueFactory<>("My Window"));
+            usernameCol.setCellValueFactory(new PropertyValueFactory<>("user name"));
+            lawyerCol.setCellValueFactory(new PropertyValueFactory<>("Lawyer id"));
+            registarCol.setCellValueFactory(new PropertyValueFactory<>("Register id"));
+            evenntmanegmentCol.setCellValueFactory(new PropertyValueFactory<>("Event manegment"));
             
         
         FileInputStream fis = null;
@@ -143,10 +146,10 @@ public class CostumerDashBoardSceneController implements Initializable {
              File f = new File("AccountentInfoToCustomer.bin");
             fis = new FileInputStream(f);
             ois = new ObjectInputStream(fis);
-            CustomerNotificationTable p;
+            dashBoardTabelModel p;
             try {
                 while (true) {
-                    p = (CustomerNotificationTable) ois.readObject();
+                    p = (dashBoardTabelModel) ois.readObject();
                     notificationarr.add(p);
                 }
             } catch (Exception e) {
@@ -160,7 +163,7 @@ public class CostumerDashBoardSceneController implements Initializable {
             } catch (IOException ex) {
             }
         }
-        userDashNotificationTable.setItems(notificationarr);
+        dashBoardTabelModel.setItems(notificationarr);
     }
 
    

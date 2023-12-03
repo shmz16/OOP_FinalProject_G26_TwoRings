@@ -39,15 +39,15 @@ public class lawyerdashboardController implements Initializable {
     @FXML
     private Button dashboardlabel;
     @FXML
-    private TableView<?> dashNotificationTable;
+    private TableView<dashBoardTabelModel> dashNotificationTable;
     @FXML
-    private TableColumn<?, ?> usernameCol;
+    private TableColumn<dashBoardTabelModel, String> usernameCol;
     @FXML
-    private TableColumn<?, ?> lawyerCol;
+    private TableColumn<dashBoardTabelModel, String> lawyerCol;
     @FXML
-    private TableColumn<?, ?> registarCol;
+    private TableColumn<dashBoardTabelModel, String> registarCol;
     @FXML
-    private TableColumn<?, ?> evenntmanegmentCol;
+    private TableColumn<dashBoardTabelModel, String> evenntmanegmentCol;
 
     /**
      * Initializes the controller class.
